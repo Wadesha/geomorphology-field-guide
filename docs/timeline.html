@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>时间轴</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="index.html">地貌现场手册</a>
+<div class="links"><a href="index.html" class="">总览</a><a href="principles.html" class="">原理</a><a href="cases/index.html" class="">实例</a><a href="field.html" class="">野外判定</a><a href="timeline.html" class="on">时间轴</a><a href="sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<section class="hero"><h1>时间轴：从 258 万年前到今天</h1>
+<p class="lead">第四纪的核心不是"很久以前"，而是"气候反复摆动"。这条时间轴把全书第四纪部分与本站实例串起来：
+每个锚点都有对应的实地可看之处。</p></section>
+<h2>锚点</h2>
+<div class="tl"><div class="it"><div class="when">约 258 万年前</div><b>第四纪下限（通行口径之一）</b>
+<div class="small muted"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</div>
+<div style="font-size:14px">第四纪开始，北半球冰期—间冰期旋回主导</div></div><div class="it"><div class="when">约 200 万—176 万年前</div><b>泥河湾盆地最早文化层</b>
+<div class="small muted"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</div>
+<div style="font-size:14px">马圈沟第 VII 文化层（176 万年），第 III 层&quot;东方人类第一餐&quot;166 万年</div></div><div class="it"><div class="when">约 176 万—125 万年前</div><b>泥河湾 17 个文化层序列</b>
+<div class="small muted"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</div>
+<div style="font-size:14px">早更新世中晚期古人类反复活动</div></div><div class="it"><div class="when">约 90 万—40 万年前</div><b>南方网纹红土主要形成期</b>
+<div class="small muted"><span class="dot" style="background:#9c7a3c"></span>风化与残积</div>
+<div style="font-size:14px">宣城剖面，中更新世早中期湿热气候产物</div></div><div class="it"><div class="when">约 30 万年前</div><b>贡嘎山冰川主要形成期</b>
+<div class="small muted"><span class="dot" style="background:#5b7fb5"></span>冰川</div>
+<div style="font-size:14px">中更新世，海螺沟冰川形成</div></div><div class="it"><div class="when">约 1.5 万年前起</div><b>若尔盖泥炭开始发育</b>
+<div class="small muted"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</div>
+<div style="font-size:14px">峰值 1.2 万—1 万年前与 7000—5000 年前</div></div><div class="it"><div class="when">约 1 万年前</div><b>黄河贯通若尔盖古湖</b>
+<div class="small muted"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</div>
+<div style="font-size:14px">草地沼泽环境形成，全新世开始</div></div><div class="it"><div class="when">1855 年</div><b>黄河改道入渤海</b>
+<div class="small muted"><span class="dot" style="background:#3f8f9c"></span>海岸与河口</div>
+<div style="font-size:14px">现代黄河三角洲开始发育，至今约 5400 km²</div></div><div class="it"><div class="when">1719—1721 年</div><b>五大连池老黑山、火烧山喷发</b>
+<div class="small muted"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</div>
+<div style="font-size:14px">中国最年轻的火山喷发，熔岩台地与堰塞湖形成</div></div><div class="it"><div class="when">1931—1937 年</div><b>李四光提出庐山第四纪冰川说</b>
+<div class="small muted"><span class="dot" style="background:#5b7fb5"></span>冰川</div>
+<div style="font-size:14px">《扬子江流域之第四纪冰期》《冰期之庐山》</div></div><div class="it"><div class="when">1964 / 1976 / 1996 年</div><b>黄河三次改道与出汊</b>
+<div class="small muted"><span class="dot" style="background:#3f8f9c"></span>海岸与河口</div>
+<div style="font-size:14px">刁口河 → 清水沟 → 清 8 汊，造陆速率随之改写</div></div><div class="it"><div class="when">1985 年</div><b>新滩滑坡</b>
+<div class="small muted"><span class="dot" style="background:#a8623c"></span>斜坡与重力</div>
+<div style="font-size:14px">约 3000 万 m³ 入江，900 年古镇被推入长江</div></div><div class="it"><div class="when">1981—2020 年</div><b>施雅风持续质疑庐山冰川说</b>
+<div class="small muted"><span class="dot" style="background:#5b7fb5"></span>冰川</div>
+<div style="font-size:14px">《庐山真的有第四纪冰川吗》至《论李四光教授的庐山第四纪冰川是对泥石流的误读》</div></div><div class="it"><div class="when">2006 年至今</div><b>青藏铁路运营</b>
+<div class="small muted"><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘</div>
+<div style="font-size:14px">550 km 连续多年冻土路段，主动冷却路基经受长期检验</div></div><div class="it"><div class="when">2024 年</div><b>桂林喀斯特入选全球百大地质遗产地</b>
+<div class="small muted"><span class="dot" style="background:#4a8f6e"></span>岩溶</div>
+<div style="font-size:14px">国际地质科学联合会第二批 100 个地质遗产地</div></div></div>
+<div class="note">年代的口径时有差异（如第四纪下限有 2.58 Ma 与 1.8 Ma 等不同方案，本站采用通行口径之一），
+泥河湾最早层位是否达到 200 万年亦在讨论中。凡存争议处，本站并列呈现而不取单值。</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

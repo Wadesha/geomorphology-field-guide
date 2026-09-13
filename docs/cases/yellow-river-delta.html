@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>黄河三角洲 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#3f8f9c"></span>海岸与河口</span></div>
+<h1 style="margin:.2em 0 .1em">黄河三角洲</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">来沙一断，海岸线立刻改口</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">海岸与河口</span><span class="tag">第十一章　海岸地貌及其堆积物</span><span class="tag">由快速淤进转为冲淤交替，部分叶瓣持续蚀退</span></div>
+<p>全世界造陆最快的地方之一，也是最直观的&quot;泥沙账本&quot;：来沙多就进，来沙少就退。1976 年改道、1996 年出汊、2002 年小浪底调水调沙，每一次人类干预都写在海岸线上。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>看河口的分汊与沙嘴：现行流路的沙嘴在向海推进，废弃流路的叶瓣在往回退，同一三角洲上两种方向并存。</li><li>看滩面的淤泥质特征：黄河口以细颗粒淤泥为主，潮滩宽阔，与砂质海岸的陡剖面完全不同。</li><li>看人工海堤段：1990 年代后东营港至孤东油田因海堤防护，岸线基本锁死 —— 这是&quot;人类活动成为地貌营力&quot;的直接证据。</li><li>看湿地植被带：从水边到内陆依次为光滩、盐地碱蓬、芦苇等，反映的是淹没频率与盐度的梯度。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>三角洲的两股力量：河流供沙使岸线向海推进，海洋动力（波浪、潮流）侵蚀使岸线向陆后退。谁占上风，取决于来沙量与海洋能量的比值。</li><li>为什么黄河三角洲造陆快：含沙量极高（水少沙多），河口淤积延伸速率可达 2—3 km/a，导致尾闾河道周期性出汊摆动。</li><li>改道的机制：河道淤高 → 比降变缓 → 泄流不畅 → 寻找新的、更短更陡的入海路径。1946 年前改道 7 次，之后又有 1953、1964、1976、1996、2007 等多次人工或自然改道。</li><li>为什么 1989 年后转蚀退：输沙量断崖式下跌（小浪底水库、调水调沙、退耕还林、工农业用水），海洋动力未变而物源锐减，抗侵蚀能力崩溃。</li><li>极端事件的放大效应：低物源时期，一次风暴潮的蚀退量（−1243 m/a）可达平均速率（−146 m/a）的 8 倍以上 —— 风险评估不能只看年均值。</li><li>&quot;每亿吨沙能换来多少岸线&quot;：不同流路时期分别为 0.21—0.23、0.31、1.16 km/亿 t，海域越浅、海洋动力越弱，单位泥沙的造陆效率越高。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>造陆速率是&quot;流量账&quot;</th><td>年均 40.8 km² → 22.1 km² 的下降，本质是来沙从 142.8 亿 t 降到 124.17 亿 t 再降到 10.34 亿 t</td></tr><tr><th>同一三角洲的两种命运</th><td>现行河口在淤、废弃叶瓣在蚀，说明三角洲不是整体进退，而是&quot;沉积中心&quot;在迁移</td></tr><tr><th>1.76 亿 t/a 的临界值</th><td>这是把&quot;冲淤平衡&quot;量化成管理指标的尝试：低于它，三角洲净蚀退</td></tr><tr><th>人类已是主要营力</th><td>改道、水库、调水调沙、海堤、生态补水，每一项的量级都超过了自然波动 —— 现代地貌学必须把人算进去</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>现代三角洲面积</th><td><b>约 5400 km²（自 1855 年黄河入渤海后淤积形成）</b><br><span class="small muted">黄河口区域主要为淤泥质海岸</span></td></tr><tr><th>利津站多年平均</th><td><b>1950—2020 年年均来沙 6.51 亿 t、年均来水 294.8 亿 m³</b><br><span class="small muted">黄河口水少沙多的典型数据</span></td></tr><tr><th>刁口河期 1964.1—1976.5</th><td><b>造陆 506.9 km²，年均 40.8 km²；岸线延伸 33 km（2.66 km/a）</b><br><span class="small muted">同期来沙 142.8 亿 t</span></td></tr><tr><th>清水沟期 1976.6—1996.6</th><td><b>造陆 442 km²，年均 22.1 km²；岸线延伸 38 km（1.9 km/a）</b><br><span class="small muted">来沙 124.17 亿 t，每亿吨沙岸线延伸 0.31 km</span></td></tr><tr><th>清 8 汊期 1996.7—2000</th><td><b>汊河小沙嘴造陆 19.2 km²，原大沙嘴南侧 25 km²；岸线延伸 12 km（2.82 km/a）</b><br><span class="small muted">来沙仅 10.34 亿 t，每亿吨沙延伸 1.16 km</span></td></tr><tr><th>快速淤积期 1976—1988</th><td><b>输沙 7.25×10⁸ t/a，最快淤进 1825 m/a，最大淤进距离超 17 km</b><br><span class="small muted">高物源驱动</span></td></tr><tr><th>剧烈调整期 1989—2008</th><td><b>输沙由 8.49×10⁸ 降至 0.825×10⁸ t/a；风暴潮致最大蚀退速率 −1243 m/a</b><br><span class="small muted">低物源下极端事件放大破坏</span></td></tr><tr><th>废弃叶瓣蚀退</th><td><b>刁口河流路 1976—2010 陆地面积由 332.4 km² 降至 192 km²，年侵蚀 4.01 km²/a</b><br><span class="small muted">2010 年生态补水后蚀退趋缓</span></td></tr><tr><th>冲淤平衡临界值</th><td><b>入海径流约 105.14 亿 m³/a、输沙约 1.76 亿 t/a 时接近临界平衡</b><br><span class="small muted">来自遥感与阈值研究</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">不同研究给出的造陆面积、岸线速率、临界水沙阈值略有差异（源于遥感数据源、岸线定义、潮位校正方法不同）。本站按各文献原始口径分列。</div>
+<h2>来源</h2><ul class="src"><li><a href="http://jhyqy.com.cn/article/doi/10.16028/j.1009-2722.2025.155" target="_blank" rel="noopener">1976—2024 年黄河三角洲海岸线变化分析（海洋地质前沿）</a></li><li><a href="https://www.geog.com.cn/CN/PDF/10.11821/xb200911007" target="_blank" rel="noopener">黄河三角洲岸线演变与利津站水沙量（地理学报，2009）</a></li><li><a href="https://a.xueshu.baidu.com/usercenter/paper/show?paperid=1s1q0er0tc280m709a7y0py0bc770683" target="_blank" rel="noopener">基于遥感的黄河三角洲海岸带淤蚀变化及其水沙阈值研究</a></li><li><a href="https://irrigate.whu.edu.cn/CN/10.12396/znsd.240233" target="_blank" rel="noopener">黄河三角洲海岸线提取及其近期时空变化格局（中国农村水利水电，2024）</a></li><li><a href="https://www.toutiao.com/article/7177564556745998882" target="_blank" rel="noopener">黄河故道——刁口河（东营网）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">山东省东营市，黄河入渤海处</p>
+<p class="small muted" style="margin:.5em 0 0">约 118°15′—119°24′E，37°20′—38°12′N；现代三角洲陆地面积约 5400 km²</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">东营市区可达黄河入海口湿地与三角洲国家级自然保护区，有观鸟与湿地游线。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">由快速淤进转为冲淤交替，部分叶瓣持续蚀退</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="yongdinghe-fan.html">永定河冲洪积扇</a></li><li><a href="zoige-peatland.html">若尔盖泥炭沼泽</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第十一章　海岸地貌及其堆积物</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

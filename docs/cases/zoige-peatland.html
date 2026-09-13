@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>若尔盖泥炭沼泽 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</span></div>
+<h1 style="margin:.2em 0 .1em">若尔盖泥炭沼泽</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">每十年长一厘米的高原&quot;固体水库&quot;</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">湖泊与沼泽</span><span class="tag">第十二章　湖泊、沼泽及其堆积物</span><span class="tag">国际重要湿地；曾严重退化，现系统性修复中</span></div>
+<p>一片被水泡着的草原，底下是平均两三米厚的泥炭。它每十年才长一厘米，一旦被排干就再也长不回来 —— 这是&quot;沉积速率&quot;这个概念最直观的教材。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>看地表：起伏平缓的草丘与积水洼地交错，踩下去是海绵感 —— 那是泥炭的持水性（1 t 干物质泥炭可蓄约 8 t 水）。</li><li>看水系：河道比降只有千分之零点几，曲流与牛轭湖密布 —— 水流几乎不动，这就是沼泽化的前提。</li><li>在沟壁看泥炭剖面：上部疏松的植物残体、下部逐渐分解的黑色泥炭，颜色与分解度随深度变化。</li><li>注意人为沟渠：20 世纪 60—70 年代&quot;开沟排水&quot;留下的痕迹仍在，是理解退化机制的现场教材。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>沼泽化的两个前提：地表积水或过湿（排水不畅）+ 低温/厌氧（分解受抑）。若尔盖两者兼备：构造下沉的宽谷盆地提供积水条件，高原低温使微生物分解缓慢。</li><li>泥炭的形成：植物残体的生产量大于分解量，未分解的有机质逐年累积。关键在于&quot;分解被卡住&quot;——积水造成的厌氧环境使分解速率骤降。</li><li>为什么每 10 年才 1 cm：泥炭是有机质，压实与分解后残留的比例很低，堆积速率天然远小于矿质沉积 —— 这提醒我们：做年代换算时必须用实测速率，不能套用其他沉积环境的经验值。</li><li>湖泊→沼泽的演化：湖泊淤浅 → 水生植物由湖心向岸推进 → 泥炭累积使水面进一步下降 → 最终完全沼泽化。若尔盖约 1 万年前黄河贯通古湖后形成草地沼泽环境。</li><li>为什么退化不可逆：泥炭积累以千年计，而排水疏干可在数十年内破坏其水文基础。一旦水位下降，好氧分解启动，碳库开始净释放。</li><li>碳汇意义：泥炭地是全球单位面积碳密度最高的陆地生态系统之一，若尔盖泥炭碳储量占全国总量约 41%，其稳定性直接影响区域碳收支。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>0.6 mm/a</th><td>把&quot;沉积速率&quot;这个抽象量换算成肉眼尺度：一百年不到 7 cm，一层砖厚</td></tr><tr><th>1 t 泥炭蓄 8 t 水</th><td>泥炭不是土，是海绵；它的&quot;地貌作用&quot;体现在调节水文而不是塑造地形</td></tr><tr><th>1977—2001 减少 164.86 km² 湖泊</th><td>人类活动（排水、放牧）在这一时段的影响量级，远超自然变化</td></tr><tr><th>为什么归入&quot;湖泊与沼泽&quot;章</th><td>它代表了流水能量的另一端：水不动的时候，堆积的是有机质而不是砂砾</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>保护区面积</th><td><b>总面积 166570.6 公顷</b><br><span class="small muted">国家级自然保护区，1998 年批准</span></td></tr><tr><th>海拔</th><td><b>平均 3400—3900 m（沼泽区一说 3400—3600 m）</b><br><span class="small muted">青藏高原高寒泥炭沼泽典型代表</span></td></tr><tr><th>沼泽与湖沼面积</th><td><b>沼泽草地 2916 km²，人畜不能进入的湖沼 508 km²</b><br><span class="small muted">中国最大的一片泥炭沼泽</span></td></tr><tr><th>泥炭厚度</th><td><b>平均 2—3 m；最厚报道有 20 余米与 9—10 m 两种口径</b><br><span class="small muted">局部由湖泊沼泽化形成的区域平均约 1 m</span></td></tr><tr><th>泥炭储量</th><td><b>71 亿 m³（体积口径）；另称储存量达 19 亿 t（重量口径）</b><br><span class="small muted">两套口径不可直接换算，本站并列</span></td></tr><tr><th>堆积速率</th><td><b>平均每 10 年约 1 cm（约 0.6 mm/a）；自然条件下每年 0.22—1.31 mm</b><br><span class="small muted">极缓慢</span></td></tr><tr><th>发育年代</th><td><b>约 1.5 万年前开始发育，峰值在 1.2 万—1 万年前与 7000—5000 年前</b><br><span class="small muted">全新世以来盆地仍持续下陷但趋缓</span></td></tr><tr><th>水文条件</th><td><b>黄河及支流白河、黑河下游比降仅 0.2—0.3‰，曲流、古河道、牛轭湖发育，阶地宽广（白河下游阶地宽达 20—30 km）</b><br><span class="small muted">排水不畅是沼泽化的直接原因</span></td></tr><tr><th>气候条件</th><td><b>年均温 0—3 ℃，年降水量 600—800 mm，相对湿度约 70%</b><br><span class="small muted">低温是有机质不分解的关键</span></td></tr><tr><th>生态功能</th><td><b>每年对黄河流域补水量占黄河全流域水量的 8%；水源涵养贡献黄河上游水量 29%—45%</b><br><span class="small muted">泥炭碳储量占全国总量约 41%</span></td></tr><tr><th>退化与修复</th><td><b>1977—2001 年湖泊面积减少 164.86 km²，沼泽减少 86.00 km²；2024 年完成湿地修复 12.71 万亩，建生态拦水坝 45 座</b><br><span class="small muted">近年萎缩退化趋势初步遏制</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">泥炭储量有 71 亿 m³（体积）与 19 亿 t（重量）两种口径，不可直接比较；最大厚度有&quot;20 余米&quot;与&quot;9—10 m&quot;两种报道；堆积速率有&quot;每 10 年 1 cm&quot;与&quot;每年 0.22—1.31 mm&quot;两种表述。本站按来源分列。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://grassland.china.com.cn/2023-08/03/content_42471633.html" target="_blank" rel="noopener">若尔盖湿地国家级自然保护区（中国网·草原频道，2023）</a></li><li><a href="http://www.greentimepaper/html/2023-08/03/content_3369314.htm" target="_blank" rel="noopener">全力打造世界最美高原湿地国家名片（中国林业新闻网，2023）</a></li><li><a href="https://article.xuexi.cn/articles/index.html?art_id=4229135913367306146" target="_blank" rel="noopener">若尔盖泥炭湿地：高原上的碳库（学习强国）</a></li><li><a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B9%BF%E5%9C%B0" target="_blank" rel="noopener">若尔盖湿地（总面积、泥炭储量、水源涵养贡献）</a></li><li><a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B2%BC%E6%B3%BD/550039" target="_blank" rel="noopener">若尔盖沼泽（面积、比降、气候、泥炭厚度）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">四川省阿坝州若尔盖县、红原县一带，青藏高原东北缘</p>
+<p class="small muted" style="margin:.5em 0 0">约 33°10′—34°06′N，101°36′—103°25′E；海拔 3400—3900 m</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">国道 248 可达；花湖、九曲黄河第一湾等为成熟观景点，保护区核心区需许可。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">国际重要湿地；曾严重退化，现系统性修复中</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="badain-jaran.html">巴丹吉林沙漠沙山</a></li><li><a href="yellow-river-delta.html">黄河三角洲</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第十二章　湖泊、沼泽及其堆积物</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

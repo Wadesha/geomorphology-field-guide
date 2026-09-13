@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>巴丹吉林沙漠沙山 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#b08a3e"></span>风沙与黄土</span></div>
+<h1 style="margin:.2em 0 .1em">巴丹吉林沙漠沙山</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">世界最高的固定沙丘与它的 144 个湖</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">风沙与黄土</span><span class="tag">第十章　风成地貌和黄土</span><span class="tag">流动沙丘为主，2024 年进入世界遗产申报名单</span></div>
+<p>年降水不足 40 毫米的地方，立着相对高度 500 多米的沙山，山脚下却有 144 个常年不干的湖。这个组合本身就是一道地貌学难题：沙从哪来、水从哪来、为什么不干。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>看沙山的&quot;骨架&quot;：高大沙山不是简单新月形沙丘，而是复合型沙山 —— 大沙丘背上驮着次级沙丘。</li><li>看沙山与湖的相对位置：湖多在山间洼地（丘间地），水面标高就是当地地下水位露头。</li><li>看沙山剖面是否有古土壤或钙胶结层 —— 若有，说明这座沙山曾经停止移动、甚至长过植被。</li><li>看迎风坡与落沙坡：迎风坡缓而硬，落沙坡陡（接近休止角）而松。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>起沙：干旱、植被稀疏、物源丰富，风速超过起沙风速后砂粒以跃移方式搬运（跃移占风沙搬运的主体）。</li><li>堆积：风遇到地形阻挡或能量减弱，砂粒在背风侧堆积；落沙坡始终保持休止角，沙丘因此向前&quot;爬&quot;。</li><li>复合型沙山的成因：多期风向或多期沙丘叠加，新一代沙丘爬上老沙丘，形成 200—500 m 级的巨丘。</li><li>沙不塌、山不散的关键：丘间地有地下水与湖泊，湖面蒸发在沙丘内部形成一定湿度与盐分胶结，相当于给沙山&quot;加筋&quot;。</li><li>水的来源（未定论）：一说经深大断裂带自祁连山远程补给，一说与雅鲁藏布江一带的水系有关，至今无定论。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>相对高度 500 m 意味着什么</th><td>沙山规模是&quot;风的能量 × 时间 × 沙源&quot;的乘积，不是单次堆积的结果</td></tr><tr><th>144 个湖不干</th><td>说明地下水位被区域地质结构托住，蒸发虽大但补给不断 —— 沙山与湖是同一套水系统的两面</td></tr><tr><th>沙漠不是终点</th><td>流动沙丘占 83%，说明仍在活动；沙山的稳定是相对的、有条件的</td></tr><tr><th>为什么值得去</th><td>它把&quot;风成地貌&quot;这一章里所有抽象概念（跃移、休止角、复合沙丘、丘间洼地）一次性摆在你面前</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>沙漠总面积</th><td><b>4.7 万 km²（一说 4.92 万 km²）</b><br><span class="small muted">我国第二或第三大沙漠，口径不同说法不同</span></td></tr><tr><th>最高沙峰必鲁图峰</th><td><b>相对高度 500 余米；海拔报道有 1617 m / 1611.09 m / 1609 m 三种</b><br><span class="small muted">三源并存，本站不取单值</span></td></tr><tr><th>高大沙山占比</th><td><b>占总面积约 61%；中部复合型沙山一般高 200—300 m</b><br><span class="small muted">形态复杂、高大密集</span></td></tr><tr><th>流动沙丘</th><td><b>约占沙漠总面积 83%</b><br><span class="small muted">流沙面积仅次于塔克拉玛干</span></td></tr><tr><th>湖泊</th><td><b>144 个，其中淡水湖 12 个</b><br><span class="small muted">最大者诺尔图海子，面积 2205 亩、水深 28 m</span></td></tr><tr><th>水收支</th><td><b>年降水量不足 40 mm，年蒸发量 4000 多 mm</b><br><span class="small muted">靠地下水维持；据勘察地下水年补给量约 5 亿 m³</span></td></tr><tr><th>鸣沙区</th><td><b>世界最大鸣沙区，中心区沙山相对高度 200—500 m</b><br><span class="small muted">响沙声可传十几里</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">①沙漠面积与排名口径不一（4.7 万 vs 4.92 万 km²；第二大 vs 第三大）；②必鲁图峰海拔三个来源给出三个数；③地下水来源（祁连山 vs 雅鲁藏布江）尚无定论。以上均并列呈现。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://photo.cctv.com/mlzg/china/140/index.shtml" target="_blank" rel="noopener">巴丹吉林沙漠概况（央视网·美丽中国）</a></li><li><a href="https://www.alsyq.gov.cn/art/2026/1/4/art_1207_210423.html" target="_blank" rel="noopener">阿拉善右旗人民政府：景区景点（面积、必鲁图峰海拔 1611.09 m、144 湖）</a></li><li><a href="https://www.badanjilin.cn/about" target="_blank" rel="noopener">内蒙古巴丹吉林景区概况（海拔 1609 m）</a></li><li><a href="https://news.cgtn.com/news/2024-07-23/Badain-Jaran-Desert-Towering-sand-dunes-and-hidden-lakes-1vth11eRu6Y/share_amp.html" target="_blank" rel="noopener">CGTN：2024 年世界遗产委员会审议巴丹吉林申遗</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">内蒙古自治区阿拉善右旗，雅布赖山以西、北大山以北</p>
+<p class="small muted" style="margin:.5em 0 0">约 39.5—42°N，100—104°E；海拔一般 1100—1700 m</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">阿拉善右旗有旅游线路进入沙漠腹地，需越野车与向导；核心区尚无公共交通。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">流动沙丘为主，2024 年进入世界遗产申报名单</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="luochuan-loess.html">洛川黄土剖面</a></li><li><a href="zoige-peatland.html">若尔盖泥炭沼泽</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第十章　风成地貌和黄土</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

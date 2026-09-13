@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>洛川黄土剖面 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#b08a3e"></span>风沙与黄土</span></div>
+<h1 style="margin:.2em 0 .1em">洛川黄土剖面</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">黄土高原中部的&quot;气候磁带机&quot;</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">风沙与黄土</span><span class="tag">第十章　风成地貌和黄土</span><span class="tag">标准剖面，研究史逾 60 年</span></div>
+<p>一堵 130 多米厚的土墙，把第四纪两百多万年的干冷—暖湿循环一层层摞起来。它是中国黄土—古土壤序列的经典参照，也是把陆相记录与深海氧同位素曲线对上的关键剖面。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>自上而下找&quot;黄—红&quot;的交替：黄色是黄土层（干冷、风大、成土弱），红褐色是古土壤层（暖湿、成土强）。</li><li>数古土壤的条数，就是数间冰期的次数；数黄土层，就是数冰期的次数。</li><li>注意古土壤层底部的钙质结核（钙结核层），它指示了当时的淋溶深度，也就是当时的降水量级。</li><li>用手捻：马兰黄土疏松、有肉眼可见的大孔和虫孔；离石黄土更致密，古土壤层黏重。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>物源：西北内陆荒漠与戈壁提供粉砂级粉尘，冬季风（西北风）是搬运机。粒径越粗 → 风力越强、源区越近、气候越干冷。</li><li>堆积：粉尘降落后若气候持续干冷，堆积速率大于成土速率，就保存为黄土层（L）。</li><li>成壤：气候转暖湿，堆积减慢而风化加强，碳酸钙被淋洗、铁质氧化、磁化率升高，形成古土壤层（S）。</li><li>循环：干冷期与暖湿期反复切换，就形成&quot;黄土—古土壤&quot;韵律，其节拍可与深海氧同位素（冰量）曲线逐段对应。</li><li>对照：黄土层 L1（马兰）对应深海氧同位素 2—4 期；古土壤 S1 对应第 5 期；成因复杂的 S5 与 13—15 期联系。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>磁化率高低</th><td>暖湿成壤期磁化率高，干冷黄土期低 —— 磁化率是这套地层里最省事的&quot;温度计&quot;</td></tr><tr><th>CaCO₃ 含量</th><td>高 → 干冷（可溶的碳酸钙没被淋走）；低 → 淋溶强、气候湿</td></tr><tr><th>沉积缺失</th><td>2025 年高分辨率 ¹⁴C 研究（58 个年代、4.75 m 剖面、31.5—3.7 ka）指出：约 20.3—16.7 ka 与 12.6—10.6 ka 存在沉积缺失，说明&quot;连续&quot;的黄土剖面其实有断档</td></tr><tr><th>一句话</th><td>黄土不是&quot;土&quot;，是一台按万年节拍走字的气候记录仪；它的分辨率足以读出千年尺度的突变</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>剖面总厚</th><td><b>130 m（教材口径）；另据工程勘察剖面，午城黄土底界埋深 135.00 m</b><br><span class="small muted">两套数据来自不同测量口径，本站并列不合并</span></td></tr><tr><th>全新世黑垆土</th><td><b>厚约 1 m（一说底界深 1.60 m）</b><br><span class="small muted">最顶部，现代成土作用的产物</span></td></tr><tr><th>马兰黄土（晚更新世）</th><td><b>厚约 7.0 m（一说底界深 9.70 m）</b><br><span class="small muted">灰黄色、疏松、大孔发育，具湿陷性</span></td></tr><tr><th>离石黄土（中更新世）</th><td><b>厚约 79 m（一说底界深 86.20 m）</b><br><span class="small muted">黄土层主体，夹多层红褐色古土壤</span></td></tr><tr><th>午城黄土（早更新世）</th><td><b>厚约 47 m（一说底界深 135.00 m 计）</b><br><span class="small muted">浅红褐色古土壤与风化黄土互层</span></td></tr><tr><th>上新世红黏土</th><td><b>厚约 13 m</b><br><span class="small muted">剖面的底，暗红色、棱柱状结构、钙结核层</span></td></tr><tr><th>粒度—气候代用指标</th><td><b>平均粒径、CaCO₃ 含量、Fe₂O₃/FeO 比值、磁化率</b><br><span class="small muted">刘东生 1985 用于与深海柱状样 V28-239 对比</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">剖面总厚与分层底界在不同文献中数值不一（130 m / 135 m；马兰 7.0 m / 9.70 m），可能源于测点位置与是否含红黏土之别。本站并列呈现，不做换算。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://ima.qq.com/wiki/?shareId=f5766487dd65915100bab3a200a9d93201f2c09e340f79db83fd4bcc04eee074" target="_blank" rel="noopener">洛川剖面：厚 130 m，午城/离石/马兰三分，刘东生 1985 与深海 V28-239 对比</a></li><li><a href="https://ima.qq.com/wiki/?shareId=c897e0b23c14979d5ab01c91bfbe4327104031557f0211b0852bd91ffe8150ba" target="_blank" rel="noopener">洛川剖面各层厚度与岩性描述（刘东生等，2000）</a></li><li><a href="http://www.progeophys.cn/article/doi/10.11928/j.issn.1001-7410.2025.06.09" target="_blank" rel="noopener">洛川黄土高分辨率 ¹⁴C 测年与千年尺度沉积缺失（地球物理学进展，2025）</a></li><li><a href="http://ytgcjs.xml-journal.net/cn/article/pdf/preview/10.3969/j.issn.1007-2993.2023.01.017.pdf" target="_blank" rel="noopener">黄土地基水分入渗试验：洛川黄土标准剖面分层底界深度（岩土工程技术，2023）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">陕西省延安市洛川县，黄土高原中部</p>
+<p class="small muted" style="margin:.5em 0 0">约 35.72°N，109.42°E（中部黄土高原）</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">剖面位于黄土塬区，露天出露，可开车至塬边；具体点位需当地向导或参考文献坐标。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">标准剖面，研究史逾 60 年</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="badain-jaran.html">巴丹吉林沙漠沙山</a></li><li><a href="xuancheng-red-earth.html">宣城网纹红土</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第十章　风成地貌和黄土</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>原理 · 营力与过程</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="index.html">地貌现场手册</a>
+<div class="links"><a href="index.html" class="">总览</a><a href="principles.html" class="on">原理</a><a href="cases/index.html" class="">实例</a><a href="field.html" class="">野外判定</a><a href="timeline.html" class="">时间轴</a><a href="sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<section class="hero"><h1>原理：营力、过程与产物</h1>
+<p class="lead">原书第一、二、三章讲"地貌是什么"：地貌形态是内外地质营力相互作用的结果 —— 内力给出骨架与高差，外力按各自的规律去削、去搬、去堆。
+本页把全书分论各章归纳为 11 类营力系统，每类只回答四件事：控制变量、作用过程、留下的产物、野外怎么认。</p></section>
+
+<h2>底层框架</h2>
+<div class="grid g2">
+<div class="card"><h3>内力 vs 外力</h3><p>内力（构造、火山）制造高差与格局，是"舞台"；外力（风化、流水、冰川、风、海浪）削平高差，是"演员"。
+地貌是二者当前比值的快照 —— 抬升快于剥蚀则山长高，反之则被削平。</p></div>
+<div class="card"><h3>成因 → 形态 → 年代</h3><p>看一个地貌，要回答三个问题：什么营力造的（成因）、现在长什么样（形态）、什么时候造的（年代）。
+三者缺一，解释就不完整。庐山之争的实质，正是"形态"无法单独裁定"成因"。</p></div>
+<div class="card"><h3>相对等级与分带</h3><p>地貌有规模等级：大地貌（山系、盆地）→ 中地貌（谷地、扇体）→ 小地貌（冲沟、沙丘）。
+同时具有气候分带性与垂直分带性 —— 同一营力在不同气候带的表现可以完全不同。</p></div>
+<div class="card"><h3>时间是隐藏变量</h3><p>速率 × 时间 = 结果。青藏铁路冻土段是毫米每年，若尔盖泥炭是 0.6 毫米每年，黄河三角洲是公里每年。
+做解释之前先算量级，很多"不可能"其实是"时间不够"。</p></div>
+</div>
+
+<h2>11 类营力系统</h2>
+<div class="grid g2"><div class="card" style="border-left:4px solid #9c7a3c">
+<h3 id="weathering"><span class="dot" style="background:#9c7a3c"></span>风化与残积</h3>
+<p class="small muted">第四章　残积物及风化壳</p>
+<dl class="kv"><dt>控制变量</dt><dd>岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。</dd>
+<dt>关键过程</dt><dd>岩石在原地被改造。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>宣城网纹红土</dd>
+<dt>代表实例</dt><dd><a href="cases/xuancheng-red-earth.html">宣城网纹红土</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #a8623c">
+<h3 id="slope"><span class="dot" style="background:#a8623c"></span>斜坡与重力</h3>
+<p class="small muted">第五章　斜坡地貌与斜坡堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。控制变量是坡度、岩土强度、水。</dd>
+<dt>关键过程</dt><dd>一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>新滩滑坡与链子崖</dd>
+<dt>代表实例</dt><dd><a href="cases/xintan-landslide.html">新滩滑坡与链子崖</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #3d7fa6">
+<h3 id="fluvial"><span class="dot" style="background:#3d7fa6"></span>流水</h3>
+<p class="small muted">第六章　流水地貌及其堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>暂时性流水（洪流）与常年性河流。控制变量是流量、比降、含沙量、基面。</dd>
+<dt>关键过程</dt><dd>暂时性流水（洪流）与常年性河流。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>永定河冲洪积扇</dd>
+<dt>代表实例</dt><dd><a href="cases/yongdinghe-fan.html">永定河冲洪积扇</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #4a8f6e">
+<h3 id="karst"><span class="dot" style="background:#4a8f6e"></span>岩溶</h3>
+<p class="small muted">第七章　岩溶地貌及岩溶堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>水对可溶岩的化学溶蚀。控制变量是岩性纯度与厚度、水的溶蚀力、透水性、流动性。</dd>
+<dt>关键过程</dt><dd>水对可溶岩的化学溶蚀。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>桂林峰林与峰丛</dd>
+<dt>代表实例</dt><dd><a href="cases/guilin-fenglin.html">桂林峰林与峰丛</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #5b7fb5">
+<h3 id="glacial"><span class="dot" style="background:#5b7fb5"></span>冰川</h3>
+<p class="small muted">第八章　冰川地貌与冰川堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>冰的积累、流动与消融。控制变量是积累区面积、气温（平衡线高度）、地形。</dd>
+<dt>关键过程</dt><dd>冰的积累、流动与消融。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>海螺沟冰川、庐山&quot;冰川&quot;之争</dd>
+<dt>代表实例</dt><dd><a href="cases/hailuogou-glacier.html">海螺沟冰川</a>、<a href="cases/lushan-glacier-debate.html">庐山&quot;冰川&quot;之争</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #6f8fa8">
+<h3 id="periglacial"><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘</h3>
+<p class="small muted">第九章　冻土地貌</p>
+<dl class="kv"><dt>控制变量</dt><dd>冻融交替。控制变量是年均地温、含冰量、岩性、活动层厚度。</dd>
+<dt>关键过程</dt><dd>冻融交替。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>青藏铁路冻土段</dd>
+<dt>代表实例</dt><dd><a href="cases/qinghai-tibet-permafrost.html">青藏铁路冻土段</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #b08a3e">
+<h3 id="aeolian"><span class="dot" style="background:#b08a3e"></span>风沙与黄土</h3>
+<p class="small muted">第十章　风成地貌和黄土</p>
+<dl class="kv"><dt>控制变量</dt><dd>风的吹扬、搬运与堆积。控制变量是风速、起沙条件、物源、植被覆盖。</dd>
+<dt>关键过程</dt><dd>风的吹扬、搬运与堆积。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>洛川黄土剖面、巴丹吉林沙漠沙山</dd>
+<dt>代表实例</dt><dd><a href="cases/luochuan-loess.html">洛川黄土剖面</a>、<a href="cases/badain-jaran.html">巴丹吉林沙漠沙山</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #3f8f9c">
+<h3 id="coastal"><span class="dot" style="background:#3f8f9c"></span>海岸与河口</h3>
+<p class="small muted">第十一章　海岸地貌及其堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>波浪、潮流与河流共同作用。控制变量是波浪能、潮差、来沙量。</dd>
+<dt>关键过程</dt><dd>波浪、潮流与河流共同作用。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>黄河三角洲</dd>
+<dt>代表实例</dt><dd><a href="cases/yellow-river-delta.html">黄河三角洲</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #5f7f6a">
+<h3 id="lacustrine"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</h3>
+<p class="small muted">第十二章　湖泊、沼泽及其堆积物</p>
+<dl class="kv"><dt>控制变量</dt><dd>静水环境沉积与有机质积累。控制变量是水位、物源、温度（分解速率）。</dd>
+<dt>关键过程</dt><dd>静水环境沉积与有机质积累。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>若尔盖泥炭沼泽</dd>
+<dt>代表实例</dt><dd><a href="cases/zoige-peatland.html">若尔盖泥炭沼泽</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #8f5f7a">
+<h3 id="tectonic"><span class="dot" style="background:#8f5f7a"></span>构造与新构造</h3>
+<p class="small muted">第十三、十四章</p>
+<dl class="kv"><dt>控制变量</dt><dd>内力给出舞台。控制变量是构造运动的方向与速率、岩性构造格局。</dd>
+<dt>关键过程</dt><dd>内力给出舞台。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>汾渭地堑与西安地裂缝</dd>
+<dt>代表实例</dt><dd><a href="cases/fenwei-graben.html">汾渭地堑与西安地裂缝</a></dd></dl>
+</div><div class="card" style="border-left:4px solid #7a6fa8">
+<h3 id="quaternary"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</h3>
+<p class="small muted">第十五、十六章</p>
+<dl class="kv"><dt>控制变量</dt><dd>时间与气候。控制变量是轨道尺度气候旋回、区域构造、沉积保存条件。</dd>
+<dt>关键过程</dt><dd>时间与气候。作用强度由上述变量共同决定，任一变量改变，产物随之改变。</dd>
+<dt>典型产物</dt><dd>泥河湾盆地、五大连池火山群</dd>
+<dt>代表实例</dt><dd><a href="cases/nihewan.html">泥河湾盆地</a>、<a href="cases/wudalianchi-volcano.html">五大连池火山群</a></dd></dl>
+</div></div>
+
+<h2>怎么用这套框架读一处地方</h2>
+<ol class="steps">
+<li><b>先定营力</b>：眼前的形态，可能是几种营力接力或叠加的结果（如黄河三角洲 = 河流供沙 + 海洋改造 + 人类干预）。</li>
+<li><b>再找控制变量</b>：把"为什么会这样"翻译成"哪个变量变了"。桂林峰林与峰丛的差别，追到最后是地下水位深浅。</li>
+<li><b>然后问年代</b>：形态相似不等于同时形成。五大连池 14 座火山，最老 200 万年、最新 300 年，摆在同一个视野里。</li>
+<li><b>最后做排除</b>：列出所有能造成相似形态的成因，逐条排除。冰碛还是泥石流、构造还是人为，靠的都是这一步。</li>
+</ol>
+<div class="note">本站所有"原理"表述以原书章节体系为骨架，数据全部来自实例页标注的公开来源；凡无来源的数字一律不写。</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

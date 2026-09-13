@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>汾渭地堑与西安地裂缝 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#8f5f7a"></span>构造与新构造</span></div>
+<h1 style="margin:.2em 0 .1em">汾渭地堑与西安地裂缝</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">内力给出的舞台，正在以毫米每年改写</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">构造与新构造</span><span class="tag">第十三、十四章</span><span class="tag">构造活动持续，叠加人类活动沉降</span></div>
+<p>一边是 5500—6000 米厚的断陷沉积，一边是每年几毫米的隆升与下沉。新构造运动在这里不是历史，而是可以用水准仪每年读出来的现实。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>在秦岭北麓看山前地貌陡坎与冲沟：山前断裂的活动在地形上留下最直接的痕迹。</li><li>在西安城里看地裂缝的地表表现：路面错台、建筑开裂、管线变形，往往沿固定方向成带出现。</li><li>注意&quot;地面沉降&quot;与&quot;地裂缝&quot;的关系：不均匀沉降会拉裂土层，形成或加剧地裂缝；二者常常伴生但机制不同。</li><li>对比渭河阶地与黄土塬的变形：同一构造背景下，不同地貌单元的表现差异，正是&quot;构造—地貌&quot;耦合的研究入口。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>地堑的形成：区域拉张背景下，两侧地块相对上升、中间地块沿正断层下落，形成断陷盆地；盆地的沉降为沉积提供空间，沉积又记录沉降历史。</li><li>新构造的含义：造成现代地形基本轮廓、且现今仍在进行的构造运动。它的证据来自地形（阶地、夷平面、断裂崖）、沉积（厚度与相变）、形变测量（水准、GPS）与地震活动。</li><li>研究方法的核心：把&quot;地形&quot;当仪器用 —— 河流阶地的级数与高差、冲洪积扇的叠置关系、夷平面的变形、海岸线的升降，都是构造运动的记录器。</li><li>构造与人类活动的叠加：西安的沉降中，地下水超采的贡献远大于构造继承性运动；这意味着&quot;新构造研究&quot;必须先把人为分量剥离，才能得到真实的构造速率。</li><li>地震危险性含义：断裂的闭锁深度越大、滑动速率越高，积累能量的潜力越大。秦岭北缘断裂闭锁 9.8 km、倾滑 5.34 mm/a，是需要重点关注的段落。</li><li>不对称掀斜：秦岭北麓隆升快于南麓（差值约 2 mm/a），与&quot;南缓北陡&quot;的地形吻合 —— 形变速率场与地形剖面的一致性，是检验构造解释的关键。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>毫米每年</th><td>这个量级听起来微不足道，但乘以万年就是几十米到上百米的高差 —— 地貌是时间的积分</td></tr><tr><th>5500—6000 m 沉积</th><td>说明沉降在时间上是持续的、在空间上是巨大的，盆地本身就是一部构造史</td></tr><tr><th>3 mm/a 中的人为分量</th><td>提醒一件事：观测到的形变不等于构造形变，测站记录永远是&quot;自然 + 人类&quot;的叠加</td></tr><tr><th>地裂缝的空间分异</th><td>东郊强于西郊、南郊强于北郊，与地下水开采强度和隐伏断裂展布有关，是&quot;构造控制 + 人为触发&quot;的复合结果</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>盆地性质</th><td><b>新生代断陷盆地（断块型复式地堑），基岩上覆沉积厚 5500—6000 m</b><br><span class="small muted">含冲积、湖积、洪积相物质及风积黄土</span></td></tr><tr><th>形成过程</th><td><b>燕山运动期（约 1.3 亿年前）奠定雏形；喜马拉雅运动期完成发育</b><br><span class="small muted">第四纪以来总趋势为&quot;北翘南陷&quot;</span></td></tr><tr><th>现今垂直形变（2006—2018 精密水准）</th><td><b>渭河盆地（除西安）下沉 &lt;1 mm/a；鄂尔多斯地块南缘隆升 3—5 mm/a；秦岭北麓隆升约 3 mm/a；秦岭腹地 &lt;1 mm/a</b><br><span class="small muted">继承性运动特征明显</span></td></tr><tr><th>西安沉降速率</th><td><b>约 3 mm/a（2006—2018）；1971—1996 年相对泾阳曾达 −12 mm/a</b><br><span class="small muted">主因曾为地下水超采，近年已受控</span></td></tr><tr><th>主要断裂倾滑速率</th><td><b>口镇—关山断裂 6.55 mm/a（闭锁深度 4.6 km）；秦岭北缘断裂 5.34 mm/a（闭锁深度 9.8 km）；渭河断裂 3.21 mm/a（闭锁 3.4 km）</b><br><span class="small muted">由矩形位错模型反演</span></td></tr><tr><th>西安地面沉降</th><td><b>20 世纪 80 年代中期累计沉降 &gt;500 mm 面积约 40 km²，沉降中心 900—1333 mm；2000 年东南郊超 600 mm，超 1000 mm 面积 42.5 km²，中心超 2000 mm，东八里村累计达 2850 mm</b><br><span class="small muted">沉降中心随城区扩展而迁移</span></td></tr><tr><th>地裂缝活动趋势</th><td><b>1995 年活动量 55.05 mm → 1999 年 23.30 mm，总体减弱</b><br><span class="small muted">仍具东郊强于西郊、南郊强于北郊的空间分异</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">不同观测时段与技术手段（水准、GPS、InSAR）给出的速率值略有差异；西安沉降中构造分量与人为分量的比例仍有讨论。本站按各时段原文献列出。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://html.rhhz.net/DDCLYDQDLX/html/11986.htm" target="_blank" rel="noopener">跨关中地区现今地壳垂直形变剖面（大地测量与地球动力学）</a></li><li><a href="https://xadfz.xa.gov.cn/xadq/stxa/63d5d8cdf8fd1c4c213b1eef.html" target="_blank" rel="noopener">渭河断陷（西安市地方志办公室）</a></li><li><a href="https://ytlx.whrsm.ac.cn/CN/PDF/10402" target="_blank" rel="noopener">西安地裂缝活动现状及地铁隧道建设应对措施（岩土力学）</a></li><li><a href="https://baike.baidu.com/view/1661404.html" target="_blank" rel="noopener">渭河地堑（构造演化与沉积厚度）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">陕西关中平原（渭河盆地）及周边汾河谷地</p>
+<p class="small muted" style="margin:.5em 0 0">夹持于秦岭造山带与鄂尔多斯地块之间；西安地区为沉降中心之一</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">西安市内即可观察地裂缝与地面沉降的地面标志；秦岭北缘断裂沿山前公路可见地貌陡坎。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">构造活动持续，叠加人类活动沉降</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="xintan-landslide.html">新滩滑坡与链子崖</a></li><li><a href="nihewan.html">泥河湾盆地</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第十三、十四章</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

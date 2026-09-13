@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>海螺沟冰川 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#5b7fb5"></span>冰川</span></div>
+<h1 style="margin:.2em 0 .1em">海螺沟冰川</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">一条正在快速后退的海洋型冰川</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">冰川</span><span class="tag">第八章　冰川地貌与冰川堆积物</span><span class="tag">持续退缩中，近两年显著加速</span></div>
+<p>冰川末端伸进针叶林里，落差 3900 米，大冰瀑布垂直 1080 米。它同时是&quot;海洋型冰川&quot;的教科书样本：对气候变化的响应快得肉眼可见。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>看冰舌表面的表碛：海螺沟冰舌大部被碎屑覆盖，远看是灰的、脏的，不是你在画册上看到的白冰。</li><li>找终碛和侧碛：冰川末端外围最新鲜的那几道垄，就是它刚刚退到过的位置。</li><li>看冰面湖、冰裂隙、冰洞、冰塔 —— 这些都是&quot;正在强烈消融&quot;的证据，不是静态景观。</li><li>沿退缩区往回走：从裸露冰碛 → 草本 → 小树 → 冬瓜杨 → 峨眉冷杉，2 公里内走完一百年的演替。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>成冰：积累区在高海拔，雪 → 粒雪 → 冰川冰；贡嘎山积累区雪崩频繁，雪崩补给占雪线以上总补给的约 44%。</li><li>流动：冰在重力下塑性流动，速度可达百米级每年（冰川中部 3950 m 处中流线约 171 m/a）。</li><li>消融：海洋型冰川温度接近压力融点，冰床普遍存在压融水，水膜增厚促进底部滑动，因此对升温极其敏感。</li><li>为什么海螺沟退得比大陆型冰川快：海洋型冰川温度高、降水多、响应快；同样升温下，它的末端后退幅度远大于唐古拉山那类低温大陆型冰川。</li><li>反馈：退缩后裸露的冰碛在暖湿条件下很快被先锋植物定殖，演替序列清晰：5 年草本 → 10 年小树 → 20 年冬瓜杨中树 → 40 年大树 → 60 年峨眉冷杉中龄林 → 100 年冷杉林。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>表碛的双面作用</th><td>薄表碛加速消融（反照率低），厚表碛反而隔热保护冰体 —— 所以&quot;脏&quot;的冰川不一定退得更快</td></tr><tr><th>退缩速率的口径</th><td>1966—2009 的 25—30 m/a 与 1990—2020 的 12.33 m/a 时段不同，不能简单说&quot;变慢了&quot;，要看原始定义的起止年</td></tr><tr><th>冰瀑布</th><td>1080 m 的落差意味着冰川在此处于极度拉伸流动状态，冰崩、雪崩终年频发</td></tr><tr><th>去现场的意义</th><td>这里是&quot;把第八章冰川侵蚀/堆积地貌一次看全&quot;的地方：U 形谷、冰碛、冰水堆积、冰蚀地貌同框</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>长度</th><td><b>13.1 km（一说 12.9 km；上世纪 80 年代末约 14.7 km）</b><br><span class="small muted">贡嘎山地区最长的现代冰川</span></td></tr><tr><th>面积</th><td><b>25.71 km²（一说 24.27 km²）</b><br><span class="small muted">复合山谷冰川、季风海洋型温冰川</span></td></tr><tr><th>末端海拔</th><td><b>2990 m（一说 2900 m / 2940 m）</b><br><span class="small muted">伸入峨眉冷杉林线以下</span></td></tr><tr><th>大冰瀑布</th><td><b>垂直落差 1080 m，宽 600—1100 m</b><br><span class="small muted">我国已发现的最高大冰瀑布</span></td></tr><tr><th>零平衡线</th><td><b>约海拔 4880 m</b><br><span class="small muted">积累量与消融量相等的那条线</span></td></tr><tr><th>贡嘎山冰川总数</th><td><b>74 条（西坡 + 东坡），面积 255.10 km²，雪线 4800—5200 m</b><br><span class="small muted">我国主要海洋型冰川分布区之一</span></td></tr><tr><th>退缩速率</th><td><b>1966—2009 年均退缩 25—30 m/a；1990—2020 平均 12.33 m/a；2019—2021 两年共退约 133 m（66.5 m/a）</b><br><span class="small muted">不同时段口径不同，均按原文献列出</span></td></tr><tr><th>累计退缩</th><td><b>自 20 世纪 30 年代至今约 2 km；截至 2021 年总退缩超 2.63 km</b><br><span class="small muted">含小冰期以来的持续退缩</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">长度、面积、末端海拔在不同来源各有两三个数值（13.1/12.9 km、25.71/24.27 km²、2990/2900/2940 m），可能源于测年不同与统计边界定义不同。本站并列。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://www.hailuogou.com/zh/bckp/1021203373412237312" target="_blank" rel="noopener">海螺沟景区：冰川基本参数与退缩过程（1990—2020、2019—2021 数据）</a></li><li><a href="https://www.hailuogou.com/zh/overview-geology/939681364502904832" target="_blank" rel="noopener">海螺沟冰川：长 12 km、落差 3900 m、大冰瀑布 1080 m</a></li><li><a href="https://news.cctv.com/2016/10/30/ARTIMnxjNGgywyvsrTGmjWj5161030.shtml" target="_blank" rel="noopener">贡嘎山冰川 74 条、面积 255.10 km²、1966—2009 退缩（中新网/央视网，2016）</a></li><li><a href="https://lib-bingchuan.museum.chaoxing.com/info/19001.jspx" target="_blank" rel="noopener">海螺沟冰川消融区表面消融特征研究（长度 13.1 km、面积 25.71 km²、零平衡线 4880 m）</a></li><li><a href="https://www.cstp.org.cn/kp/kxcb/art/2024/art_a7ab7b8bf08449589d4b16501b53b78d.html" target="_blank" rel="noopener">两类冰川退缩对比与海螺沟植被演替序列（中国科技馆）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">四川省甘孜州泸定县，贡嘎山东坡</p>
+<p class="small muted" style="margin:.5em 0 0">贡嘎山主峰海拔 7514 m（文献值，另有 7556 m 之说）；冰川末端约 2900—2990 m</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">海螺沟景区（国家 5A），有公路直达冰川观景台与城门洞，是同纬度最容易到达的现代冰川之一。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">持续退缩中，近两年显著加速</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="lushan-glacier-debate.html">庐山&quot;冰川&quot;之争</a></li><li><a href="qinghai-tibet-permafrost.html">青藏铁路冻土段</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第八章　冰川地貌与冰川堆积物</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

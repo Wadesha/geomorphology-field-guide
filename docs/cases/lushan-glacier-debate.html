@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>庐山&quot;冰川&quot;之争 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#5b7fb5"></span>冰川</span></div>
+<h1 style="margin:.2em 0 .1em">庐山&quot;冰川&quot;之争</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">中国地学史上最长的一次误判还是正解？</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">冰川</span><span class="tag">第八章　冰川地貌与冰川堆积物</span><span class="tag">持续近百年的学术争鸣，两派并存</span></div>
+<p>同一堆泥砾，李四光说是冰碛，施雅风说是泥石流。争论的焦点不是&quot;谁名气大&quot;，而是：什么样的证据才能判定一条山谷曾经被冰川占据过。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>到大坳看&quot;冰斗&quot;的圈椅形态，同时问一句：这个形态有没有可能是别的成因塑造的？</li><li>到王家坡看 U 谷横剖面，与 V 形河谷对比 —— 但也要想：构造与岩性会不会造成类似形态？</li><li>重点看泥砾本身：砾石大小混杂、无分选、无层理，这是冰碛还是泥石流？关键在砾石表面擦痕、砾径分布、基质支撑结构。</li><li>看泥砾之上的网纹红土：这套红土指示的是湿热风化环境，用它来反推泥砾形成时的气候，是本案的关键推理链。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>为什么&quot;泥砾混杂&quot;会成为焦点：冰川搬运不按粒径分选，冰碛物天然大小混杂、无层理、砾石可带擦痕；而泥石流作为高密度重力流，同样能造成大小混杂、无层理的堆积。二者形态相似，判定必须靠多重证据。</li><li>判据一（气候可行性）：冰川存在需要积累区长期处于零度以下。用山体高度 + 冰期降温幅度反算雪线是否能降到该高度 —— 这是&quot;先问可能性&quot;的一步。</li><li>判据二（沉积结构）：冰川沉积常见基质支撑、砾石棱角状、有擦痕与压坑、砾石长轴定向；泥石流沉积可出现粒序变化、杂基支撑但常伴流水改造痕迹、缺乏典型冰蚀伴生地貌。</li><li>判据三（伴生组合）：真正的冰川作用会留下完整组合 —— 冰斗、U 谷、悬谷、角峰、羊背石、终碛侧碛，孤立的&quot;某一处泥砾&quot;不足以定案。</li><li>判据四（年代与古环境）：把&quot;冰期&quot;地层与 global 气候曲线对时，如果它落在间冰期，结论就自相矛盾；同时用孢粉、网纹红土等独立指标反演当时气候。</li><li>方法论的收获：这不是&quot;谁对谁错&quot;的故事，而是&quot;如何判定一种地貌成因&quot;的完整示范 —— 形态 → 沉积 → 年代 → 古环境，四条独立证据链互校。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>为什么争论近百年没结束</th><td>因为关键证据本身是多解的：同一堆泥砾可被两套理论各自解释，缺的是能&quot;一票决定&quot;的诊断性证据</td></tr><tr><th>对研究者的提醒</th><td>&quot;发现遗迹&quot;与&quot;证明成因&quot;是两件事。形态相似是最弱的证据，年代与古环境才是硬的</td></tr><tr><th>为什么仍值得去</th><td>这是中国少有的&quot;能现场看到一场方法论争论&quot;的地方 —— 每个点位旁边都配着两种解释</td></tr><tr><th>与本书的关系</th><td>对应第八章&quot;五、古冰川遗迹的确定&quot;与第十六章&quot;一、中国第四纪冰期&quot;两节，是这两节最好的现实注脚</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>提出</th><td><b>1931 年李四光在庐山发现&quot;冰川遗迹&quot;；1933 年发表《扬子江流域之第四纪冰期》；1937 年完成《冰期之庐山》</b><br><span class="small muted">挑战&quot;中国东南部无第四纪冰川&quot;的旧说</span></td></tr><tr><th>主要遗迹点</th><td><b>王家坡 U 谷、大坳冰斗、锦绣谷天桥（巨岩断裂）</b><br><span class="small muted">被列为冰蚀地貌实例</span></td></tr><tr><th>反方提出</th><td><b>1981 年施雅风《庐山真的有第四纪冰川吗》；1989 年《中国东部第四纪冰川环境问题》专著；2020 年《论李四光教授的庐山第四纪冰川是对泥石流的误读》</b><br><span class="small muted">认为泥砾混杂堆积实为泥石流堆积</span></td></tr><tr><th>核心反驳一</th><td><b>庐山牯岭海拔 1165 m，需 7 月气温下降约 20 ℃ 才具备积雪成冰条件，而长江中下游任一冰期降温幅度未达此量级</b><br><span class="small muted">气候可能性论证</span></td></tr><tr><th>核心反驳二</th><td><b>从砾石组成、砾径变化、沉积结构、擦痕判断，泥砾堆积更符合泥石流成因</b><br><span class="small muted">沉积学证据</span></td></tr><tr><th>核心反驳三</th><td><b>包围砾石的网纹红土与孢粉组合指示暖温带—亚热带湿热环境，非寒冷冰川环境</b><br><span class="small muted">古环境证据</span></td></tr><tr><th>核心反驳四</th><td><b>古地磁测年显示&quot;庐山冰期&quot;&quot;大姑冰期&quot;&quot;鄱阳冰期&quot;等恰对应北半球间冰期时段</b><br><span class="small muted">年代学证据</span></td></tr><tr><th>正方新证</th><td><b>1992 年何培元等《庐山第四纪冰期与环境》系统论证；支持者提出冰川条痕石、直径 15 m 漂砾等证据</b><br><span class="small muted">争议未终结</span></td></tr><tr><th>保护身份</th><td><b>2001 年国家地质公园，2004 年世界地质公园；2021 年入选第一批精品地学研学路线</b><br><span class="small muted">管理与科普层面已定，学术层面仍存争议</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">本条本身就是争议条目。正方（李四光及后续支持者）认为庐山存在第四纪冰川；反方（施雅风等）认为是泥石流误读，并提出气候、沉积、古环境、年代四条反驳；1992 年后支持方亦有系统性专著回应。本站只陈述双方论据与出处，不作裁决。</div>
+<h2>来源</h2><ul class="src"><li><a href="https://baike.baidu.com/item/%E5%BA%90%E5%B1%B1%E7%AC%AC%E5%9B%9B%E7%BA%AA%E5%86%B0%E5%B7%9D/8172452" target="_blank" rel="noopener">庐山第四纪冰川（含争议史、遗迹点、保护身份）</a></li><li><a href="https://www.chinanews.com/cul/2010/11-03/2631025.shtml" target="_blank" rel="noopener">学者驳李四光：庐山第四纪冰川应是泥石流（中新网，2010）</a></li><li><a href="https://baike.sogou.com/v76599090.htm" target="_blank" rel="noopener">施雅风四条论据整理（搜狗百科）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">江西省九江市庐山（牯岭海拔 1165 m）</p>
+<p class="small muted" style="margin:.5em 0 0">约 29.5°N，115.9°E；庐山第四纪冰川国家地质公园面积 29156 公顷</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">庐山景区公路通达，王家坡 U 谷、大坳冰斗、锦绣谷天桥等点位均有步道可达。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">持续近百年的学术争鸣，两派并存</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="hailuogou-glacier.html">海螺沟冰川</a></li><li><a href="xuancheng-red-earth.html">宣城网纹红土</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第八章　冰川地貌与冰川堆积物</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>来源清单</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="index.html">地貌现场手册</a>
+<div class="links"><a href="index.html" class="">总览</a><a href="principles.html" class="">原理</a><a href="cases/index.html" class="">实例</a><a href="field.html" class="">野外判定</a><a href="timeline.html" class="">时间轴</a><a href="sources.html" class="on">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<section class="hero"><h1>来源清单</h1>
+<p class="lead">本站所有实测数字均来自以下公开来源，共 60 条。
+采集方式：以原书章节为线索逐类联网检索，优先采用期刊论文、政府部门、景区官方与主流媒体的实测数据；
+同一指标出现多个数值时并列呈现，不做加权或换算。</p></section>
+<h2>按实例</h2>
+<table><thead><tr><th style="width:150px">实例</th><th>来源</th></tr></thead><tbody><tr><td>洛川黄土剖面</td><td><a href="https://ima.qq.com/wiki/?shareId=f5766487dd65915100bab3a200a9d93201f2c09e340f79db83fd4bcc04eee074" target="_blank" rel="noopener">洛川剖面：厚 130 m，午城/离石/马兰三分，刘东生 1985 与深海 V28-239 对比</a></td></tr><tr><td>洛川黄土剖面</td><td><a href="https://ima.qq.com/wiki/?shareId=c897e0b23c14979d5ab01c91bfbe4327104031557f0211b0852bd91ffe8150ba" target="_blank" rel="noopener">洛川剖面各层厚度与岩性描述（刘东生等，2000）</a></td></tr><tr><td>洛川黄土剖面</td><td><a href="http://www.progeophys.cn/article/doi/10.11928/j.issn.1001-7410.2025.06.09" target="_blank" rel="noopener">洛川黄土高分辨率 ¹⁴C 测年与千年尺度沉积缺失（地球物理学进展，2025）</a></td></tr><tr><td>洛川黄土剖面</td><td><a href="http://ytgcjs.xml-journal.net/cn/article/pdf/preview/10.3969/j.issn.1007-2993.2023.01.017.pdf" target="_blank" rel="noopener">黄土地基水分入渗试验：洛川黄土标准剖面分层底界深度（岩土工程技术，2023）</a></td></tr><tr><td>巴丹吉林沙漠沙山</td><td><a href="https://photo.cctv.com/mlzg/china/140/index.shtml" target="_blank" rel="noopener">巴丹吉林沙漠概况（央视网·美丽中国）</a></td></tr><tr><td>巴丹吉林沙漠沙山</td><td><a href="https://www.alsyq.gov.cn/art/2026/1/4/art_1207_210423.html" target="_blank" rel="noopener">阿拉善右旗人民政府：景区景点（面积、必鲁图峰海拔 1611.09 m、144 湖）</a></td></tr><tr><td>巴丹吉林沙漠沙山</td><td><a href="https://www.badanjilin.cn/about" target="_blank" rel="noopener">内蒙古巴丹吉林景区概况（海拔 1609 m）</a></td></tr><tr><td>巴丹吉林沙漠沙山</td><td><a href="https://news.cgtn.com/news/2024-07-23/Badain-Jaran-Desert-Towering-sand-dunes-and-hidden-lakes-1vth11eRu6Y/share_amp.html" target="_blank" rel="noopener">CGTN：2024 年世界遗产委员会审议巴丹吉林申遗</a></td></tr><tr><td>海螺沟冰川</td><td><a href="https://www.hailuogou.com/zh/bckp/1021203373412237312" target="_blank" rel="noopener">海螺沟景区：冰川基本参数与退缩过程（1990—2020、2019—2021 数据）</a></td></tr><tr><td>海螺沟冰川</td><td><a href="https://www.hailuogou.com/zh/overview-geology/939681364502904832" target="_blank" rel="noopener">海螺沟冰川：长 12 km、落差 3900 m、大冰瀑布 1080 m</a></td></tr><tr><td>海螺沟冰川</td><td><a href="https://news.cctv.com/2016/10/30/ARTIMnxjNGgywyvsrTGmjWj5161030.shtml" target="_blank" rel="noopener">贡嘎山冰川 74 条、面积 255.10 km²、1966—2009 退缩（中新网/央视网，2016）</a></td></tr><tr><td>海螺沟冰川</td><td><a href="https://lib-bingchuan.museum.chaoxing.com/info/19001.jspx" target="_blank" rel="noopener">海螺沟冰川消融区表面消融特征研究（长度 13.1 km、面积 25.71 km²、零平衡线 4880 m）</a></td></tr><tr><td>海螺沟冰川</td><td><a href="https://www.cstp.org.cn/kp/kxcb/art/2024/art_a7ab7b8bf08449589d4b16501b53b78d.html" target="_blank" rel="noopener">两类冰川退缩对比与海螺沟植被演替序列（中国科技馆）</a></td></tr><tr><td>庐山&quot;冰川&quot;之争</td><td><a href="https://baike.baidu.com/item/%E5%BA%90%E5%B1%B1%E7%AC%AC%E5%9B%9B%E7%BA%AA%E5%86%B0%E5%B7%9D/8172452" target="_blank" rel="noopener">庐山第四纪冰川（含争议史、遗迹点、保护身份）</a></td></tr><tr><td>庐山&quot;冰川&quot;之争</td><td><a href="https://www.chinanews.com/cul/2010/11-03/2631025.shtml" target="_blank" rel="noopener">学者驳李四光：庐山第四纪冰川应是泥石流（中新网，2010）</a></td></tr><tr><td>庐山&quot;冰川&quot;之争</td><td><a href="https://baike.sogou.com/v76599090.htm" target="_blank" rel="noopener">施雅风四条论据整理（搜狗百科）</a></td></tr><tr><td>青藏铁路冻土段</td><td><a href="https://cloud.kepuchina.cn/newSearch/imgText?id=6654070544307318784" target="_blank" rel="noopener">青藏铁路：穿越冻土里程、热棒与块石路基等措施（科普中国）</a></td></tr><tr><td>青藏铁路冻土段</td><td><a href="https://www.chinanews.com/gn/2011/07-14/3183084.shtml" target="_blank" rel="noopener">青藏铁路通车运营 5 年：冻土线路整体稳定，平均厚度 38.79 m（中新网，2011）</a></td></tr><tr><td>青藏铁路冻土段</td><td><a href="https://xz.people.com.cn/BIG5/n2/2026/0623/c138901-41618627.html" target="_blank" rel="noopener">550 公里冻土禁区，安全驰骋 20 年（人民网西藏，2026）</a></td></tr><tr><td>青藏铁路冻土段</td><td><a href="http://www.bcdt.ac.cn/article/2022/1000-0240/1000-0240-2022-44-6-1784.shtml" target="_blank" rel="noopener">青藏铁路高温多年冻土区典型路基长期热稳定性研究（冰川冻土，2022）</a></td></tr><tr><td>青藏铁路冻土段</td><td><a href="http://www.gcdz.org/cn/article/pdf/preview/10117.pdf" target="_blank" rel="noopener">青藏高原多年冻土退化及铁路路基工程热稳定性（工程地质学报，2007）</a></td></tr><tr><td>桂林峰林与峰丛</td><td><a href="https://baike.baidu.com/item/%E5%96%80%E6%96%AF%E7%89%B9%E5%B3%B0%E6%9E%97/1946797" target="_blank" rel="noopener">喀斯特峰林（峰林/峰丛定义、桂林 2665 km²、11400 座石峰）</a></td></tr><tr><td>桂林峰林与峰丛</td><td><a href="https://article.xuexi.cn/articles/index.html?art_id=12420800958318976763" target="_blank" rel="noopener">桂林喀斯特：峰丛 1285 km²、峰林 1167 km²、石峰 11400 座、洞穴近 2000 个（中国地质调查局岩溶地质研究所）</a></td></tr><tr><td>桂林峰林与峰丛</td><td><a href="https://baike.baidu.com/item/%E5%8D%97%E6%96%B9%E5%96%80%E6%96%AF%E7%89%B9/15796561" target="_blank" rel="noopener">中国南方喀斯特（世界遗产构成与面积）</a></td></tr><tr><td>桂林峰林与峰丛</td><td><a href="https://dnr.yn.gov.cn/html/2022/ziranziyuanxinxi_1102/33942.html" target="_blank" rel="noopener">云南石林：350 km²、海拔 1600—2203 m、2.7 亿年演化史（云南省自然资源厅）</a></td></tr><tr><td>桂林峰林与峰丛</td><td><a href="http://www.kyb.cgs.gov.cn/dxqy/202004/t20200401_583278.html" target="_blank" rel="noopener">石林剑状石柱与溶蚀机理（中国矿业报）</a></td></tr><tr><td>黄河三角洲</td><td><a href="http://jhyqy.com.cn/article/doi/10.16028/j.1009-2722.2025.155" target="_blank" rel="noopener">1976—2024 年黄河三角洲海岸线变化分析（海洋地质前沿）</a></td></tr><tr><td>黄河三角洲</td><td><a href="https://www.geog.com.cn/CN/PDF/10.11821/xb200911007" target="_blank" rel="noopener">黄河三角洲岸线演变与利津站水沙量（地理学报，2009）</a></td></tr><tr><td>黄河三角洲</td><td><a href="https://a.xueshu.baidu.com/usercenter/paper/show?paperid=1s1q0er0tc280m709a7y0py0bc770683" target="_blank" rel="noopener">基于遥感的黄河三角洲海岸带淤蚀变化及其水沙阈值研究</a></td></tr><tr><td>黄河三角洲</td><td><a href="https://irrigate.whu.edu.cn/CN/10.12396/znsd.240233" target="_blank" rel="noopener">黄河三角洲海岸线提取及其近期时空变化格局（中国农村水利水电，2024）</a></td></tr><tr><td>黄河三角洲</td><td><a href="https://www.toutiao.com/article/7177564556745998882" target="_blank" rel="noopener">黄河故道——刁口河（东营网）</a></td></tr><tr><td>永定河冲洪积扇</td><td><a href="http://geochina.cgs.gov.cn/cn/article/pdf/preview/10.12029/gc20090507.pdf" target="_blank" rel="noopener">北京平原第四系的三维结构：永定河冲洪积扇结构与新 5 孔（中国地质）</a></td></tr><tr><td>永定河冲洪积扇</td><td><a href="http://geochina.cgs.gov.cn/fileZGDZ/journal/article/zgdz/2016/3/htm/20160327.htm" target="_blank" rel="noopener">北京平原地区第四纪地质研究新进展（中国地质）</a></td></tr><tr><td>永定河冲洪积扇</td><td><a href="https://baike.baidu.com/item/%E5%86%B2%E7%A7%AF%E6%89%87%E5%B9%B3%E5%8E%9F" target="_blank" rel="noopener">冲积扇平原（永定河扇 1000 km²、坡度 2—5°）</a></td></tr><tr><td>永定河冲洪积扇</td><td><a href="https://www.doc88.com/p-0008547885586.html" target="_blank" rel="noopener">冲积扇与洪积扇的区别（扇顶坡度 5—10°、扇缘 1—2°）</a></td></tr><tr><td>新滩滑坡与链子崖</td><td><a href="https://m.mnr.gov.cn/dt/ywbb/201812/t20181228_2383470.html" target="_blank" rel="noopener">百里峡江写沧桑：链子崖危岩体与新滩滑坡（自然资源部）</a></td></tr><tr><td>新滩滑坡与链子崖</td><td><a href="https://m.mnr.gov.cn/dt/ywbb/202410/t20241001_2869822.html" target="_blank" rel="noopener">荆山楚水韵三江：新滩滑坡与链子崖治理（自然资源部）</a></td></tr><tr><td>新滩滑坡与链子崖</td><td><a href="https://cigem.cn/auto/db/detail?db=800001&amp;rid=160217B8D3BE3DCC757A4F26270F92C1" target="_blank" rel="noopener">今日链子崖：治理与监测（中国地质环境信息网）</a></td></tr><tr><td>新滩滑坡与链子崖</td><td><a href="https://caghp.org.cn/detail/905.html" target="_blank" rel="noopener">今 日 新 三 峡：三峡库区地质灾害防治回眸（中国地质灾害防治与生态修复协会）</a></td></tr><tr><td>汾渭地堑与西安地裂缝</td><td><a href="https://html.rhhz.net/DDCLYDQDLX/html/11986.htm" target="_blank" rel="noopener">跨关中地区现今地壳垂直形变剖面（大地测量与地球动力学）</a></td></tr><tr><td>汾渭地堑与西安地裂缝</td><td><a href="https://xadfz.xa.gov.cn/xadq/stxa/63d5d8cdf8fd1c4c213b1eef.html" target="_blank" rel="noopener">渭河断陷（西安市地方志办公室）</a></td></tr><tr><td>汾渭地堑与西安地裂缝</td><td><a href="https://ytlx.whrsm.ac.cn/CN/PDF/10402" target="_blank" rel="noopener">西安地裂缝活动现状及地铁隧道建设应对措施（岩土力学）</a></td></tr><tr><td>汾渭地堑与西安地裂缝</td><td><a href="https://baike.baidu.com/view/1661404.html" target="_blank" rel="noopener">渭河地堑（构造演化与沉积厚度）</a></td></tr><tr><td>泥河湾盆地</td><td><a href="https://baike.baidu.com/item/%E9%A9%AC%E5%9C%88%E6%B2%9F%E9%81%97%E5%9D%80/7125186" target="_blank" rel="noopener">马圈沟遗址（年代、文化层、出土物、保护级别）</a></td></tr><tr><td>泥河湾盆地</td><td><a href="http://www.hbswwkg.com/2022-02/18/content_8728396.html" target="_blank" rel="noopener">马圈沟遗址 2019 年考古发掘汇报（河北省文物考古研究院）</a></td></tr><tr><td>泥河湾盆地</td><td><a href="http://ir.ivpp.ac.cn/bitstream/311034/470/1/" target="_blank" rel="noopener">泥河湾盆地马圈沟遗址化石哺乳动物及年代讨论（中科院古脊椎所）</a></td></tr><tr><td>泥河湾盆地</td><td><a href="https://news.qq.com/rain/a/20250315A05A9J00" target="_blank" rel="noopener">文化中国行：泥河湾遗址群实证我国百万年人类史（腾讯新闻，2025）</a></td></tr><tr><td>泥河湾盆地</td><td><a href="https://www.hbynet.net/html/heqing/daohang/heqingzhuanti/nhwzt/jmnhw/1579740605142241281.html" target="_blank" rel="noopener">马圈沟遗址：泥河湾盆地年代最早的文化遗址</a></td></tr><tr><td>五大连池火山群</td><td><a href="https://baike.baidu.com/item/%E4%BA%94%E5%A4%A7%E8%BF%9E%E6%B1%A0%E7%81%AB%E5%B1%B1%E6%99%AF%E8%A7%82/6978397" target="_blank" rel="noopener">五大连池火山景观（喷发时间、14 座火山、熔岩台地）</a></td></tr><tr><td>五大连池火山群</td><td><a href="https://baike.baidu.com/item/%E7%9F%B3%E6%B5%B7/5734572" target="_blank" rel="noopener">石海/翻花熔岩（形成机理、龙门石寨约 5 km²）</a></td></tr><tr><td>五大连池火山群</td><td><a href="https://q.baike.haosou.com/doc/5718482-5931209.html" target="_blank" rel="noopener">老黑山（海拔、火口尺寸、石龙延伸 17 km）</a></td></tr><tr><td>五大连池火山群</td><td><a href="https://m.baike.haosou.com/doc/6417836-6631508.html" target="_blank" rel="noopener">五大连池火山群（14 座火山、新期喷发、68.3 km²）</a></td></tr><tr><td>宣城网纹红土</td><td><a href="http://www.dsjyj.com.cn/dzdqs-data/qs/2004/2/PDF/20040204.pdf" target="_blank" rel="noopener">皖南网纹红土的粒度分布特征及古环境意义（第四纪研究，2004）</a></td></tr><tr><td>宣城网纹红土</td><td><a href="https://baike.baidu.com/item/%E7%BD%91%E7%BA%B9%E7%BA%A2%E5%9C%9F/6827575" target="_blank" rel="noopener">网纹红土（命名沿革、年代、分布与磁学特征）</a></td></tr><tr><td>宣城网纹红土</td><td><a href="http://geophy.cn/dzdqs-data/qs/2020/6/PDF/dsjyj-40-6-1441.pdf" target="_blank" rel="noopener">中国南方红土记录的中更新世气候转型及其环境效应（第四纪研究，2020）</a></td></tr><tr><td>若尔盖泥炭沼泽</td><td><a href="https://grassland.china.com.cn/2023-08/03/content_42471633.html" target="_blank" rel="noopener">若尔盖湿地国家级自然保护区（中国网·草原频道，2023）</a></td></tr><tr><td>若尔盖泥炭沼泽</td><td><a href="http://www.greentimepaper/html/2023-08/03/content_3369314.htm" target="_blank" rel="noopener">全力打造世界最美高原湿地国家名片（中国林业新闻网，2023）</a></td></tr><tr><td>若尔盖泥炭沼泽</td><td><a href="https://article.xuexi.cn/articles/index.html?art_id=4229135913367306146" target="_blank" rel="noopener">若尔盖泥炭湿地：高原上的碳库（学习强国）</a></td></tr><tr><td>若尔盖泥炭沼泽</td><td><a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B9%BF%E5%9C%B0" target="_blank" rel="noopener">若尔盖湿地（总面积、泥炭储量、水源涵养贡献）</a></td></tr><tr><td>若尔盖泥炭沼泽</td><td><a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B2%BC%E6%B3%BD/550039" target="_blank" rel="noopener">若尔盖沼泽（面积、比降、气候、泥炭厚度）</a></td></tr></tbody></table>
+<h2>底本</h2>
+<table><tbody>
+<tr><th>书名</th><td>地貌学及第四纪地质学</td></tr>
+<tr><th>作者</th><td>杜恒俭 等</td></tr>
+<tr><th>规模</th><td>389 页，17 章，111 条目录条目</td></tr>
+<tr><th>文字层</th><td>RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖（扫描件原图未做任何重压缩或替换）</td></tr>
+</tbody></table>
+<div class="warn"><b>说明：</b>书中参考文献页在原扫描件中即已截断（书内第 374 页仅存 1 页），这是原件缺页，非处理引入。
+本站实例数据不依赖该参考文献，全部另采公开来源。</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

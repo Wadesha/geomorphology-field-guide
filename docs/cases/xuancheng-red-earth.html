@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>宣城网纹红土 · 实例</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="../index.html">地貌现场手册</a>
+<div class="links"><a href="../index.html" class="">总览</a><a href="../principles.html" class="">原理</a><a href="../cases/index.html" class="on">实例</a><a href="../field.html" class="">野外判定</a><a href="../timeline.html" class="">时间轴</a><a href="../sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<div style="padding-top:22px">
+<div class="small muted"><a href="../index.html">总览</a> · <a href="index.html">实例</a> · <span class="tag"><span class="dot" style="background:#9c7a3c"></span>风化与残积</span></div>
+<h1 style="margin:.2em 0 .1em">宣城网纹红土</h1>
+<p class="lead muted" style="font-size:17px;margin:0 0 1em">南方的红土，到底是不是风吹来的</p>
+<div class="meta" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px">
+<span class="tag">风化与残积</span><span class="tag">第四章　残积物及风化壳</span><span class="tag">研究热点：成因与气候旋回解读存在分歧</span></div>
+<p>一堵红白相间的土墙。白色网纹是铁被还原淋走的痕迹，红色基质是铁被氧化的产物。它记录的是南方持续湿热风化的强度，也是李四光&quot;白条红泥&quot;命名的起点。</p>
+</div>
+<div class="layout">
+<div>
+<h2>现场能看到什么</h2><ul class="tick"><li>看&quot;网纹&quot;的形态：白色/黄白色的指状、管状、虫状条纹，交织在红色基质中 —— 这是铁质沿裂隙被还原淋失的通道。</li><li>看颜色剖面：典型网纹红土（中下部）风化最强，均质红土、弱发育网纹层次之，顶部黄棕色土最弱。</li><li>捻土感：黏重、细腻、无砂感；与北方黄土的粉质感完全不同。</li><li>注意上覆下伏关系：长江中下游常见网纹红土覆盖于红色泥砾层之上，这一接触关系是讨论年代与成因的关键。</li></ul>
+<h2>背后的原理</h2><ol class="steps"><li>红化的化学：湿热条件下，硅酸盐矿物强烈水解，碱金属与碱土金属淋失，硅部分淋失，铁铝相对富集（脱硅富铝化） → 形成以高岭石、赤铁矿、三水铝石为主的红色风化壳。</li><li>网纹的成因：干湿气候交替下氧化还原环境反复切换。还原条件下铁被还原为可溶的 Fe²⁺ 沿裂隙淋失，留下灰白色条带（纯水铝石为主）；氧化条件下铁以 Fe³⁺ 固定为赤铁矿，呈现红色。</li><li>为什么磁化率低：强风化使强磁性磁赤铁矿溶解流失或向弱磁性赤铁矿转化，因此典型网纹红土的磁化率比上覆均质红土低一个数量级 —— 磁化率在这里不能当&quot;风化强度计&quot;用。</li><li>风成说 vs 水成说：粒度证据（粒径细、分布均匀、10—50 μm 富集、双峰曲线、与黄土众数粒径 15—30 μm 吻合）支持风成特性；但作者同时强调，不能因风成特性就简单称其为风积成因 —— 它是&quot;原始风成沉积 + 后期强烈风化&quot;的双重产物。</li><li>与黄土的对仗：北方黄土—古土壤序列记录干冷—暖湿旋回；南方红土—网纹记录的是长期湿热下的风化强度变化。两者用的不是同一套&quot;气候语法&quot;。</li><li>为什么不产出多旋回信息：高分辨率粒度分析显示，粒度分布无法提供多个&quot;沉积—成土&quot;旋回的证据，中值粒径曲线与前人结果亦有差异 —— 说明红土记录的分辨率远低于黄土。</li></ol>
+<h2>这些数字在说什么</h2><table><tbody><tr><th>粒径 10—50 μm 富集</th><td>这是判别风成 vs 水成的关键指纹：风尘的&quot;基本粒组&quot;</td></tr><tr><th>磁化率失效</th><td>同一指标在黄土里是温度计，在红土里却失效 —— 指标永远要问&quot;它的物理机制是什么&quot;</td></tr><tr><th>20 m 对应近百万年</th><td>沉积—风化速率极慢，红土是&quot;时间被压缩得最狠&quot;的第四纪记录</td></tr><tr><th>为什么重要</th><td>它是长江流域第四纪地层的重要标志层，也是&quot;南北对照&quot;这条研究路线的南方支点</td></tr></tbody></table>
+<h2>实测数据</h2><table><tbody><tr><th>剖面厚度</th><td><b>网纹红土一般厚约 20 m 左右（一说 20—30 m）；向阳剖面采样深至 952 cm</b><br><span class="small muted">远薄于北方黄土，但形成年代古老</span></td></tr><tr><th>粒度上限</th><td><b>全剖面未见 &gt;2 mm 砾石；最大粒径未超过 200 μm；&gt;100 μm 颗粒含量微不足道</b><br><span class="small muted">砂粒（&gt;63 μm）平均仅 0.35%</span></td></tr><tr><th>&quot;风尘基本粒组&quot;</th><td><b>10—50 μm 粒级平均含量 35.06%，变化范围 29.15%—44.88%</b><br><span class="small muted">与北方黄土可比，是风成说的核心证据</span></td></tr><tr><th>粘粒含量</th><td><b>&lt;2 μm 平均 29.56%（21.77%—34.67%）</b><br><span class="small muted">次众粒级，反映强风化</span></td></tr><tr><th>中值粒径</th><td><b>平均 5.53 μm</b><br><span class="small muted">颗粒极细</span></td></tr><tr><th>风化强度指标</th><td><b>强酸性，pH 4.4—5.9；游离铁（Fed）平均 32.14 mg/g，最高 48.57 mg/g</b><br><span class="small muted">次生氧化铁胶结性强，制样分散困难</span></td></tr><tr><th>成岩与年代</th><td><b>李四光 1937 年《冰期之庐山》中命名&quot;白条红泥&quot;；据磁性地层研究，形成年代约 0.9—0.40 Ma（中更新世早中期）</b><br><span class="small muted">宣城剖面网纹红土测年在距今 400 ka 以上</span></td></tr><tr><th>分布</th><td><b>长江以南、横断山脉以东广泛分布，北至长江沿岸，西至成都平原与云南，南达海南岛；东部出露海拔仅几十米，西部可达 3000 余米</b><br><span class="small muted">长江流域第四纪地层的重要标志层</span></td></tr></tbody></table>
+<h2>争议与口径</h2><div class="warn">①成因之争：早期多认为冲、洪积成因，后有研究主张风积成因（杨达源、Hu 等、Xiong 等），亦有研究指出九江具风成特性而泰和具冲积特性 —— 结论因地点而异；②是否存在多个&quot;沉积—成土&quot;旋回（可与黄土 S8 以上对比）存在分歧，2004 年高分辨率粒度研究不支持多旋回说；③年代口径有 0.9—0.40 Ma 与&quot;400 ka 以上&quot;两种表述。本站并列。</div>
+<h2>来源</h2><ul class="src"><li><a href="http://www.dsjyj.com.cn/dzdqs-data/qs/2004/2/PDF/20040204.pdf" target="_blank" rel="noopener">皖南网纹红土的粒度分布特征及古环境意义（第四纪研究，2004）</a></li><li><a href="https://baike.baidu.com/item/%E7%BD%91%E7%BA%B9%E7%BA%A2%E5%9C%9F/6827575" target="_blank" rel="noopener">网纹红土（命名沿革、年代、分布与磁学特征）</a></li><li><a href="http://geophy.cn/dzdqs-data/qs/2020/6/PDF/dsjyj-40-6-1441.pdf" target="_blank" rel="noopener">中国南方红土记录的中更新世气候转型及其环境效应（第四纪研究，2020）</a></li></ul>
+</div>
+<aside>
+<div class="box"><h4>位置</h4><p style="margin:0;font-size:14px">安徽省宣城市向阳镇夏村（向阳剖面）</p>
+<p class="small muted" style="margin:.5em 0 0">30°52′24″N，118°51′55″E</p></div>
+<div class="box"><h4>可达性</h4><p style="margin:0;font-size:14px">剖面位于砖瓦厂取土场露头，需引路；同类红土在皖、苏、浙、赣、粤广泛出露，路边常见。</p></div>
+<div class="box"><h4>状态</h4><p style="margin:0;font-size:14px">研究热点：成因与气候旋回解读存在分歧</p></div>
+<div class="box"><h4>相关实例</h4><ul style="margin:0;padding-left:18px;font-size:14px"><li><a href="lushan-glacier-debate.html">庐山&quot;冰川&quot;之争</a></li><li><a href="luochuan-loess.html">洛川黄土剖面</a></li></ul></div>
+<div class="box"><h4>原书对应</h4><p style="margin:0;font-size:14px">第四章　残积物及风化壳</p></div>
+</aside>
+</div>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+
+</body></html>

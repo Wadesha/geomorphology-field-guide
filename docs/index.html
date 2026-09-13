@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地貌现场手册 · 总览</title>
+<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
+  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+html[data-theme=dark]{
+  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
+  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
+  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
+nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
+nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
+nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
+nav .spacer{flex:1}
+.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
+  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
+h1{font-size:32px;letter-spacing:.01em}
+h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-top:1.6em}
+p{margin:.7em 0}
+small,.small{font-size:13px;color:var(--muted)}
+.muted{color:var(--muted)}
+.hero{padding:52px 0 26px}
+.hero h1{font-size:38px;max-width:22em}
+.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:26px;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tbody tr:hover{background:var(--panel2)}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--panel2);white-space:nowrap}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
+  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
+a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
+a.case h3{margin:.2em 0 .3em;font-size:17.5px}
+a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
+aside{position:sticky;top:70px}
+aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
+ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
+ol.steps li:last-child{border-bottom:0}
+ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
+  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
+  justify-content:center;font-size:13px;color:var(--muted)}
+ul.tick{list-style:none;padding:0;margin:.5em 0}
+ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
+ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
+ul.tick li:last-child{border-bottom:0}
+.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.kv dt{color:var(--muted);white-space:nowrap}
+.kv dd{margin:0}
+.src{font-size:13px;color:var(--muted)}
+.src li{margin:.35em 0;word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
+input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
+  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
+.tl{position:relative;padding-left:22px}
+.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl .it{position:relative;padding:0 0 18px 8px}
+.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--accent)}
+.tl .it b{font-size:15px}
+.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
+.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+</style></head><body>
+<script>
+(function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
+else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
+</script>
+<nav><div class="wrap">
+<a class="brand" href="index.html">地貌现场手册</a>
+<div class="links"><a href="index.html" class="on">总览</a><a href="principles.html" class="">原理</a><a href="cases/index.html" class="">实例</a><a href="field.html" class="">野外判定</a><a href="timeline.html" class="">时间轴</a><a href="sources.html" class="">来源</a></div><div class="spacer"></div>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button>
+</div></nav>
+<main class="wrap">
+<section class="hero">
+<h1>把一本书，拆成 14 个能去的地方</h1>
+<p class="lead">《地貌学及第四纪地质学》按学科体系写成：先基本问题，后分论各营力，再讲中国第四纪与研究方法。
+这套结构适合上课，不适合"我要去看"。本站把它<b>重构</b>为三层：营力原理（为什么会这样）→ 现存实例（去哪里看、看什么数字）→ 野外判定（怎么认、怎么防认错）。
+每个实例都给出可核对的实测数据与出处，冲突数据并列不合并。</p>
+<div class="stats"><div class="stat"><b>17</b><span>原书章数</span></div><div class="stat"><b>11</b><span>营力系统</span></div><div class="stat"><b>14</b><span>现存实例</span></div><div class="stat"><b>6</b><span>易混淆对照</span></div><div class="stat"><b>15</b><span>时间锚点</span></div></div>
+</section>
+
+<h2 id="how">重构逻辑：从章节顺序到问题顺序</h2>
+<div class="grid g3">
+<div class="card"><h3>① 原理层</h3><p class="muted">把 17 章压缩为 11 类营力系统，每类回答四个问题：控制变量是什么、作用过程如何推进、留下什么产物、野外怎么认。</p></div>
+<div class="card"><h3>② 实例层</h3><p class="muted">14 个中国境内现存的、可到达的地点。每处给出坐标、实测数字、现场观察清单、成因机制链与争议点。</p></div>
+<div class="card"><h3>③ 判定层</h3><p class="muted">把最容易被认错的 6 组地貌/堆积物做成对照表 —— 冰碛还是泥石流、风成还是水成、构造沉降还是人为沉降。</p></div>
+</div>
+
+<h2>原书章节 → 本站模块</h2>
+<table><thead><tr><th>原书位置</th><th>本站对应</th><th></th></tr></thead><tbody><tr><td>第一、二、三章 概论与基本问题</td><td>原理页「底层框架」</td><td><a href="principles.html">打开 →</a></td></tr><tr><td>第四章 残积物及风化壳</td><td>风化与残积 → 宣城网纹红土</td><td><a href="cases/xuancheng-red-earth.html">打开 →</a></td></tr><tr><td>第五章 斜坡地貌</td><td>斜坡与重力 → 新滩滑坡</td><td><a href="cases/xintan-landslide.html">打开 →</a></td></tr><tr><td>第六章 流水地貌</td><td>流水 → 永定河冲洪积扇</td><td><a href="cases/yongdinghe-fan.html">打开 →</a></td></tr><tr><td>第七章 岩溶地貌</td><td>岩溶 → 桂林峰林</td><td><a href="cases/guilin-fenglin.html">打开 →</a></td></tr><tr><td>第八章 冰川地貌</td><td>冰川 → 海螺沟 + 庐山之争</td><td><a href="cases/hailuogou-glacier.html">打开 →</a></td></tr><tr><td>第九章 冻土地貌</td><td>冻土 → 青藏铁路</td><td><a href="cases/qinghai-tibet-permafrost.html">打开 →</a></td></tr><tr><td>第十章 风成地貌和黄土</td><td>风沙与黄土 → 巴丹吉林 + 洛川</td><td><a href="cases/luochuan-loess.html">打开 →</a></td></tr><tr><td>第十一章 海岸地貌</td><td>海岸 → 黄河三角洲</td><td><a href="cases/yellow-river-delta.html">打开 →</a></td></tr><tr><td>第十二章 湖泊、沼泽</td><td>湖泊与沼泽 → 若尔盖</td><td><a href="cases/zoige-peatland.html">打开 →</a></td></tr><tr><td>第十三、十四章 构造与新构造</td><td>构造 → 汾渭地堑</td><td><a href="cases/fenwei-graben.html">打开 →</a></td></tr><tr><td>第十五、十六章 中国第四纪</td><td>第四纪 → 泥河湾 / 五大连池 / 网纹红土</td><td><a href="cases/nihewan.html">打开 →</a></td></tr><tr><td>第十七章 研究方法</td><td>野外判定页（识别清单 + 易混对照表）</td><td><a href="field.html">打开 →</a></td></tr></tbody></table>
+
+<h2>营力 × 实例</h2>
+<table><thead><tr><th>营力系统</th><th>原书章节</th><th>控制变量</th><th>实例</th></tr></thead><tbody>
+<tr><td><span class="dot" style="background:#9c7a3c"></span>风化与残积</td><td class="small">第四章　残积物及风化壳</td><td class="small">岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。</td><td class="small"><a href="cases/xuancheng-red-earth.html">宣城网纹红土</a></td></tr><tr><td><span class="dot" style="background:#a8623c"></span>斜坡与重力</td><td class="small">第五章　斜坡地貌与斜坡堆积物</td><td class="small">一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。控制变量是坡度、岩土强度、水。</td><td class="small"><a href="cases/xintan-landslide.html">新滩滑坡与链子崖</a></td></tr><tr><td><span class="dot" style="background:#3d7fa6"></span>流水</td><td class="small">第六章　流水地貌及其堆积物</td><td class="small">暂时性流水（洪流）与常年性河流。控制变量是流量、比降、含沙量、基面。</td><td class="small"><a href="cases/yongdinghe-fan.html">永定河冲洪积扇</a></td></tr><tr><td><span class="dot" style="background:#4a8f6e"></span>岩溶</td><td class="small">第七章　岩溶地貌及岩溶堆积物</td><td class="small">水对可溶岩的化学溶蚀。控制变量是岩性纯度与厚度、水的溶蚀力、透水性、流动性。</td><td class="small"><a href="cases/guilin-fenglin.html">桂林峰林与峰丛</a></td></tr><tr><td><span class="dot" style="background:#5b7fb5"></span>冰川</td><td class="small">第八章　冰川地貌与冰川堆积物</td><td class="small">冰的积累、流动与消融。控制变量是积累区面积、气温（平衡线高度）、地形。</td><td class="small"><a href="cases/hailuogou-glacier.html">海螺沟冰川</a>、<a href="cases/lushan-glacier-debate.html">庐山&quot;冰川&quot;之争</a></td></tr><tr><td><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘</td><td class="small">第九章　冻土地貌</td><td class="small">冻融交替。控制变量是年均地温、含冰量、岩性、活动层厚度。</td><td class="small"><a href="cases/qinghai-tibet-permafrost.html">青藏铁路冻土段</a></td></tr><tr><td><span class="dot" style="background:#b08a3e"></span>风沙与黄土</td><td class="small">第十章　风成地貌和黄土</td><td class="small">风的吹扬、搬运与堆积。控制变量是风速、起沙条件、物源、植被覆盖。</td><td class="small"><a href="cases/luochuan-loess.html">洛川黄土剖面</a>、<a href="cases/badain-jaran.html">巴丹吉林沙漠沙山</a></td></tr><tr><td><span class="dot" style="background:#3f8f9c"></span>海岸与河口</td><td class="small">第十一章　海岸地貌及其堆积物</td><td class="small">波浪、潮流与河流共同作用。控制变量是波浪能、潮差、来沙量。</td><td class="small"><a href="cases/yellow-river-delta.html">黄河三角洲</a></td></tr><tr><td><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</td><td class="small">第十二章　湖泊、沼泽及其堆积物</td><td class="small">静水环境沉积与有机质积累。控制变量是水位、物源、温度（分解速率）。</td><td class="small"><a href="cases/zoige-peatland.html">若尔盖泥炭沼泽</a></td></tr><tr><td><span class="dot" style="background:#8f5f7a"></span>构造与新构造</td><td class="small">第十三、十四章</td><td class="small">内力给出舞台。控制变量是构造运动的方向与速率、岩性构造格局。</td><td class="small"><a href="cases/fenwei-graben.html">汾渭地堑与西安地裂缝</a></td></tr><tr><td><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</td><td class="small">第十五、十六章</td><td class="small">时间与气候。控制变量是轨道尺度气候旋回、区域构造、沉积保存条件。</td><td class="small"><a href="cases/nihewan.html">泥河湾盆地</a>、<a href="cases/wudalianchi-volcano.html">五大连池火山群</a></td></tr>
+</tbody></table>
+
+<h2 id="cases">全部实例</h2>
+<input class="f" id="q" placeholder="输入关键词或地点筛选…">
+<select class="f" id="fa"><option value="">全部营力</option><option value="weathering">风化与残积</option><option value="slope">斜坡与重力</option><option value="fluvial">流水</option><option value="karst">岩溶</option><option value="glacial">冰川</option><option value="periglacial">冻土与冰缘</option><option value="aeolian">风沙与黄土</option><option value="coastal">海岸与河口</option><option value="lacustrine">湖泊与沼泽</option><option value="tectonic">构造与新构造</option><option value="quaternary">第四纪地层与事件</option></select>
+<div class="grid g3" id="cl"><a class="case" href="cases/luochuan-loess.html" data-agent="aeolian" data-name="洛川黄土剖面">
+<h3>洛川黄土剖面</h3>
+<div class="meta"><span class="dot" style="background:#b08a3e"></span>风沙与黄土<span>·</span><span>陕西省延安市洛川县，黄土高原中部</span></div>
+<p>黄土高原中部的&quot;气候磁带机&quot;</p></a><a class="case" href="cases/badain-jaran.html" data-agent="aeolian" data-name="巴丹吉林沙漠沙山">
+<h3>巴丹吉林沙漠沙山</h3>
+<div class="meta"><span class="dot" style="background:#b08a3e"></span>风沙与黄土<span>·</span><span>内蒙古自治区阿拉善右旗，雅布赖山以西、北大山</span></div>
+<p>世界最高的固定沙丘与它的 144 个湖</p></a><a class="case" href="cases/hailuogou-glacier.html" data-agent="glacial" data-name="海螺沟冰川">
+<h3>海螺沟冰川</h3>
+<div class="meta"><span class="dot" style="background:#5b7fb5"></span>冰川<span>·</span><span>四川省甘孜州泸定县，贡嘎山东坡</span></div>
+<p>一条正在快速后退的海洋型冰川</p></a><a class="case" href="cases/lushan-glacier-debate.html" data-agent="glacial" data-name="庐山&quot;冰川&quot;之争">
+<h3>庐山&quot;冰川&quot;之争</h3>
+<div class="meta"><span class="dot" style="background:#5b7fb5"></span>冰川<span>·</span><span>江西省九江市庐山（牯岭海拔 1165 m）</span></div>
+<p>中国地学史上最长的一次误判还是正解？</p></a><a class="case" href="cases/qinghai-tibet-permafrost.html" data-agent="periglacial" data-name="青藏铁路冻土段">
+<h3>青藏铁路冻土段</h3>
+<div class="meta"><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘<span>·</span><span>青海格尔木至西藏拉萨，穿越可可西里、风火山、</span></div>
+<p>把&quot;会呼吸的地基&quot;钉住的 550 公里</p></a><a class="case" href="cases/guilin-fenglin.html" data-agent="karst" data-name="桂林峰林与峰丛">
+<h3>桂林峰林与峰丛</h3>
+<div class="meta"><span class="dot" style="background:#4a8f6e"></span>岩溶<span>·</span><span>广西壮族自治区桂林市，漓江流域</span></div>
+<p>峰林与峰丛的分界，其实是地下水位的分界</p></a><a class="case" href="cases/yellow-river-delta.html" data-agent="coastal" data-name="黄河三角洲">
+<h3>黄河三角洲</h3>
+<div class="meta"><span class="dot" style="background:#3f8f9c"></span>海岸与河口<span>·</span><span>山东省东营市，黄河入渤海处</span></div>
+<p>来沙一断，海岸线立刻改口</p></a><a class="case" href="cases/yongdinghe-fan.html" data-agent="fluvial" data-name="永定河冲洪积扇">
+<h3>永定河冲洪积扇</h3>
+<div class="meta"><span class="dot" style="background:#3d7fa6"></span>流水<span>·</span><span>北京市西部至东南部，扇顶在石景山</span></div>
+<p>北京城就建在一个扇面上</p></a><a class="case" href="cases/xintan-landslide.html" data-agent="slope" data-name="新滩滑坡与链子崖">
+<h3>新滩滑坡与链子崖</h3>
+<div class="meta"><span class="dot" style="background:#a8623c"></span>斜坡与重力<span>·</span><span>湖北省秭归县（今屈原镇）长江北岸新滩、南岸链</span></div>
+<p>3000 万方，一夜之间把一座 900 年的镇推进长江</p></a><a class="case" href="cases/fenwei-graben.html" data-agent="tectonic" data-name="汾渭地堑与西安地裂缝">
+<h3>汾渭地堑与西安地裂缝</h3>
+<div class="meta"><span class="dot" style="background:#8f5f7a"></span>构造与新构造<span>·</span><span>陕西关中平原（渭河盆地）及周边汾河谷地</span></div>
+<p>内力给出的舞台，正在以毫米每年改写</p></a><a class="case" href="cases/nihewan.html" data-agent="quaternary" data-name="泥河湾盆地">
+<h3>泥河湾盆地</h3>
+<div class="meta"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件<span>·</span><span>河北省张家口市阳原县大田洼乡，桑干河南岸</span></div>
+<p>东亚最早的人类活动面，与它下面的 176 万年</p></a><a class="case" href="cases/wudalianchi-volcano.html" data-agent="quaternary" data-name="五大连池火山群">
+<h3>五大连池火山群</h3>
+<div class="meta"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件<span>·</span><span>黑龙江省黑河市五大连池市</span></div>
+<p>300 年前的一次喷发，把地貌过程按下了快进键</p></a><a class="case" href="cases/xuancheng-red-earth.html" data-agent="weathering" data-name="宣城网纹红土">
+<h3>宣城网纹红土</h3>
+<div class="meta"><span class="dot" style="background:#9c7a3c"></span>风化与残积<span>·</span><span>安徽省宣城市向阳镇夏村（向阳剖面）</span></div>
+<p>南方的红土，到底是不是风吹来的</p></a><a class="case" href="cases/zoige-peatland.html" data-agent="lacustrine" data-name="若尔盖泥炭沼泽">
+<h3>若尔盖泥炭沼泽</h3>
+<div class="meta"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽<span>·</span><span>四川省阿坝州若尔盖县、红原县一带，青藏高原东</span></div>
+<p>每十年长一厘米的高原&quot;固体水库&quot;</p></a></div>
+<p class="small" id="none" style="display:none">没有匹配的实例。</p>
+</main>
+<footer><div class="wrap">
+<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
+实例数据来自公开来源，逐条标注出处。</p>
+<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
+</div></footer>
+<script>
+var q=document.getElementById('q'),fa=document.getElementById('fa'),
+cs=[].slice.call(document.querySelectorAll('#cl a.case')),none=document.getElementById('none');
+function run(){var k=q.value.trim().toLowerCase(),a=fa.value,n=0;
+cs.forEach(function(el){var ok=(!k||el.textContent.toLowerCase().includes(k))&&(!a||el.dataset.agent===a);
+el.style.display=ok?'':'none';if(ok)n++;});none.style.display=n?'none':'';}
+q.addEventListener('input',run);fa.addEventListener('change',run);
+</script>
+</body></html>
