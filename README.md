@@ -32,6 +32,17 @@ python build_site.py     # 输出到 ./docs
 
 数据源与页面结构全部在 `site_data.py`，改内容不需要动生成器。
 
+## 发布状态（GitHub Pages）
+
+**已发布：https://wadesha.github.io/geomorphology-field-guide/**
+仓库：https://github.com/Wadesha/geomorphology-field-guide （Pages 源：`main` 分支 `/docs` 目录，已含 `.nojekyll`）
+
+> 首次发布说明：本机出口代理拦截 git 推送（`git push` 的 receive-pack POST 被代理 502，
+> 直连 443 也不通），首个提交改经 GitHub API（Git Data API：blobs → tree → commit → refs）写入远端，
+> 文件内容与本地完全一致，但**远端与本地 git 历史不同源**。
+> 之后在能连 GitHub 的环境里同步一次即可接续推送：
+> `git fetch origin && git reset --hard origin/main`（内容一致，重置无数据损失）。
+
 ## 底本
 
 杜恒俭 等《地貌学及第四纪地质学》扫描本 389 页，已做 OCR 隐藏文字层（RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，原图未重压缩）与 111 条分级书签。原扫描件书末参考文献页本身缺页（书内 374 页仅存 1 页），为原件问题。
