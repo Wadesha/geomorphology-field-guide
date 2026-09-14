@@ -14,8 +14,8 @@ OUT = os.path.join(ROOT, 'docs')
 AGENT_D = {a[0]: a for a in AGENTS}
 E = html.escape
 
-MODULES = [('home', '总览'), ('prins', '原理'), ('cases', '实例'),
-           ('field', '判定'), ('time', '时间轴'), ('srcs', '来源')]
+MODULES = [('cases', '实例'), ('prins', '原理'), ('field', '判定'),
+           ('time', '时间轴'), ('srcs', '来源'), ('home', '总览')]
 
 # 每处实例的卡片短名（顶排卡片空间有限，只放 2—4 字）
 SHORT = {
@@ -97,10 +97,10 @@ document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmth
 var CASES=%s;
 function route(){
   var h=decodeURIComponent(location.hash.replace(/^#\\/?/,''));
-  var view='home',caso=null;
+  var view='cases',caso=null;
   if(h.slice(0,2)==='c/'){view='cases';caso=h.slice(2);}
   else if(h) view=h;
-  if(!document.getElementById('v-'+view)) view='home';
+  if(!document.getElementById('v-'+view)) view='cases';
   if(view==='cases'&&(caso===null||CASES.indexOf(caso)<0)) caso=CASES[0];
   var vs=document.querySelectorAll('.view');
   for(var i=0;i<vs.length;i++) vs[i].classList.remove('on');
@@ -130,7 +130,7 @@ def json_dumps(arr):
 def shell(body):
     mod_cards = ''
     for k, n in MODULES:
-        cls = ' class="on"' if k == 'home' else ''
+        cls = ' class="on"' if k == 'cases' else ''
         dest = 'c/' if k == 'cases' else k
         mod_cards += (f'<button data-v="{k}"{cls} '
                       f'onclick="location.hash=\'{dest}\'">{E(n)}</button>')
@@ -147,7 +147,7 @@ def shell(body):
 <div class="topbar"><span class="brand">地貌现场手册</span><span class="spacer"></span>
 <button class="tg" onclick="toggleTheme()">明 / 暗</button></div>
 <div class="cards" data-k="mod">{mod_cards}</div>
-<div class="cards sub" data-k="case" id="casebar" style="display:none">{case_cards}</div>
+<div class="cards sub" data-k="case" id="casebar" style="display:flex">{case_cards}</div>
 </nav>
 <main>{body}</main>
 <footer><div class="wrap">
@@ -176,16 +176,11 @@ def body_home():
     return f'''
 <section class="hero wrap">
 <h1>中国大地上，{len(CASES)} 处能亲手核对的现场</h1>
-<p class="lead">这是一份给实地用的地貌指南：把中国常见的地貌现象归成 {len(AGENTS)} 类营力，每类落到几处现存、可到达的具体地点；每处都给出坐标与可达性、现场观察要点、成因机制、实测数字与来源。本站的营力框架最初整理自一部地貌学教材的章节体系，实例与数据全部另采公开来源。</p>
+<p class="lead">这是一份给实地用的地貌指南：把中国常见的地貌现象归成 {len(AGENTS)} 类营力，每类落到几处现存、可到达的具体地点；每处都给出坐标与可达性、现场观察要点、成因机制、实测数字与来源，实例与数据全部来自公开来源。</p>
 <p>{len(CASES)} 处地点从黄土高原铺到南海之滨、从青藏冻土带到东北火山群；所有实测数字出自 {nsrc} 条公开来源，逐条标注出处；同一指标的多个口径并列呈现，不换算、不取单值；查不到来源的数字一概不写。</p>
 </section>
 
 <div class="wrap">
-<h2 id="how">怎么用这个站</h2>
-<p>第一层是原理。地貌的成因被归纳为 {len(AGENTS)} 类营力系统，从风化、斜坡、流水一路到构造运动与第四纪地层。每一类只回答四件事：控制变量是什么、作用过程怎么推进、留下什么产物、野外凭什么认出来。</p>
-<p>第二层是实例。{len(CASES)} 处中国境内现存、可到达的地点。点顶部「实例」卡片，再点下面一排地点短名卡片，就能在 {len(CASES)} 处现场之间随时切换。每一处都给出坐标与可达性、现场观察要点、成因机制链、实测数字与它们说明的问题，以及存争议处的双方口径。</p>
-<p>第三层是判定。把野外最容易认错的 {len(CONFUSIONS)} 组地貌与堆积物摊开对照——冰碛还是泥石流、冲积扇还是洪积扇、峰林还是峰丛，各自凭什么定案。再往上，一条时间轴把这些地点放回 {len(TIMELINE)} 个锚点，看出它们不是同时形成的。</p>
-
 <h2>{len(AGENTS)} 类营力与它们的实例</h2>
 {agents}
 <p class="plain">说明：营力分类是为方便查阅而作的归纳，同一处地貌常是几种营力接力或叠加的结果，分类不构成对成因的排他判断。</p>

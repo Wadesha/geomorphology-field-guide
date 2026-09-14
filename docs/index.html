@@ -59,22 +59,17 @@ footer p{text-indent:0;line-height:1.6}
 <nav>
 <div class="topbar"><span class="brand">地貌现场手册</span><span class="spacer"></span>
 <button class="tg" onclick="toggleTheme()">明 / 暗</button></div>
-<div class="cards" data-k="mod"><button data-v="home" class="on" onclick="location.hash='home'">总览</button><button data-v="prins" onclick="location.hash='prins'">原理</button><button data-v="cases" onclick="location.hash='c/'">实例</button><button data-v="field" onclick="location.hash='field'">判定</button><button data-v="time" onclick="location.hash='time'">时间轴</button><button data-v="srcs" onclick="location.hash='srcs'">来源</button></div>
-<div class="cards sub" data-k="case" id="casebar" style="display:none"><button data-c="luochuan-loess" onclick="location.hash='c/luochuan-loess'">洛川</button><button data-c="badain-jaran" onclick="location.hash='c/badain-jaran'">巴丹吉林</button><button data-c="hailuogou-glacier" onclick="location.hash='c/hailuogou-glacier'">海螺沟</button><button data-c="lushan-glacier-debate" onclick="location.hash='c/lushan-glacier-debate'">庐山之争</button><button data-c="qinghai-tibet-permafrost" onclick="location.hash='c/qinghai-tibet-permafrost'">青藏冻土</button><button data-c="guilin-fenglin" onclick="location.hash='c/guilin-fenglin'">桂林</button><button data-c="yellow-river-delta" onclick="location.hash='c/yellow-river-delta'">黄河口</button><button data-c="yongdinghe-fan" onclick="location.hash='c/yongdinghe-fan'">永定河扇</button><button data-c="xintan-landslide" onclick="location.hash='c/xintan-landslide'">新滩滑坡</button><button data-c="fenwei-graben" onclick="location.hash='c/fenwei-graben'">汾渭地堑</button><button data-c="nihewan" onclick="location.hash='c/nihewan'">泥河湾</button><button data-c="wudalianchi-volcano" onclick="location.hash='c/wudalianchi-volcano'">五大连池</button><button data-c="xuancheng-red-earth" onclick="location.hash='c/xuancheng-red-earth'">网纹红土</button><button data-c="zoige-peatland" onclick="location.hash='c/zoige-peatland'">若尔盖</button></div>
+<div class="cards" data-k="mod"><button data-v="cases" class="on" onclick="location.hash='c/'">实例</button><button data-v="prins" onclick="location.hash='prins'">原理</button><button data-v="field" onclick="location.hash='field'">判定</button><button data-v="time" onclick="location.hash='time'">时间轴</button><button data-v="srcs" onclick="location.hash='srcs'">来源</button><button data-v="home" onclick="location.hash='home'">总览</button></div>
+<div class="cards sub" data-k="case" id="casebar" style="display:flex"><button data-c="luochuan-loess" onclick="location.hash='c/luochuan-loess'">洛川</button><button data-c="badain-jaran" onclick="location.hash='c/badain-jaran'">巴丹吉林</button><button data-c="hailuogou-glacier" onclick="location.hash='c/hailuogou-glacier'">海螺沟</button><button data-c="lushan-glacier-debate" onclick="location.hash='c/lushan-glacier-debate'">庐山之争</button><button data-c="qinghai-tibet-permafrost" onclick="location.hash='c/qinghai-tibet-permafrost'">青藏冻土</button><button data-c="guilin-fenglin" onclick="location.hash='c/guilin-fenglin'">桂林</button><button data-c="yellow-river-delta" onclick="location.hash='c/yellow-river-delta'">黄河口</button><button data-c="yongdinghe-fan" onclick="location.hash='c/yongdinghe-fan'">永定河扇</button><button data-c="xintan-landslide" onclick="location.hash='c/xintan-landslide'">新滩滑坡</button><button data-c="fenwei-graben" onclick="location.hash='c/fenwei-graben'">汾渭地堑</button><button data-c="nihewan" onclick="location.hash='c/nihewan'">泥河湾</button><button data-c="wudalianchi-volcano" onclick="location.hash='c/wudalianchi-volcano'">五大连池</button><button data-c="xuancheng-red-earth" onclick="location.hash='c/xuancheng-red-earth'">网纹红土</button><button data-c="zoige-peatland" onclick="location.hash='c/zoige-peatland'">若尔盖</button></div>
 </nav>
 <main><section class="view" id="v-home">
 <section class="hero wrap">
 <h1>中国大地上，14 处能亲手核对的现场</h1>
-<p class="lead">这是一份给实地用的地貌指南：把中国常见的地貌现象归成 11 类营力，每类落到几处现存、可到达的具体地点；每处都给出坐标与可达性、现场观察要点、成因机制、实测数字与来源。本站的营力框架最初整理自一部地貌学教材的章节体系，实例与数据全部另采公开来源。</p>
+<p class="lead">这是一份给实地用的地貌指南：把中国常见的地貌现象归成 11 类营力，每类落到几处现存、可到达的具体地点；每处都给出坐标与可达性、现场观察要点、成因机制、实测数字与来源，实例与数据全部来自公开来源。</p>
 <p>14 处地点从黄土高原铺到南海之滨、从青藏冻土带到东北火山群；所有实测数字出自 60 条公开来源，逐条标注出处；同一指标的多个口径并列呈现，不换算、不取单值；查不到来源的数字一概不写。</p>
 </section>
 
 <div class="wrap">
-<h2 id="how">怎么用这个站</h2>
-<p>第一层是原理。地貌的成因被归纳为 11 类营力系统，从风化、斜坡、流水一路到构造运动与第四纪地层。每一类只回答四件事：控制变量是什么、作用过程怎么推进、留下什么产物、野外凭什么认出来。</p>
-<p>第二层是实例。14 处中国境内现存、可到达的地点。点顶部「实例」卡片，再点下面一排地点短名卡片，就能在 14 处现场之间随时切换。每一处都给出坐标与可达性、现场观察要点、成因机制链、实测数字与它们说明的问题，以及存争议处的双方口径。</p>
-<p>第三层是判定。把野外最容易认错的 6 组地貌与堆积物摊开对照——冰碛还是泥石流、冲积扇还是洪积扇、峰林还是峰丛，各自凭什么定案。再往上，一条时间轴把这些地点放回 15 个锚点，看出它们不是同时形成的。</p>
-
 <h2>11 类营力与它们的实例</h2>
 <h3>风化与残积</h3>
 <p>岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。全国范围内归入这一类的实例有<a href="#c/xuancheng-red-earth">网纹红土</a>。</p>
@@ -515,10 +510,10 @@ document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmth
 var CASES=["luochuan-loess","badain-jaran","hailuogou-glacier","lushan-glacier-debate","qinghai-tibet-permafrost","guilin-fenglin","yellow-river-delta","yongdinghe-fan","xintan-landslide","fenwei-graben","nihewan","wudalianchi-volcano","xuancheng-red-earth","zoige-peatland"];
 function route(){
   var h=decodeURIComponent(location.hash.replace(/^#\/?/,''));
-  var view='home',caso=null;
+  var view='cases',caso=null;
   if(h.slice(0,2)==='c/'){view='cases';caso=h.slice(2);}
   else if(h) view=h;
-  if(!document.getElementById('v-'+view)) view='home';
+  if(!document.getElementById('v-'+view)) view='cases';
   if(view==='cases'&&(caso===null||CASES.indexOf(caso)<0)) caso=CASES[0];
   var vs=document.querySelectorAll('.view');
   for(var i=0;i<vs.length;i++) vs[i].classList.remove('on');
