@@ -1,193 +1,540 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>地貌现场手册 · 总览</title>
-<meta name="description" content="基于《地貌学及第四纪地质学》（杜恒俭 等）重构的地貌学现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
+<title>地貌现场手册</title>
+<meta name="description" content="地貌现场手册：11 类营力原理 + 14 个中国现存实例 + 野外判定对照。">
 <style>
 *{box-sizing:border-box}
 :root{
-  --bg:#fbfaf7; --panel:#ffffff; --panel2:#f5f2ec; --ink:#23201c; --muted:#6b6459;
-  --line:#e6e1d7; --line2:#d8d2c5; --accent:#8a6d3b; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  --bg:#fbfaf7; --panel:#f6f3ed; --ink:#23201c; --muted:#6b6459; --line:#e3ddd1;
+  --rule:#d3cbbd; --accent:#8a6d3b; --accent-soft:#f1ead9;
 }
 html[data-theme=dark]{
-  --bg:#15171a; --panel:#1c1f23; --panel2:#22262b; --ink:#e9e6e0; --muted:#9b948a;
-  --line:#2d3137; --line2:#3a3f46; --accent:#c9a86a; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  --bg:#15171a; --panel:#1e2126; --ink:#e9e6e0; --muted:#9b948a; --line:#2c3036;
+  --rule:#3b4046; --accent:#c9a86a; --accent-soft:#2e2a20;
 }
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,"PingFang SC","Microsoft YaHei",serif;
-  font-size:15.5px;line-height:1.78;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:50;background:var(--bg);
-  background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:18px;height:54px;flex-wrap:wrap}
-nav .brand{font-weight:700;letter-spacing:.02em;font-size:16px;text-decoration:none;white-space:nowrap}
-nav .links{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
-nav .links a{text-decoration:none;color:var(--muted);padding:2px 0;border-bottom:2px solid transparent}
-nav .links a:hover,nav .links a.on{color:var(--ink);border-color:var(--accent)}
-nav .spacer{flex:1}
-.tg{background:var(--panel2);border:1px solid var(--line);color:var(--muted);border-radius:6px;
-  padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
-h1,h2,h3,h4{line-height:1.35;margin:0 0 .5em}
-h1{font-size:32px;letter-spacing:.01em}
-h2{font-size:21px;margin-top:2em;padding-bottom:.35em;border-bottom:1px solid var(--line)}
-h3{font-size:17px;margin-top:1.6em}
-p{margin:.7em 0}
-small,.small{font-size:13px;color:var(--muted)}
-.muted{color:var(--muted)}
-.hero{padding:52px 0 26px}
-.hero h1{font-size:38px;max-width:22em}
-.hero p.lead{font-size:17px;color:var(--muted);max-width:44em}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
-.stat b{display:block;font-size:26px;line-height:1.2}
-.stat span{font-size:12.5px;color:var(--muted)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
-.grid{display:grid;gap:14px}
-.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-table{width:100%;border-collapse:collapse;font-size:14px;margin:.8em 0}
-th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-th{background:var(--panel2);font-weight:600;font-size:13.5px;white-space:nowrap}
-tbody tr:hover{background:var(--panel2)}
-.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);
-  color:var(--muted);background:var(--panel2);white-space:nowrap}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
-a.case{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;
-  background:var(--panel);padding:15px 17px;box-shadow:var(--shadow);transition:transform .12s}
-a.case:hover{transform:translateY(-2px);border-color:var(--line2)}
-a.case h3{margin:.2em 0 .3em;font-size:17.5px}
-a.case .meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-a.case p{margin:.5em 0 0;font-size:14px;color:var(--muted)}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:26px;align-items:start;margin-top:18px}
-@media(max-width:900px){.layout{grid-template-columns:1fr}.hero h1{font-size:28px}}
-aside{position:sticky;top:70px}
-aside .box{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:14px}
-aside h4{margin:0 0 .5em;font-size:14px;letter-spacing:.05em;color:var(--muted);text-transform:uppercase}
-ol.steps{counter-reset:s;list-style:none;padding:0;margin:.6em 0}
-ol.steps li{position:relative;padding:10px 0 10px 44px;border-bottom:1px dashed var(--line)}
-ol.steps li:last-child{border-bottom:0}
-ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:10px;width:28px;height:28px;
-  border-radius:50%;background:var(--panel2);border:1px solid var(--line2);display:flex;align-items:center;
-  justify-content:center;font-size:13px;color:var(--muted)}
-ul.tick{list-style:none;padding:0;margin:.5em 0}
-ul.tick li{padding:6px 0 6px 20px;border-bottom:1px dashed var(--line);position:relative}
-ul.tick li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.6}
-ul.tick li:last-child{border-bottom:0}
-.note{background:var(--panel2);border-left:3px solid var(--accent);padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
-.warn{background:var(--panel2);border-left:3px solid #b4574f;padding:12px 15px;border-radius:0 8px 8px 0;margin:1em 0;font-size:14px}
-.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
-.kv dt{color:var(--muted);white-space:nowrap}
-.kv dd{margin:0}
-.src{font-size:13px;color:var(--muted)}
-.src li{margin:.35em 0;word-break:break-all}
-footer{border-top:1px solid var(--line);margin-top:60px;padding:26px 0 40px;color:var(--muted);font-size:13px}
-input.f{width:100%;padding:9px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--panel);
-  color:var(--ink);font-family:inherit;font-size:14px;margin-bottom:14px}
-.tl{position:relative;padding-left:22px}
-.tl:before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;background:var(--line2)}
-.tl .it{position:relative;padding:0 0 18px 8px}
-.tl .it:before{content:"";position:absolute;left:-20px;top:8px;width:11px;height:11px;border-radius:50%;
-  background:var(--bg);border:2px solid var(--accent)}
-.tl .it b{font-size:15px}
-.tl .it .when{font-size:12.5px;color:var(--accent);font-weight:600}
-.anchor{display:block;height:60px;margin-top:-60px;visibility:hidden}
+  font-size:15px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{color:var(--accent);border-color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);
+  padding-bottom:5px}
+.topbar{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:14px;height:38px;padding:0 18px;flex-wrap:wrap}
+.topbar .brand{font-weight:700;font-size:14.5px;white-space:nowrap;border:0;letter-spacing:.02em}
+.topbar .spacer{flex:1}
+.tg{background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;
+  padding:2px 8px;font-size:12px;cursor:pointer;font-family:inherit}
+.cards{max-width:1000px;margin:0 auto;padding:1px 18px 0;display:flex;gap:5px;flex-wrap:wrap}
+.cards button{font-family:inherit;font-size:13px;line-height:1.3;color:var(--muted);
+  background:var(--panel);border:1px solid var(--line);border-radius:7px;
+  padding:3px 10px;cursor:pointer;transition:all .12s ease}
+.cards button:hover{color:var(--accent);border-color:var(--accent)}
+.cards button.on{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);font-weight:700}
+.cards.sub{padding-top:5px}
+.cards.sub button{font-size:12.5px;padding:2px 8px;border-radius:6px}
+.view{display:none}
+.view.on{display:block}
+main{padding-bottom:10px}
+.hero{padding:16px 0 4px}
+h1{font-size:23px;line-height:1.3;margin:0 0 .3em;letter-spacing:.01em}
+h2{font-size:17.5px;line-height:1.35;margin:1.15em 0 .5em;padding-bottom:.25em;border-bottom:1px solid var(--line)}
+h3{font-size:15.5px;line-height:1.4;margin:.95em 0 .3em}
+h4{font-size:14.5px;margin:.8em 0 .25em}
+p{margin:0 0 .55em;text-indent:2em;text-align:justify}
+p.lead,p.kicker,p.plain{text-indent:0}
+p.lead{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:.7em}
+p.kicker{font-size:12.5px;color:var(--muted);margin-bottom:.25em}
+p.plain{color:var(--muted);font-size:13.5px}
+.small{font-size:13px;color:var(--muted)}
+p.ref{font-size:13px;text-indent:0;color:var(--muted);line-height:1.5;word-break:break-word}
+p.ref a{border-bottom-style:dotted}
+footer{border-top:1px solid var(--line);margin-top:24px;padding:14px 0 26px;color:var(--muted);font-size:12.5px}
+footer .wrap{max-width:960px}
+footer p{text-indent:0;line-height:1.6}
 </style></head><body>
+<nav>
+<div class="topbar"><span class="brand">地貌现场手册</span><span class="spacer"></span>
+<button class="tg" onclick="toggleTheme()">明 / 暗</button></div>
+<div class="cards" data-k="mod"><button data-v="home" class="on" onclick="location.hash='home'">总览</button><button data-v="prins" onclick="location.hash='prins'">原理</button><button data-v="cases" onclick="location.hash='c/'">实例</button><button data-v="field" onclick="location.hash='field'">判定</button><button data-v="time" onclick="location.hash='time'">时间轴</button><button data-v="srcs" onclick="location.hash='srcs'">来源</button></div>
+<div class="cards sub" data-k="case" id="casebar" style="display:none"><button data-c="luochuan-loess" onclick="location.hash='c/luochuan-loess'">洛川</button><button data-c="badain-jaran" onclick="location.hash='c/badain-jaran'">巴丹吉林</button><button data-c="hailuogou-glacier" onclick="location.hash='c/hailuogou-glacier'">海螺沟</button><button data-c="lushan-glacier-debate" onclick="location.hash='c/lushan-glacier-debate'">庐山之争</button><button data-c="qinghai-tibet-permafrost" onclick="location.hash='c/qinghai-tibet-permafrost'">青藏冻土</button><button data-c="guilin-fenglin" onclick="location.hash='c/guilin-fenglin'">桂林</button><button data-c="yellow-river-delta" onclick="location.hash='c/yellow-river-delta'">黄河口</button><button data-c="yongdinghe-fan" onclick="location.hash='c/yongdinghe-fan'">永定河扇</button><button data-c="xintan-landslide" onclick="location.hash='c/xintan-landslide'">新滩滑坡</button><button data-c="fenwei-graben" onclick="location.hash='c/fenwei-graben'">汾渭地堑</button><button data-c="nihewan" onclick="location.hash='c/nihewan'">泥河湾</button><button data-c="wudalianchi-volcano" onclick="location.hash='c/wudalianchi-volcano'">五大连池</button><button data-c="xuancheng-red-earth" onclick="location.hash='c/xuancheng-red-earth'">网纹红土</button><button data-c="zoige-peatland" onclick="location.hash='c/zoige-peatland'">若尔盖</button></div>
+</nav>
+<main><section class="view" id="v-home">
+<section class="hero wrap">
+<h1>中国大地上，14 处能亲手核对的现场</h1>
+<p class="lead">这是一份给实地用的地貌指南：把中国常见的地貌现象归成 11 类营力，每类落到几处现存、可到达的具体地点；每处都给出坐标与可达性、现场观察要点、成因机制、实测数字与来源。本站的营力框架最初整理自一部地貌学教材的章节体系，实例与数据全部另采公开来源。</p>
+<p>14 处地点从黄土高原铺到南海之滨、从青藏冻土带到东北火山群；所有实测数字出自 60 条公开来源，逐条标注出处；同一指标的多个口径并列呈现，不换算、不取单值；查不到来源的数字一概不写。</p>
+</section>
+
+<div class="wrap">
+<h2 id="how">怎么用这个站</h2>
+<p>第一层是原理。地貌的成因被归纳为 11 类营力系统，从风化、斜坡、流水一路到构造运动与第四纪地层。每一类只回答四件事：控制变量是什么、作用过程怎么推进、留下什么产物、野外凭什么认出来。</p>
+<p>第二层是实例。14 处中国境内现存、可到达的地点。点顶部「实例」卡片，再点下面一排地点短名卡片，就能在 14 处现场之间随时切换。每一处都给出坐标与可达性、现场观察要点、成因机制链、实测数字与它们说明的问题，以及存争议处的双方口径。</p>
+<p>第三层是判定。把野外最容易认错的 6 组地貌与堆积物摊开对照——冰碛还是泥石流、冲积扇还是洪积扇、峰林还是峰丛，各自凭什么定案。再往上，一条时间轴把这些地点放回 15 个锚点，看出它们不是同时形成的。</p>
+
+<h2>11 类营力与它们的实例</h2>
+<h3>风化与残积</h3>
+<p>岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。全国范围内归入这一类的实例有<a href="#c/xuancheng-red-earth">网纹红土</a>。</p>
+<h3>斜坡与重力</h3>
+<p>一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。控制变量是坡度、岩土强度、水。全国范围内归入这一类的实例有<a href="#c/xintan-landslide">新滩滑坡</a>。</p>
+<h3>流水</h3>
+<p>暂时性流水（洪流）与常年性河流。控制变量是流量、比降、含沙量、基面。全国范围内归入这一类的实例有<a href="#c/yongdinghe-fan">永定河扇</a>。</p>
+<h3>岩溶</h3>
+<p>水对可溶岩的化学溶蚀。控制变量是岩性纯度与厚度、水的溶蚀力、透水性、流动性。全国范围内归入这一类的实例有<a href="#c/guilin-fenglin">桂林</a>。</p>
+<h3>冰川</h3>
+<p>冰的积累、流动与消融。控制变量是积累区面积、气温（平衡线高度）、地形。全国范围内归入这一类的实例有<a href="#c/hailuogou-glacier">海螺沟</a>、<a href="#c/lushan-glacier-debate">庐山之争</a>。</p>
+<h3>冻土与冰缘</h3>
+<p>冻融交替。控制变量是年均地温、含冰量、岩性、活动层厚度。全国范围内归入这一类的实例有<a href="#c/qinghai-tibet-permafrost">青藏冻土</a>。</p>
+<h3>风沙与黄土</h3>
+<p>风的吹扬、搬运与堆积。控制变量是风速、起沙条件、物源、植被覆盖。全国范围内归入这一类的实例有<a href="#c/luochuan-loess">洛川</a>、<a href="#c/badain-jaran">巴丹吉林</a>。</p>
+<h3>海岸与河口</h3>
+<p>波浪、潮流与河流共同作用。控制变量是波浪能、潮差、来沙量。全国范围内归入这一类的实例有<a href="#c/yellow-river-delta">黄河口</a>。</p>
+<h3>湖泊与沼泽</h3>
+<p>静水环境沉积与有机质积累。控制变量是水位、物源、温度（分解速率）。全国范围内归入这一类的实例有<a href="#c/zoige-peatland">若尔盖</a>。</p>
+<h3>构造与新构造</h3>
+<p>内力给出舞台。控制变量是构造运动的方向与速率、岩性构造格局。全国范围内归入这一类的实例有<a href="#c/fenwei-graben">汾渭地堑</a>。</p>
+<h3>第四纪地层与事件</h3>
+<p>时间与气候。控制变量是轨道尺度气候旋回、区域构造、沉积保存条件。全国范围内归入这一类的实例有<a href="#c/nihewan">泥河湾</a>、<a href="#c/wudalianchi-volcano">五大连池</a>。</p>
+
+<p class="plain">说明：营力分类是为方便查阅而作的归纳，同一处地貌常是几种营力接力或叠加的结果，分类不构成对成因的排他判断。</p>
+</div>
+</section><section class="view" id="v-prins">
+<section class="hero wrap">
+<h1>原理：营力、过程与产物</h1>
+<p class="lead">地貌形态是内外地质营力相互作用的结果：内力给出骨架与高差，外力按各自的规律去削、去搬、去堆。本页把 11 类营力各讲一节，每节只回答四件事：控制变量、作用过程、留下的产物、野外怎么认。</p>
+</section>
+
+<div class="wrap">
+<h2>读地貌的四条底层框架</h2>
+<h3>内力与外力</h3>
+<p>内力（构造运动、火山活动）制造高差与格局，是「舞台」；外力（风化、流水、冰川、风、海浪）削平高差，是「演员」。地貌是二者当前比值的快照——抬升快于剥蚀则山长高，反之则被削平。青藏高原是内力搭台、冰川与流水登场的样本，华北平原则是外力铺了千万年的成品。</p>
+<h3>成因、形态与年代</h3>
+<p>看一处地貌，要回答三个问题：什么营力造成的（成因）、现在长什么样（形态）、什么时候造成的（年代）。三者缺一，解释就不完整。庐山之争的实质，正是「形态」无法单独裁定「成因」。</p>
+<h3>规模等级与地域分带</h3>
+<p>地貌是有等级的：大地貌如山系、盆地、高原，中地貌如谷地、扇体、湖盆，小地貌如冲沟、沙丘、溶洞。同一营力在不同气候带的表现可以完全不同——同为风成堆积，北方铺成黄土高原，南方却混进了湿热风化的网纹红土。</p>
+<h3>时间是隐藏变量</h3>
+<p>速率乘以时间等于结果。青藏铁路冻土段是毫米每年，若尔盖泥炭是零点六毫米每年，黄河三角洲造陆最快时是每年几十平方公里。动手解释之前先算量级，很多看似「不可能」的现象，其实只是「时间不够」。</p>
+
+
+<h2>11 类营力系统</h2>
+<h3 id="weathering">风化与残积</h3>
+<p>岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。这一类的实例是<a href="#c/xuancheng-red-earth">网纹红土</a>。</p>
+<h3 id="slope">斜坡与重力</h3>
+<p>一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。控制变量是坡度、岩土强度、水。这一类的实例是<a href="#c/xintan-landslide">新滩滑坡</a>。</p>
+<h3 id="fluvial">流水</h3>
+<p>暂时性流水（洪流）与常年性河流。控制变量是流量、比降、含沙量、基面。这一类的实例是<a href="#c/yongdinghe-fan">永定河扇</a>。</p>
+<h3 id="karst">岩溶</h3>
+<p>水对可溶岩的化学溶蚀。控制变量是岩性纯度与厚度、水的溶蚀力、透水性、流动性。这一类的实例是<a href="#c/guilin-fenglin">桂林</a>。</p>
+<h3 id="glacial">冰川</h3>
+<p>冰的积累、流动与消融。控制变量是积累区面积、气温（平衡线高度）、地形。这一类的实例是<a href="#c/hailuogou-glacier">海螺沟</a>、<a href="#c/lushan-glacier-debate">庐山之争</a>。</p>
+<h3 id="periglacial">冻土与冰缘</h3>
+<p>冻融交替。控制变量是年均地温、含冰量、岩性、活动层厚度。这一类的实例是<a href="#c/qinghai-tibet-permafrost">青藏冻土</a>。</p>
+<h3 id="aeolian">风沙与黄土</h3>
+<p>风的吹扬、搬运与堆积。控制变量是风速、起沙条件、物源、植被覆盖。这一类的实例是<a href="#c/luochuan-loess">洛川</a>、<a href="#c/badain-jaran">巴丹吉林</a>。</p>
+<h3 id="coastal">海岸与河口</h3>
+<p>波浪、潮流与河流共同作用。控制变量是波浪能、潮差、来沙量。这一类的实例是<a href="#c/yellow-river-delta">黄河口</a>。</p>
+<h3 id="lacustrine">湖泊与沼泽</h3>
+<p>静水环境沉积与有机质积累。控制变量是水位、物源、温度（分解速率）。这一类的实例是<a href="#c/zoige-peatland">若尔盖</a>。</p>
+<h3 id="tectonic">构造与新构造</h3>
+<p>内力给出舞台。控制变量是构造运动的方向与速率、岩性构造格局。这一类的实例是<a href="#c/fenwei-graben">汾渭地堑</a>。</p>
+<h3 id="quaternary">第四纪地层与事件</h3>
+<p>时间与气候。控制变量是轨道尺度气候旋回、区域构造、沉积保存条件。这一类的实例是<a href="#c/nihewan">泥河湾</a>、<a href="#c/wudalianchi-volcano">五大连池</a>。</p>
+
+
+<h2>怎么用这套框架读一处地方</h2>
+<p>先定营力：眼前的形态，多半是几种营力接力或叠加的结果，比如黄河三角洲等于河流供沙加海洋改造，再叠上人工改道与调水调沙。再找控制变量：把「为什么会这样」翻译成「哪个变量变了」——桂林峰林与峰丛的差别，追到最后是地下水位的深浅。然后问年代：形态相似不等于同时形成，五大连池十四座火山，最老二百万年、最新三百年，摆在同一个视野里。最后做排除：列出所有能造成相似形态的成因，逐条排除，冰碛还是泥石流、构造沉降还是人为沉降，靠的都是这一步。</p>
+<p>本页的原理表述是通用的地貌学结论；实例数据全部来自各处标注的公开来源，凡无来源的数字一律不写。原理与实例之间不是一一对应关系：一类营力可以解释多处地点，一处地点也常常需要几类营力合起来解释。</p>
+</div>
+</section><section class="view" id="v-cases"><section class="hero wrap"><h1>14 处现存实例</h1><p class="lead">下面一排短名卡片就是 14 处中国境内现存、可到达的地点；点哪张，下面就出现哪一处的完整内容——坐标与可达性、现场观察要点、成因机制链、实测数字、争议口径与来源，一处一页式地摊开。再点顶排其他卡片，随时离开。</p></section><div class="casebody wrap" id="case-luochuan-loess"><p class="kicker">风沙与黄土 · 洛川黄土剖面</p>
+<h1>洛川黄土剖面</h1>
+<p class="lead">黄土高原中部的&quot;气候磁带机&quot;</p>
+<p>洛川黄土剖面地处陕西省延安市洛川县，黄土高原中部。坐标约 35.72°N，109.42°E（中部黄土高原）。成因上归入风沙与黄土一类。它的现状是：标准剖面，研究史逾 60 年。到现场去，剖面位于黄土塬区，露天出露，可开车至塬边；具体点位需当地向导或参考文献坐标。</p>
+<p>一堵 130 多米厚的土墙，把第四纪两百多万年的干冷—暖湿循环一层层摞起来。它是中国黄土—古土壤序列的经典参照，也是把陆相记录与深海氧同位素曲线对上的关键剖面。</p>
+<h2>现场能看到什么</h2>
+<p>风沙现场，先看颗粒粗细与层理，再看植被与水分条件，最后判断沙的来路。自上而下找&quot;黄—红&quot;的交替：黄色是黄土层（干冷、风大、成土弱），红褐色是古土壤层（暖湿、成土强）。数古土壤的条数，就是数间冰期的次数；数黄土层，就是数冰期的次数。注意古土壤层底部的钙质结核（钙结核层），它指示了当时的淋溶深度，也就是当时的降水量级。用手捻：马兰黄土疏松、有肉眼可见的大孔和虫孔；离石黄土更致密，古土壤层黏重。</p>
+<h2>背后的原理</h2>
+<p>物源：西北内陆荒漠与戈壁提供粉砂级粉尘，冬季风（西北风）是搬运机。粒径越粗 → 风力越强、源区越近、气候越干冷。堆积：粉尘降落后若气候持续干冷，堆积速率大于成土速率，就保存为黄土层（L）。成壤：气候转暖湿，堆积减慢而风化加强，碳酸钙被淋洗、铁质氧化、磁化率升高，形成古土壤层（S）。循环：干冷期与暖湿期反复切换，就形成&quot;黄土—古土壤&quot;韵律，其节拍可与深海氧同位素（冰量）曲线逐段对应。对照：黄土层 L1（马兰）对应深海氧同位素 2—4 期；古土壤 S1 对应第 5 期；成因复杂的 S5 与 13—15 期联系。</p>
+<h2>这些数字在说什么</h2>
+<p>磁化率高低，暖湿成壤期磁化率高，干冷黄土期低 —— 磁化率是这套地层里最省事的&quot;温度计&quot;。CaCO₃ 含量，高 → 干冷（可溶的碳酸钙没被淋走）；低 → 淋溶强、气候湿。沉积缺失，2025 年高分辨率 ¹⁴C 研究（58 个年代、4.75 m 剖面、31.5—3.7 ka）指出：约 20.3—16.7 ka 与 12.6—10.6 ka 存在沉积缺失，说明&quot;连续&quot;的黄土剖面其实有断档。一句话，黄土不是&quot;土&quot;，是一台按万年节拍走字的气候记录仪；它的分辨率足以读出千年尺度的突变。</p>
+<h2>实测数据</h2>
+<p>剖面总厚，130 m（通行口径）；另据工程勘察剖面，午城黄土底界埋深 135.00 m——两套数据来自不同测量口径，本站并列不合并。全新世黑垆土，厚约 1 m（一说底界深 1.60 m）——最顶部，现代成土作用的产物。马兰黄土（晚更新世），厚约 7.0 m（一说底界深 9.70 m）——灰黄色、疏松、大孔发育，具湿陷性。离石黄土（中更新世），厚约 79 m（一说底界深 86.20 m）——黄土层主体，夹多层红褐色古土壤。午城黄土（早更新世），厚约 47 m（一说底界深 135.00 m 计）——浅红褐色古土壤与风化黄土互层。上新世红黏土，厚约 13 m——剖面的底，暗红色、棱柱状结构、钙结核层。粒度—气候代用指标，平均粒径、CaCO₃ 含量、Fe₂O₃/FeO 比值、磁化率——刘东生 1985 用于与深海柱状样 V28-239 对比。</p>
+<h2>争议与口径</h2>
+<p>剖面总厚与分层底界在不同文献中数值不一（130 m / 135 m；马兰 7.0 m / 9.70 m），可能源于测点位置与是否含红黏土之别。本站并列呈现，不做换算。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="https://ima.qq.com/wiki/?shareId=f5766487dd65915100bab3a200a9d93201f2c09e340f79db83fd4bcc04eee074" target="_blank" rel="noopener">洛川剖面：厚 130 m，午城/离石/马兰三分，刘东生 1985 与深海 V28-239 对比</a>；<a href="https://ima.qq.com/wiki/?shareId=c897e0b23c14979d5ab01c91bfbe4327104031557f0211b0852bd91ffe8150ba" target="_blank" rel="noopener">洛川剖面各层厚度与岩性描述（刘东生等，2000）</a>；<a href="http://www.progeophys.cn/article/doi/10.11928/j.issn.1001-7410.2025.06.09" target="_blank" rel="noopener">洛川黄土高分辨率 ¹⁴C 测年与千年尺度沉积缺失（地球物理学进展，2025）</a>；<a href="http://ytgcjs.xml-journal.net/cn/article/pdf/preview/10.3969/j.issn.1007-2993.2023.01.017.pdf" target="_blank" rel="noopener">黄土地基水分入渗试验：洛川黄土标准剖面分层底界深度（岩土工程技术，2023）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/badain-jaran">巴丹吉林</a>、<a href="#c/xuancheng-red-earth">网纹红土</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 7 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-badain-jaran"><p class="kicker">风沙与黄土 · 巴丹吉林沙漠沙山</p>
+<h1>巴丹吉林沙漠沙山</h1>
+<p class="lead">世界最高的固定沙丘与它的 144 个湖</p>
+<p>巴丹吉林沙漠沙山地处内蒙古自治区阿拉善右旗，雅布赖山以西、北大山以北。坐标约 39.5—42°N，100—104°E；海拔一般 1100—1700 m。成因上归入风沙与黄土一类。它的现状是：流动沙丘为主，2024 年进入世界遗产申报名单。到现场去，阿拉善右旗有旅游线路进入沙漠腹地，需越野车与向导；核心区尚无公共交通。</p>
+<p>年降水不足 40 毫米的地方，立着相对高度 500 多米的沙山，山脚下却有 144 个常年不干的湖。这个组合本身就是一道地貌学难题：沙从哪来、水从哪来、为什么不干。</p>
+<h2>现场能看到什么</h2>
+<p>风沙现场，先看颗粒粗细与层理，再看植被与水分条件，最后判断沙的来路。看沙山的&quot;骨架&quot;：高大沙山不是简单新月形沙丘，而是复合型沙山 —— 大沙丘背上驮着次级沙丘。看沙山与湖的相对位置：湖多在山间洼地（丘间地），水面标高就是当地地下水位露头。看沙山剖面是否有古土壤或钙胶结层 —— 若有，说明这座沙山曾经停止移动、甚至长过植被。看迎风坡与落沙坡：迎风坡缓而硬，落沙坡陡（接近休止角）而松。</p>
+<h2>背后的原理</h2>
+<p>起沙：干旱、植被稀疏、物源丰富，风速超过起沙风速后砂粒以跃移方式搬运（跃移占风沙搬运的主体）。堆积：风遇到地形阻挡或能量减弱，砂粒在背风侧堆积；落沙坡始终保持休止角，沙丘因此向前&quot;爬&quot;。复合型沙山的成因：多期风向或多期沙丘叠加，新一代沙丘爬上老沙丘，形成 200—500 m 级的巨丘。沙不塌、山不散的关键：丘间地有地下水与湖泊，湖面蒸发在沙丘内部形成一定湿度与盐分胶结，相当于给沙山&quot;加筋&quot;。水的来源（未定论）：一说经深大断裂带自祁连山远程补给，一说与雅鲁藏布江一带的水系有关，至今无定论。</p>
+<h2>这些数字在说什么</h2>
+<p>相对高度 500 m 意味着什么，沙山规模是&quot;风的能量 × 时间 × 沙源&quot;的乘积，不是单次堆积的结果。144 个湖不干，说明地下水位被区域地质结构托住，蒸发虽大但补给不断 —— 沙山与湖是同一套水系统的两面。沙漠不是终点，流动沙丘占 83%，说明仍在活动；沙山的稳定是相对的、有条件的。为什么值得去，它把&quot;风成地貌&quot;这一章里所有抽象概念（跃移、休止角、复合沙丘、丘间洼地）一次性摆在你面前。</p>
+<h2>实测数据</h2>
+<p>沙漠总面积，4.7 万 km²（一说 4.92 万 km²）——我国第二或第三大沙漠，口径不同说法不同。最高沙峰必鲁图峰，相对高度 500 余米；海拔报道有 1617 m / 1611.09 m / 1609 m 三种——三源并存，本站不取单值。高大沙山占比，占总面积约 61%；中部复合型沙山一般高 200—300 m——形态复杂、高大密集。流动沙丘，约占沙漠总面积 83%——流沙面积仅次于塔克拉玛干。湖泊，144 个，其中淡水湖 12 个——最大者诺尔图海子，面积 2205 亩、水深 28 m。水收支，年降水量不足 40 mm，年蒸发量 4000 多 mm——靠地下水维持；据勘察地下水年补给量约 5 亿 m³。鸣沙区，世界最大鸣沙区，中心区沙山相对高度 200—500 m——响沙声可传十几里。</p>
+<h2>争议与口径</h2>
+<p>①沙漠面积与排名口径不一（4.7 万 vs 4.92 万 km²；第二大 vs 第三大）；②必鲁图峰海拔三个来源给出三个数；③地下水来源（祁连山 vs 雅鲁藏布江）尚无定论。以上均并列呈现。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="https://photo.cctv.com/mlzg/china/140/index.shtml" target="_blank" rel="noopener">巴丹吉林沙漠概况（央视网·美丽中国）</a>；<a href="https://www.alsyq.gov.cn/art/2026/1/4/art_1207_210423.html" target="_blank" rel="noopener">阿拉善右旗人民政府：景区景点（面积、必鲁图峰海拔 1611.09 m、144 湖）</a>；<a href="https://www.badanjilin.cn/about" target="_blank" rel="noopener">内蒙古巴丹吉林景区概况（海拔 1609 m）</a>；<a href="https://news.cgtn.com/news/2024-07-23/Badain-Jaran-Desert-Towering-sand-dunes-and-hidden-lakes-1vth11eRu6Y/share_amp.html" target="_blank" rel="noopener">CGTN：2024 年世界遗产委员会审议巴丹吉林申遗</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/luochuan-loess">洛川</a>、<a href="#c/zoige-peatland">若尔盖</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 7 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-hailuogou-glacier"><p class="kicker">冰川 · 海螺沟冰川</p>
+<h1>海螺沟冰川</h1>
+<p class="lead">一条正在快速后退的海洋型冰川</p>
+<p>海螺沟冰川地处四川省甘孜州泸定县，贡嘎山东坡。贡嘎山主峰海拔 7514 m（文献值，另有 7556 m 之说）；冰川末端约 2900—2990 m。成因上归入冰川一类。它的现状是：持续退缩中，近两年显著加速。到现场去，海螺沟景区（国家 5A），有公路直达冰川观景台与城门洞，是同纬度最容易到达的现代冰川之一。</p>
+<p>冰川末端伸进针叶林里，落差 3900 米，大冰瀑布垂直 1080 米。它同时是&quot;海洋型冰川&quot;的标准样本：对气候变化的响应快得肉眼可见。</p>
+<h2>现场能看到什么</h2>
+<p>冰川现场，看冰体、冰碛与植被演替的次序，重点在「正在变化」的痕迹。看冰舌表面的表碛：海螺沟冰舌大部被碎屑覆盖，远看是灰的、脏的，不是你在画册上看到的白冰。找终碛和侧碛：冰川末端外围最新鲜的那几道垄，就是它刚刚退到过的位置。看冰面湖、冰裂隙、冰洞、冰塔 —— 这些都是&quot;正在强烈消融&quot;的证据，不是静态景观。沿退缩区往回走：从裸露冰碛 → 草本 → 小树 → 冬瓜杨 → 峨眉冷杉，2 公里内走完一百年的演替。</p>
+<h2>背后的原理</h2>
+<p>成冰：积累区在高海拔，雪 → 粒雪 → 冰川冰；贡嘎山积累区雪崩频繁，雪崩补给占雪线以上总补给的约 44%。流动：冰在重力下塑性流动，速度可达百米级每年（冰川中部 3950 m 处中流线约 171 m/a）。消融：海洋型冰川温度接近压力融点，冰床普遍存在压融水，水膜增厚促进底部滑动，因此对升温极其敏感。为什么海螺沟退得比大陆型冰川快：海洋型冰川温度高、降水多、响应快；同样升温下，它的末端后退幅度远大于唐古拉山那类低温大陆型冰川。反馈：退缩后裸露的冰碛在暖湿条件下很快被先锋植物定殖，演替序列清晰：5 年草本 → 10 年小树 → 20 年冬瓜杨中树 → 40 年大树 → 60 年峨眉冷杉中龄林 → 100 年冷杉林。</p>
+<h2>这些数字在说什么</h2>
+<p>表碛的双面作用，薄表碛加速消融（反照率低），厚表碛反而隔热保护冰体 —— 所以&quot;脏&quot;的冰川不一定退得更快。退缩速率的口径，1966—2009 的 25—30 m/a 与 1990—2020 的 12.33 m/a 时段不同，不能简单说&quot;变慢了&quot;，要看原始定义的起止年。冰瀑布，1080 m 的落差意味着冰川在此处于极度拉伸流动状态，冰崩、雪崩终年频发。去现场的意义，这里是把冰川侵蚀与堆积地貌一次看全的地方：U 形谷、冰碛、冰水堆积、冰蚀地貌同框。</p>
+<h2>实测数据</h2>
+<p>长度，13.1 km（一说 12.9 km；上世纪 80 年代末约 14.7 km）——贡嘎山地区最长的现代冰川。面积，25.71 km²（一说 24.27 km²）——复合山谷冰川、季风海洋型温冰川。末端海拔，2990 m（一说 2900 m / 2940 m）——伸入峨眉冷杉林线以下。大冰瀑布，垂直落差 1080 m，宽 600—1100 m——我国已发现的最高大冰瀑布。零平衡线，约海拔 4880 m——积累量与消融量相等的那条线。贡嘎山冰川总数，74 条（西坡 + 东坡），面积 255.10 km²，雪线 4800—5200 m——我国主要海洋型冰川分布区之一。退缩速率，1966—2009 年均退缩 25—30 m/a；1990—2020 平均 12.33 m/a；2019—2021 两年共退约 133 m（66.5 m/a）——不同时段口径不同，均按原文献列出。累计退缩，自 20 世纪 30 年代至今约 2 km；截至 2021 年总退缩超 2.63 km——含小冰期以来的持续退缩。</p>
+<h2>争议与口径</h2>
+<p>长度、面积、末端海拔在不同来源各有两三个数值（13.1/12.9 km、25.71/24.27 km²、2990/2900/2940 m），可能源于测年不同与统计边界定义不同。本站并列。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="https://www.hailuogou.com/zh/bckp/1021203373412237312" target="_blank" rel="noopener">海螺沟景区：冰川基本参数与退缩过程（1990—2020、2019—2021 数据）</a>；<a href="https://www.hailuogou.com/zh/overview-geology/939681364502904832" target="_blank" rel="noopener">海螺沟冰川：长 12 km、落差 3900 m、大冰瀑布 1080 m</a>；<a href="https://news.cctv.com/2016/10/30/ARTIMnxjNGgywyvsrTGmjWj5161030.shtml" target="_blank" rel="noopener">贡嘎山冰川 74 条、面积 255.10 km²、1966—2009 退缩（中新网/央视网，2016）</a>；<a href="https://lib-bingchuan.museum.chaoxing.com/info/19001.jspx" target="_blank" rel="noopener">海螺沟冰川消融区表面消融特征研究（长度 13.1 km、面积 25.71 km²、零平衡线 4880 m）</a>；<a href="https://www.cstp.org.cn/kp/kxcb/art/2024/art_a7ab7b8bf08449589d4b16501b53b78d.html" target="_blank" rel="noopener">两类冰川退缩对比与海螺沟植被演替序列（中国科技馆）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/lushan-glacier-debate">庐山之争</a>、<a href="#c/qinghai-tibet-permafrost">青藏冻土</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-lushan-glacier-debate"><p class="kicker">冰川 · 庐山&quot;冰川&quot;之争</p>
+<h1>庐山&quot;冰川&quot;之争</h1>
+<p class="lead">中国地学史上最长的一次误判还是正解？</p>
+<p>庐山&quot;冰川&quot;之争地处江西省九江市庐山（牯岭海拔 1165 m）。坐标约 29.5°N，115.9°E；庐山第四纪冰川国家地质公园面积 29156 公顷。成因上归入冰川一类。它的现状是：持续近百年的学术争鸣，两派并存。到现场去，庐山景区公路通达，王家坡 U 谷、大坳冰斗、锦绣谷天桥等点位均有步道可达。</p>
+<p>同一堆泥砾，李四光说是冰碛，施雅风说是泥石流。争论的焦点不是&quot;谁名气大&quot;，而是：什么样的证据才能判定一条山谷曾经被冰川占据过。</p>
+<h2>现场能看到什么</h2>
+<p>冰川现场，看冰体、冰碛与植被演替的次序，重点在「正在变化」的痕迹。到大坳看&quot;冰斗&quot;的圈椅形态，同时问一句：这个形态有没有可能是别的成因塑造的？到王家坡看 U 谷横剖面，与 V 形河谷对比 —— 但也要想：构造与岩性会不会造成类似形态？重点看泥砾本身：砾石大小混杂、无分选、无层理，这是冰碛还是泥石流？关键在砾石表面擦痕、砾径分布、基质支撑结构。看泥砾之上的网纹红土：这套红土指示的是湿热风化环境，用它来反推泥砾形成时的气候，是本案的关键推理链。</p>
+<h2>背后的原理</h2>
+<p>为什么&quot;泥砾混杂&quot;会成为焦点：冰川搬运不按粒径分选，冰碛物天然大小混杂、无层理、砾石可带擦痕；而泥石流作为高密度重力流，同样能造成大小混杂、无层理的堆积。二者形态相似，判定必须靠多重证据。判据一（气候可行性）：冰川存在需要积累区长期处于零度以下。用山体高度 + 冰期降温幅度反算雪线是否能降到该高度 —— 这是&quot;先问可能性&quot;的一步。判据二（沉积结构）：冰川沉积常见基质支撑、砾石棱角状、有擦痕与压坑、砾石长轴定向；泥石流沉积可出现粒序变化、杂基支撑但常伴流水改造痕迹、缺乏典型冰蚀伴生地貌。判据三（伴生组合）：真正的冰川作用会留下完整组合 —— 冰斗、U 谷、悬谷、角峰、羊背石、终碛侧碛，孤立的&quot;某一处泥砾&quot;不足以定案。判据四（年代与古环境）：把&quot;冰期&quot;地层与 global 气候曲线对时，如果它落在间冰期，结论就自相矛盾；同时用孢粉、网纹红土等独立指标反演当时气候。方法论的收获：这不是&quot;谁对谁错&quot;的故事，而是&quot;如何判定一种地貌成因&quot;的完整示范 —— 形态 → 沉积 → 年代 → 古环境，四条独立证据链互校。</p>
+<h2>这些数字在说什么</h2>
+<p>为什么争论近百年没结束，因为关键证据本身是多解的：同一堆泥砾可被两套理论各自解释，缺的是能&quot;一票决定&quot;的诊断性证据。对研究者的提醒，&quot;发现遗迹&quot;与&quot;证明成因&quot;是两件事。形态相似是最弱的证据，年代与古环境才是硬的。为什么仍值得去，这是中国少有的&quot;能现场看到一场方法论争论&quot;的地方 —— 每个点位旁边都配着两种解释。方法论价值，它是&quot;如何判定古冰川遗迹&quot;这一命题最完整的现实注脚：形态、沉积、年代、古环境四条证据链都能在这里走一遍。</p>
+<h2>实测数据</h2>
+<p>提出，1931 年李四光在庐山发现&quot;冰川遗迹&quot;；1933 年发表《扬子江流域之第四纪冰期》；1937 年完成《冰期之庐山》——挑战&quot;中国东南部无第四纪冰川&quot;的旧说。主要遗迹点，王家坡 U 谷、大坳冰斗、锦绣谷天桥（巨岩断裂）——被列为冰蚀地貌实例。反方提出，1981 年施雅风《庐山真的有第四纪冰川吗》；1989 年《中国东部第四纪冰川环境问题》专著；2020 年《论李四光教授的庐山第四纪冰川是对泥石流的误读》——认为泥砾混杂堆积实为泥石流堆积。核心反驳一，庐山牯岭海拔 1165 m，需 7 月气温下降约 20 ℃ 才具备积雪成冰条件，而长江中下游任一冰期降温幅度未达此量级——气候可能性论证。核心反驳二，从砾石组成、砾径变化、沉积结构、擦痕判断，泥砾堆积更符合泥石流成因——沉积学证据。核心反驳三，包围砾石的网纹红土与孢粉组合指示暖温带—亚热带湿热环境，非寒冷冰川环境——古环境证据。核心反驳四，古地磁测年显示&quot;庐山冰期&quot;&quot;大姑冰期&quot;&quot;鄱阳冰期&quot;等恰对应北半球间冰期时段——年代学证据。正方新证，1992 年何培元等《庐山第四纪冰期与环境》系统论证；支持者提出冰川条痕石、直径 15 m 漂砾等证据——争议未终结。保护身份，2001 年国家地质公园，2004 年世界地质公园；2021 年入选第一批精品地学研学路线——管理与科普层面已定，学术层面仍存争议。</p>
+<h2>争议与口径</h2>
+<p>本条本身就是争议条目。正方（李四光及后续支持者）认为庐山存在第四纪冰川；反方（施雅风等）认为是泥石流误读，并提出气候、沉积、古环境、年代四条反驳；1992 年后支持方亦有系统性专著回应。本站只陈述双方论据与出处，不作裁决。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 3 条公开来源：<a href="https://baike.baidu.com/item/%E5%BA%90%E5%B1%B1%E7%AC%AC%E5%9B%9B%E7%BA%AA%E5%86%B0%E5%B7%9D/8172452" target="_blank" rel="noopener">庐山第四纪冰川（含争议史、遗迹点、保护身份）</a>；<a href="https://www.chinanews.com/cul/2010/11-03/2631025.shtml" target="_blank" rel="noopener">学者驳李四光：庐山第四纪冰川应是泥石流（中新网，2010）</a>；<a href="https://baike.sogou.com/v76599090.htm" target="_blank" rel="noopener">施雅风四条论据整理（搜狗百科）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/hailuogou-glacier">海螺沟</a>、<a href="#c/xuancheng-red-earth">网纹红土</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 9 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-qinghai-tibet-permafrost"><p class="kicker">冻土与冰缘 · 青藏铁路冻土段</p>
+<h1>青藏铁路冻土段</h1>
+<p class="lead">把&quot;会呼吸的地基&quot;钉住的 550 公里</p>
+<p>青藏铁路冻土段地处青海格尔木至西藏拉萨，穿越可可西里、风火山、唐古拉山。格拉段约 1118—1142 km；海拔 4000 m 以上地段 965 km。成因上归入冻土与冰缘一类。它的现状是：运营 20 年，冻土路段整体稳定。到现场去，青藏铁路沿线可观景；工程措施（热棒、块石护坡、旱桥）在车窗外即可看到。</p>
+<p>冻土是含冰的土，冬天冻胀、夏天融沉。铁路要在上面跑百年，唯一办法不是&quot;加固&quot;，而是&quot;让它一直冻着&quot;。全线 550 公里连续多年冻土，就是一座冻土工程的露天博物馆。</p>
+<h2>现场能看到什么</h2>
+<p>冻土现场，看工程措施与地基的对应关系，再看地表变形的痕迹。在车窗外数热棒：路基两侧斜插的灰色金属棒，间距均匀，一根根排开 —— 那是这条线最醒目的地标。看路基边坡的块石/碎石护坡：空隙大的块石层，夏天隔热、冬天对流散热，是&quot;主动降温&quot;的核心手段。看旱桥：清水河特大桥以桥代路，让冻土保持在天然状态下不受路基荷载与热量扰动。看路基下的通风管与端部自动风门：温度高时自动关闭、低时自动打开，是个纯机械的&quot;空调&quot;。</p>
+<h2>背后的原理</h2>
+<p>冻土的本质：含冰的岩土，力学性质随温度剧烈变化 —— 冻结时强度高，融化时强度骤降并伴随沉降。冻胀：水结冰体积膨胀，且水分向冻结锋面迁移形成冰透镜体，地表被顶起。含冰量越高，冻胀越强。融沉：冰融化后体积缩小、孔隙水排出，土体压密下沉 —— 这是路基最主要的威胁，也是&quot;冻土关键在融沉&quot;的由来。工程思路的转变：从&quot;被动保温&quot;（加厚保温层、坏了再修）改为&quot;主动冷却路基&quot; —— 调控对流（块石层、通风管）、调控传导（热棒）、调控辐射（遮阳板），目标是把传入路基的热量降到最低。热棒原理：管内工质在地下段吸热蒸发上升、地上段放热冷凝回流，靠相变单向把地下热量搬到空气里；夏季因无温差驱动而基本停止工作，等效于隔热。为什么要&quot;以桥代路&quot;：在极端高温高含冰量段，任何路基都会扰动冻土的水热平衡，不如让轨道悬空，把扰动降到最小。</p>
+<h2>这些数字在说什么</h2>
+<p>550 km 连续冻土，这不是&quot;一段特殊地基&quot;，而是长达数百公里的活动性地基，工程必须按&quot;变&quot;来设计而不是按&quot;稳&quot;。年沉降 &lt;20 mm，意味着主动冷却措施在多年尺度上确实压住了融沉，验证了&quot;冷却路基&quot;路线的有效性。西大滩 12% 的面积缩减，在气候变暖背景下，冻土退化是趋势；工程措施延缓的是局部，改不了区域背景。工程与学科的交叉，这是冻土地貌从认识对象变成工程对象的典型案例：先认识冻融机制，才谈得上治理。</p>
+<h2>实测数据</h2>
+<p>全线，青藏铁路全长 1956 km（一说运营里程约 1925 km），格拉段约 1118—1142 km——世界海拔最高、里程最长的高原铁路。多年冻土路段，632 km：连续多年冻土约 550 km，岛状/片状不连续约 82 km——穿越多年冻土区里程为世界之最。高温高含冰量段，约 355 km（另一口径：高温冻土 275 km，与高含冰量重叠约 134 km）——这是路基最危险的部分。多年冻土层平均厚度，38.79 m（中科院寒区旱区环境与工程研究所研究）——沿线多年冻土层厚度均值。热棒，全长约 9 m，地下埋 6 m、地上露 3 m——冬季单向导出热量，夏季阻断热量下传。清水河特大桥，长 11.7 km，以旱桥方式跨越可可西里冻土区——铺架铁轨不扰动冻土。运营表现，冻土区段列车时速 100 km；78 个断面 156 个监测点，年沉降绝大多数 &lt;20 mm，全部 &lt;50 mm 设计允许值——截至通车 5 年监测结论；后续长期监测持续。冻土退化迹象，西大滩多年冻土面积由 1975 年 160.5 km² 减至约 141.0 km²，缩小约 12%；出现多年冻土的最低高程 4385 m，比 1975 年升高 25 m——北界退化的直接观测。</p>
+<h2>争议与口径</h2>
+<p>多年冻土路段长度有 632 km / 550 km（连续）等不同口径；高温高含冰量段长度亦有 355 km 与 275 km（重叠 134 km）两种表述。运营沉降数据为通车 5 年时的监测结论。以上按原文列出。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="https://cloud.kepuchina.cn/newSearch/imgText?id=6654070544307318784" target="_blank" rel="noopener">青藏铁路：穿越冻土里程、热棒与块石路基等措施（科普中国）</a>；<a href="https://www.chinanews.com/gn/2011/07-14/3183084.shtml" target="_blank" rel="noopener">青藏铁路通车运营 5 年：冻土线路整体稳定，平均厚度 38.79 m（中新网，2011）</a>；<a href="https://xz.people.com.cn/BIG5/n2/2026/0623/c138901-41618627.html" target="_blank" rel="noopener">550 公里冻土禁区，安全驰骋 20 年（人民网西藏，2026）</a>；<a href="http://www.bcdt.ac.cn/article/2022/1000-0240/1000-0240-2022-44-6-1784.shtml" target="_blank" rel="noopener">青藏铁路高温多年冻土区典型路基长期热稳定性研究（冰川冻土，2022）</a>；<a href="http://www.gcdz.org/cn/article/pdf/preview/10117.pdf" target="_blank" rel="noopener">青藏高原多年冻土退化及铁路路基工程热稳定性（工程地质学报，2007）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/hailuogou-glacier">海螺沟</a>、<a href="#c/zoige-peatland">若尔盖</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-guilin-fenglin"><p class="kicker">岩溶 · 桂林峰林与峰丛</p>
+<h1>桂林峰林与峰丛</h1>
+<p class="lead">峰林与峰丛的分界，其实是地下水位的分界</p>
+<p>桂林峰林与峰丛地处广西壮族自治区桂林市，漓江流域。坐标约 24.7—25.6°N，110.1—110.8°E；喀斯特面积 2665 km²。成因上归入岩溶一类。它的现状是：世界自然遗产；2024 年入选 IUGS 全球第二批百大地质遗产地。到现场去，桂林市区、阳朔、葡萄镇等均有成熟游线与观景台，是国内最容易观察岩溶地貌的地区之一。</p>
+<p>同样是石灰岩山峰，有的基座相连叫峰丛，有的彼此离立叫峰林。差别不在岩石，而在它当初是被&quot;垂直切&quot;还是被&quot;横向掏&quot;出来的。</p>
+<h2>现场能看到什么</h2>
+<p>岩溶现场，看岩性、溶蚀痕迹，以及山体与水面、地下水位之间的关系。在漓江两岸分辨：山与山基部连在一起的是峰丛，彼此分离、孤立站在平原上的是峰林，再孤立下去就是孤峰（如独秀峰、伏波山）。看峰林基部的&quot;脚洞&quot;：那是洪水横向掏蚀的痕迹，也是峰林形成的直接证据。看山体表面的溶沟与石芽：垂直溶沟是大气降水沿裂隙下切的产物；水平溶沟是地表/地下水横向作用的产物。对照看石林：石林的溶痕是&quot;土下溶蚀&quot;（地下水沿裂隙快速溶蚀）为主，与桂林峰林的&quot;地表水横向侵蚀&quot;路径不同。</p>
+<h2>背后的原理</h2>
+<p>溶蚀的化学本质：雨水溶入 CO₂ 形成碳酸，与碳酸钙反应生成可溶的碳酸氢钙被水带走。需要三个条件同时成立：可溶岩、岩体透水、水能流动。水的溶蚀力取决于 CO₂ 含量与温度；水的流动性取决于补给—排泄的落差；岩石的透水性取决于裂隙与层理。三者任一不足，岩溶就发育不起来。峰丛的形成：地下水位埋藏深（地势较高处，如漓江潜经村—兴坪段、海洋山西麓），水以垂向切割为主，残余山体高大且基座相连。峰林的形成：地下水位与地表接近（地势低平处，如临桂、桂林市区东北部、桂林—阳朔公路沿线），地表/地下河流横向侵蚀，山体平行后退、彼此分离。构造控制：背斜高处地下水深埋 → 发育峰丛；向斜低处地下水接近地表 → 发育峰林。地壳升降强度则决定整体格局 —— 稳定缓慢抬升利于峰林，快速抬升利于峰丛。时间维度：中国喀斯特峰林始于燕山运动以后的准平原，长期轻微上升条件下形成，因此规模宏大；而世界多数热带喀斯特区中新世以后才从海面升起，形成时间短，故中国峰林独特高大。石林的另一条路：土下溶蚀为主，石柱表面保留溶痕、溶窝与近水平溶蚀凹面（地下水流动痕迹），是&quot;埋在土里长大、后来被剥出来&quot;的。</p>
+<h2>这些数字在说什么</h2>
+<p>峰林 vs 峰丛，本质是地下水位与地表的相对关系：水在深部走，切出峰丛；水在浅处走，掏出峰林。11400 座石峰，不是&quot;风景多&quot;，而是一次区域尺度的溶蚀实验，样本量足够支撑统计规律。2665 km² 的&quot;一盆山水&quot;，桂林之所以特别，在于四周被非可溶岩山地环绕，水都往盆地里汇 —— 地下水位因此长期接近地表，这是峰林平原能大规模发育的前提。石林的&quot;世代&quot;，2.7 亿年成岩 → 2.6 亿年抬升破裂 → 2.5 亿年被玄武岩覆盖 → 6500 万年前再出露 → 5000—2000 万年前又被湖相沉积覆盖 → 2000 万年来发育最新一期。石林是叠出来的，不是一次长成的。</p>
+<h2>实测数据</h2>
+<p>喀斯特面积，漓江流域 2665 km²：峰丛 1285 km²、峰林 1167 km²——峰林与峰丛面积相当，是&quot;桂林模式&quot;的关键。石峰数量，约 11400 座：峰丛石峰约 7900 座、峰林石峰约 3500 座——另有洞穴近 2000 个。岩性基础，上泥盆统至下石炭统石灰岩，厚达 3000 m，产状平缓、质地纯净——巨厚纯净碳酸盐岩是物质基础。狭义峰林，相对高度一般 100—200 m，坡度多在 60° 以上甚至直立——塔状/堡垒状，表面有石芽、溶沟；基部常发育脚洞。峰丛，相对高度可达 300—600 m，坡度一般 30—60°——峰顶至垭口高差不超过山峰高度的 1/3。世界遗产构成，桂林喀斯特：葡萄峰林段 2840 公顷 + 漓江峰丛段 22544 公顷（分属二期申报）——中国南方喀斯特系列遗产组成部分。对照：云南石林，面积 350 km²，海拔 1600—2203 m；剑状石柱高 20—50 m——2.7 亿年前二叠纪灰岩，多期&quot;世代&quot;石林。对照：全国规模，全国喀斯特峰林峰丛分布面积约 14 万 km²——相当于一个安徽省。</p>
+<h2>争议与口径</h2>
+<p>峰林与峰丛的划分在国内有过命名沿革（陈述彭 1954 广义&quot;峰林&quot;，曾昭璇将联座者定为&quot;峰丛&quot;）；石林与峰林成因强调点不同（土下溶蚀 vs 地表水横向侵蚀），学界对具体过程权重仍有讨论。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="https://baike.baidu.com/item/%E5%96%80%E6%96%AF%E7%89%B9%E5%B3%B0%E6%9E%97/1946797" target="_blank" rel="noopener">喀斯特峰林（峰林/峰丛定义、桂林 2665 km²、11400 座石峰）</a>；<a href="https://article.xuexi.cn/articles/index.html?art_id=12420800958318976763" target="_blank" rel="noopener">桂林喀斯特：峰丛 1285 km²、峰林 1167 km²、石峰 11400 座、洞穴近 2000 个（中国地质调查局岩溶地质研究所）</a>；<a href="https://baike.baidu.com/item/%E5%8D%97%E6%96%B9%E5%96%80%E6%96%AF%E7%89%B9/15796561" target="_blank" rel="noopener">中国南方喀斯特（世界遗产构成与面积）</a>；<a href="https://dnr.yn.gov.cn/html/2022/ziranziyuanxinxi_1102/33942.html" target="_blank" rel="noopener">云南石林：350 km²、海拔 1600—2203 m、2.7 亿年演化史（云南省自然资源厅）</a>；<a href="http://www.kyb.cgs.gov.cn/dxqy/202004/t20200401_583278.html" target="_blank" rel="noopener">石林剑状石柱与溶蚀机理（中国矿业报）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/zoige-peatland">若尔盖</a>、<a href="#c/yongdinghe-fan">永定河扇</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-yellow-river-delta"><p class="kicker">海岸与河口 · 黄河三角洲</p>
+<h1>黄河三角洲</h1>
+<p class="lead">来沙一断，海岸线立刻改口</p>
+<p>黄河三角洲地处山东省东营市，黄河入渤海处。坐标约 118°15′—119°24′E，37°20′—38°12′N；现代三角洲陆地面积约 5400 km²。成因上归入海岸与河口一类。它的现状是：由快速淤进转为冲淤交替，部分叶瓣持续蚀退。到现场去，东营市区可达黄河入海口湿地与三角洲国家级自然保护区，有观鸟与湿地游线。</p>
+<p>全世界造陆最快的地方之一，也是最直观的&quot;泥沙账本&quot;：来沙多就进，来沙少就退。1976 年改道、1996 年出汊、2002 年小浪底调水调沙，每一次人类干预都写在海岸线上。</p>
+<h2>现场能看到什么</h2>
+<p>海岸现场，看河海两股力量留下的分带，以及岸线正在向哪个方向推进。看河口的分汊与沙嘴：现行流路的沙嘴在向海推进，废弃流路的叶瓣在往回退，同一三角洲上两种方向并存。看滩面的淤泥质特征：黄河口以细颗粒淤泥为主，潮滩宽阔，与砂质海岸的陡剖面完全不同。看人工海堤段：1990 年代后东营港至孤东油田因海堤防护，岸线基本锁死 —— 这是&quot;人类活动成为地貌营力&quot;的直接证据。看湿地植被带：从水边到内陆依次为光滩、盐地碱蓬、芦苇等，反映的是淹没频率与盐度的梯度。</p>
+<h2>背后的原理</h2>
+<p>三角洲的两股力量：河流供沙使岸线向海推进，海洋动力（波浪、潮流）侵蚀使岸线向陆后退。谁占上风，取决于来沙量与海洋能量的比值。为什么黄河三角洲造陆快：含沙量极高（水少沙多），河口淤积延伸速率可达 2—3 km/a，导致尾闾河道周期性出汊摆动。改道的机制：河道淤高 → 比降变缓 → 泄流不畅 → 寻找新的、更短更陡的入海路径。1946 年前改道 7 次，之后又有 1953、1964、1976、1996、2007 等多次人工或自然改道。为什么 1989 年后转蚀退：输沙量断崖式下跌（小浪底水库、调水调沙、退耕还林、工农业用水），海洋动力未变而物源锐减，抗侵蚀能力崩溃。极端事件的放大效应：低物源时期，一次风暴潮的蚀退量（−1243 m/a）可达平均速率（−146 m/a）的 8 倍以上 —— 风险评估不能只看年均值。&quot;每亿吨沙能换来多少岸线&quot;：不同流路时期分别为 0.21—0.23、0.31、1.16 km/亿 t，海域越浅、海洋动力越弱，单位泥沙的造陆效率越高。</p>
+<h2>这些数字在说什么</h2>
+<p>造陆速率是&quot;流量账&quot;，年均 40.8 km² → 22.1 km² 的下降，本质是来沙从 142.8 亿 t 降到 124.17 亿 t 再降到 10.34 亿 t。同一三角洲的两种命运，现行河口在淤、废弃叶瓣在蚀，说明三角洲不是整体进退，而是&quot;沉积中心&quot;在迁移。1.76 亿 t/a 的临界值，这是把&quot;冲淤平衡&quot;量化成管理指标的尝试：低于它，三角洲净蚀退。人类已是主要营力，改道、水库、调水调沙、海堤、生态补水，每一项的量级都超过了自然波动 —— 现代地貌学必须把人算进去。</p>
+<h2>实测数据</h2>
+<p>现代三角洲面积，约 5400 km²（自 1855 年黄河入渤海后淤积形成）——黄河口区域主要为淤泥质海岸。利津站多年平均，1950—2020 年年均来沙 6.51 亿 t、年均来水 294.8 亿 m³——黄河口水少沙多的典型数据。刁口河期 1964.1—1976.5，造陆 506.9 km²，年均 40.8 km²；岸线延伸 33 km（2.66 km/a）——同期来沙 142.8 亿 t。清水沟期 1976.6—1996.6，造陆 442 km²，年均 22.1 km²；岸线延伸 38 km（1.9 km/a）——来沙 124.17 亿 t，每亿吨沙岸线延伸 0.31 km。清 8 汊期 1996.7—2000，汊河小沙嘴造陆 19.2 km²，原大沙嘴南侧 25 km²；岸线延伸 12 km（2.82 km/a）——来沙仅 10.34 亿 t，每亿吨沙延伸 1.16 km。快速淤积期 1976—1988，输沙 7.25×10⁸ t/a，最快淤进 1825 m/a，最大淤进距离超 17 km——高物源驱动。剧烈调整期 1989—2008，输沙由 8.49×10⁸ 降至 0.825×10⁸ t/a；风暴潮致最大蚀退速率 −1243 m/a——低物源下极端事件放大破坏。废弃叶瓣蚀退，刁口河流路 1976—2010 陆地面积由 332.4 km² 降至 192 km²，年侵蚀 4.01 km²/a——2010 年生态补水后蚀退趋缓。冲淤平衡临界值，入海径流约 105.14 亿 m³/a、输沙约 1.76 亿 t/a 时接近临界平衡——来自遥感与阈值研究。</p>
+<h2>争议与口径</h2>
+<p>不同研究给出的造陆面积、岸线速率、临界水沙阈值略有差异（源于遥感数据源、岸线定义、潮位校正方法不同）。本站按各文献原始口径分列。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="http://jhyqy.com.cn/article/doi/10.16028/j.1009-2722.2025.155" target="_blank" rel="noopener">1976—2024 年黄河三角洲海岸线变化分析（海洋地质前沿）</a>；<a href="https://www.geog.com.cn/CN/PDF/10.11821/xb200911007" target="_blank" rel="noopener">黄河三角洲岸线演变与利津站水沙量（地理学报，2009）</a>；<a href="https://a.xueshu.baidu.com/usercenter/paper/show?paperid=1s1q0er0tc280m709a7y0py0bc770683" target="_blank" rel="noopener">基于遥感的黄河三角洲海岸带淤蚀变化及其水沙阈值研究</a>；<a href="https://irrigate.whu.edu.cn/CN/10.12396/znsd.240233" target="_blank" rel="noopener">黄河三角洲海岸线提取及其近期时空变化格局（中国农村水利水电，2024）</a>；<a href="https://www.toutiao.com/article/7177564556745998882" target="_blank" rel="noopener">黄河故道——刁口河（东营网）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/yongdinghe-fan">永定河扇</a>、<a href="#c/zoige-peatland">若尔盖</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 9 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-yongdinghe-fan"><p class="kicker">流水 · 永定河冲洪积扇</p>
+<h1>永定河冲洪积扇</h1>
+<p class="lead">北京城就建在一个扇面上</p>
+<p>永定河冲洪积扇地处北京市西部至东南部，扇顶在石景山。北京平原约 6400 km²；永定河冲洪积扇面积约 1000 km²。成因上归入流水一类。它的现状是：被城市完全覆盖，靠钻探与物探揭示。到现场去，扇顶石景山、扇中城区、扇缘通州，沿地铁与城市道路即可穿越整个扇体。</p>
+<p>一条河出山，坡度骤减，就把携带的碎石一把撒成扇面。从扇顶到扇缘，砾石变砂、砂变黏土，地下水位由深变浅 —— 这套分带决定了北京城几千年的选址与供水。</p>
+<h2>现场能看到什么</h2>
+<p>流水地貌现场，先看地面高低，再看土质的粗细与分选，然后找水流方向的证据。在石景山一带看扇顶：粗大的砂砾石层直接出露地表，是&quot;能量最强处先卸货&quot;的证据。沿长安街自西向东走，就是在走扇体的轴线；地层由砾石渐变到细砂再到黏土。看扇缘的湖沼相沉积与古河道洼地：通州一带历史上多湿地，是扇缘地下水位接近地表的直接后果。在工程建设剖面或基坑里找&quot;泥包砾&quot;：砾石被黏土包裹，说明是高密度洪流快速堆积。</p>
+<h2>背后的原理</h2>
+<p>为什么出山就堆：河流出山口后失去侧向约束、比降骤减、水流分散，搬运能力断崖式下降，携带物质随即堆积。为什么是扇形：一条河道被自己堆高后水流转向侧方，日久在山前&quot;扫&quot;出一个扇面 —— 扇是河流自己摆动出来的。冲积扇与洪积扇的区别：常年性河流出山形成冲积扇（规模大、坡度缓、砾石磨圆好、层序清楚）；干旱半干旱区暂时性洪流形成洪积扇（规模小、坡度大、物质混杂无序、砾石多不磨圆）。粒度的分带机制：搬运能力随流速下降而下降，粗颗粒先沉、细颗粒后沉，因此扇顶粗、扇缘细；扇缘往往也是地下水溢出带。扇体的叠加与迁移：山地持续抬升、山前平原下降时，新扇叠在老扇上（上叠式）；若山前新构造活动不均量，新扇向相对下降侧偏移，形成不对称或串珠状扇体。为什么城市长在扇上：扇中—扇缘地段地形平缓、地下水位适中、有砂层含水层可供开采，且不受山洪直接冲击。</p>
+<h2>这些数字在说什么</h2>
+<p>1000 km² 的扇面，这不是一个&quot;景点&quot;，而是一整套沉积系统；城市的地基、水源、工程地质条件都由它决定。422 m 的底界，说明这套扇体堆积跨越了数百万年，是构造沉降与沉积供给长期耦合的结果。扇顶到扇缘的粒度梯度，是&quot;判别古扇体方向&quot;的基本工具：野外找到砾石变细的方向，就找到了古代水流的方向。冲积扇 vs 三角洲，同为河流堆积体，一个在出山口、一个在入水口；识别时看顶积层的岩相组合与是否含海/湖相夹层。</p>
+<h2>实测数据</h2>
+<p>扇体规模，永定河出山后以石景山为顶点形成的洪积—冲积扇，面积约 1000 km²——北京城 3000 多年发展未离开此扇。北京平原组成，约 6400 km²，主要由永定河冲洪积扇群与潮白河冲洪积扇组成——永定河扇群在市域内有 Ⅰ 号、Ⅱ 号两个扇体。Ⅰ 号扇，轴线沿长安街东西向；扇顶在石景山，砂砾石出露地表厚数十米；中部为中砂—细砂—粉砂与黏土互层；扇缘在通州，以黏土、亚黏土为主并见湖沼相——扇体结构自西向东完整展开。底界埋深，新 5 孔钻探，冲洪积扇底界埋深 422 m，底部见厚 90 余米泥砂砾岩——古地磁测年 3.33—3.58 Ma，上新世中期。坡度特征，冲积扇一般 2—5°；洪积扇扇顶 5—10°，远离山口 2—6°；扇缘可低至 1—2°——坡度自扇顶向扇缘递减。沉积物分带，扇顶以砂砾为主、分选差；扇中为砂砾石夹黏土；扇缘为粉砂与黏土，分选较好——粒度随搬运距离变细。扇缘水文，扇体之间及扇缘相对低洼处常有地下水溢出——干旱区形成绿洲；北京扇缘历史上多湖沼。</p>
+<h2>争议与口径</h2>
+<p>永定河扇体划分（Ⅰ 号、Ⅱ 号）与扇缘位置存在不同研究口径；扇面积 1000 km² 为常见科普口径，具体边界随研究定义不同而有出入。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="http://geochina.cgs.gov.cn/cn/article/pdf/preview/10.12029/gc20090507.pdf" target="_blank" rel="noopener">北京平原第四系的三维结构：永定河冲洪积扇结构与新 5 孔（中国地质）</a>；<a href="http://geochina.cgs.gov.cn/fileZGDZ/journal/article/zgdz/2016/3/htm/20160327.htm" target="_blank" rel="noopener">北京平原地区第四纪地质研究新进展（中国地质）</a>；<a href="https://baike.baidu.com/item/%E5%86%B2%E7%A7%AF%E6%89%87%E5%B9%B3%E5%8E%9F" target="_blank" rel="noopener">冲积扇平原（永定河扇 1000 km²、坡度 2—5°）</a>；<a href="https://www.doc88.com/p-0008547885586.html" target="_blank" rel="noopener">冲积扇与洪积扇的区别（扇顶坡度 5—10°、扇缘 1—2°）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/yellow-river-delta">黄河口</a>、<a href="#c/guilin-fenglin">桂林</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 7 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-xintan-landslide"><p class="kicker">斜坡与重力 · 新滩滑坡与链子崖</p>
+<h1>新滩滑坡与链子崖</h1>
+<p class="lead">3000 万方，一夜之间把一座 900 年的镇推进长江</p>
+<p>新滩滑坡与链子崖地处湖北省秭归县（今屈原镇）长江北岸新滩、南岸链子崖。新滩位于秭归县城东 17 km；链子崖距三峡大坝 25 km。成因上归入斜坡与重力一类。它的现状是：滑坡已发生（1985）；链子崖危岩体已治理并开放。到现场去，长江航线可近距离观察链子崖治理工程；新滩滑坡体位于江北岸，可从陆路远观。</p>
+<p>斜坡章节里所有概念 —— 崩塌、滑坡、危岩、涌浪、监测预警 —— 在这个点上一次性全部发生，并且留下了完整的工程治理档案。</p>
+<h2>现场能看到什么</h2>
+<p>斜坡灾害现场，看陡崖、裂缝与堆积体，重点在它们的接触关系与规模。到链子崖看崖面上的混凝土&quot;铠甲&quot;与承重阻滑工程：抗滑键、锚固、排水系统构成完整治理体系。看裂缝：58 条宽大裂缝把岩体切割成片状块状 —— 危岩体的&quot;危&quot;，本质是结构面控制。从江面看岸坡的阶梯状地形与崩积物：那是长期崩滑堆积的结果，也是判断稳定性的直观依据。注意监测设施：地表位移、地下水位、裂缝计等，地灾治理&quot;三分治七分养&quot;，监测才是长期主角。</p>
+<h2>背后的原理</h2>
+<p>斜坡失稳的基本判据：下滑力（重力沿坡面分量）超过抗滑力（岩土强度 + 结构面摩擦 + 支护）。水是最常见的诱发因素 —— 它增加重量、降低强度、产生孔隙水压力。崩塌 vs 滑坡：崩塌以坠落、翻滚为主，速度快、无明显滑动面；滑坡沿一个或多个滑动面整体下滑，有明确的滑体、滑床、滑坡壁与滑坡台阶。为什么是这里：长江在此强烈下切形成高陡临空面，岸坡岩体被构造裂隙与卸荷裂隙切割，加上长期崩滑堆积物自身强度低，构成典型的峡谷型地质灾害链。次生灾害放大的机制：滑坡高速入江 → 体积置换产生涌浪 → 涌浪传播造成对岸与上下游船只、设施的二次破坏。这类&quot;滑坡—涌浪&quot;链比滑坡本身危害更大。治理思路：不是&quot;把山搬走&quot;，而是&quot;改变力的平衡&quot; —— 承重阻滑（在关键部位设抗滑工程）+ 排水（降低孔隙水压）+ 锚固（提高结构面强度）+ 监测预警（争取时间）。为什么值得长期监测：危岩体变形具有时效性与突发性，蓄水、降雨、地震都可能触发；监测数据的趋势分析是预报的唯一依据。</p>
+<h2>这些数字在说什么</h2>
+<p>3000 万 m³ 与 900 年古镇，地貌过程的量级，和人类聚落的时间尺度，在这个点上直接对撞。70 m 浪高，说明斜坡灾害的危害半径远大于滑体本身 —— 评估风险时要算&quot;链&quot;，不能只算&quot;体&quot;。135 个监测点，重大地灾治理的样板意义在于：它把&quot;治理—监测—预警&quot;做成了一个可持续运行的系统。21 年与 82 年断航，历史记载提供了超越仪器观测时段的&quot;长序列数据&quot;，是地貌年代学里最朴素的证据来源。</p>
+<h2>实测数据</h2>
+<p>滑坡时间，1985 年初夏——正值长江汛前。滑坡规模，约 3000 万 m³——将有 900 年历史的新滩镇推入长江。入江后果，激起浪高 70 m、涌浪 39 m；击翻机动船 13 艘；造成 10 余人死亡；滑坡岩土占据长江航道 30%；被迫停航 12 天——目击者回忆与工程档案记录。链子崖危岩体，南北长 700 m、东西宽 210 m，被 58 条宽大裂缝切割，总体积 300 多万 m³——位于长江南岸临江陡崖。历史崩滑，1030 年、1542 年两次崩滑分别导致长江断航 21 年和 82 年——说明该段具长期崩滑史。治理工程，1989 年立项并动用总理基金；1992 年开工；1999 年 8 月全面竣工——历时约 5 年。监测系统，设置各类监测点 135 个（处）——多手段、立体化，含计算机自动处理与预测预报。后续检验，经 4 个水文年效果监测与三峡水库坝前 135—139 m、175 m 蓄水检验，运行效果良好——治理后被辟为风景区对外开放。</p>
+<h2>争议与口径</h2>
+<p>滑坡体积、涌浪高度等数字来源以工程档案与目击者回忆为主，不同文本表述略有出入（如&quot;3000 万 m³&quot;为通行口径）。本站采用官方与媒体报道中的一致值。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="https://m.mnr.gov.cn/dt/ywbb/201812/t20181228_2383470.html" target="_blank" rel="noopener">百里峡江写沧桑：链子崖危岩体与新滩滑坡（自然资源部）</a>；<a href="https://m.mnr.gov.cn/dt/ywbb/202410/t20241001_2869822.html" target="_blank" rel="noopener">荆山楚水韵三江：新滩滑坡与链子崖治理（自然资源部）</a>；<a href="https://cigem.cn/auto/db/detail?db=800001&amp;rid=160217B8D3BE3DCC757A4F26270F92C1" target="_blank" rel="noopener">今日链子崖：治理与监测（中国地质环境信息网）</a>；<a href="https://caghp.org.cn/detail/905.html" target="_blank" rel="noopener">今 日 新 三 峡：三峡库区地质灾害防治回眸（中国地质灾害防治与生态修复协会）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/fenwei-graben">汾渭地堑</a>、<a href="#c/hailuogou-glacier">海螺沟</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-fenwei-graben"><p class="kicker">构造与新构造 · 汾渭地堑与西安地裂缝</p>
+<h1>汾渭地堑与西安地裂缝</h1>
+<p class="lead">内力给出的舞台，正在以毫米每年改写</p>
+<p>汾渭地堑与西安地裂缝地处陕西关中平原（渭河盆地）及周边汾河谷地。夹持于秦岭造山带与鄂尔多斯地块之间；西安地区为沉降中心之一。成因上归入构造与新构造一类。它的现状是：构造活动持续，叠加人类活动沉降。到现场去，西安市内即可观察地裂缝与地面沉降的地面标志；秦岭北缘断裂沿山前公路可见地貌陡坎。</p>
+<p>一边是 5500—6000 米厚的断陷沉积，一边是每年几毫米的隆升与下沉。新构造运动在这里不是历史，而是可以用水准仪每年读出来的现实。</p>
+<h2>现场能看到什么</h2>
+<p>构造现场，找直线状的地形痕迹、地面错台的走向，以及形变速率的量级。在秦岭北麓看山前地貌陡坎与冲沟：山前断裂的活动在地形上留下最直接的痕迹。在西安城里看地裂缝的地表表现：路面错台、建筑开裂、管线变形，往往沿固定方向成带出现。注意&quot;地面沉降&quot;与&quot;地裂缝&quot;的关系：不均匀沉降会拉裂土层，形成或加剧地裂缝；二者常常伴生但机制不同。对比渭河阶地与黄土塬的变形：同一构造背景下，不同地貌单元的表现差异，正是&quot;构造—地貌&quot;耦合的研究入口。</p>
+<h2>背后的原理</h2>
+<p>地堑的形成：区域拉张背景下，两侧地块相对上升、中间地块沿正断层下落，形成断陷盆地；盆地的沉降为沉积提供空间，沉积又记录沉降历史。新构造的含义：造成现代地形基本轮廓、且现今仍在进行的构造运动。它的证据来自地形（阶地、夷平面、断裂崖）、沉积（厚度与相变）、形变测量（水准、GPS）与地震活动。研究方法的核心：把&quot;地形&quot;当仪器用 —— 河流阶地的级数与高差、冲洪积扇的叠置关系、夷平面的变形、海岸线的升降，都是构造运动的记录器。构造与人类活动的叠加：西安的沉降中，地下水超采的贡献远大于构造继承性运动；这意味着&quot;新构造研究&quot;必须先把人为分量剥离，才能得到真实的构造速率。地震危险性含义：断裂的闭锁深度越大、滑动速率越高，积累能量的潜力越大。秦岭北缘断裂闭锁 9.8 km、倾滑 5.34 mm/a，是需要重点关注的段落。不对称掀斜：秦岭北麓隆升快于南麓（差值约 2 mm/a），与&quot;南缓北陡&quot;的地形吻合 —— 形变速率场与地形剖面的一致性，是检验构造解释的关键。</p>
+<h2>这些数字在说什么</h2>
+<p>毫米每年，这个量级听起来微不足道，但乘以万年就是几十米到上百米的高差 —— 地貌是时间的积分。5500—6000 m 沉积，说明沉降在时间上是持续的、在空间上是巨大的，盆地本身就是一部构造史。3 mm/a 中的人为分量，提醒一件事：观测到的形变不等于构造形变，测站记录永远是&quot;自然 + 人类&quot;的叠加。地裂缝的空间分异，东郊强于西郊、南郊强于北郊，与地下水开采强度和隐伏断裂展布有关，是&quot;构造控制 + 人为触发&quot;的复合结果。</p>
+<h2>实测数据</h2>
+<p>盆地性质，新生代断陷盆地（断块型复式地堑），基岩上覆沉积厚 5500—6000 m——含冲积、湖积、洪积相物质及风积黄土。形成过程，燕山运动期（约 1.3 亿年前）奠定雏形；喜马拉雅运动期完成发育——第四纪以来总趋势为&quot;北翘南陷&quot;。现今垂直形变（2006—2018 精密水准），渭河盆地（除西安）下沉 &lt;1 mm/a；鄂尔多斯地块南缘隆升 3—5 mm/a；秦岭北麓隆升约 3 mm/a；秦岭腹地 &lt;1 mm/a——继承性运动特征明显。西安沉降速率，约 3 mm/a（2006—2018）；1971—1996 年相对泾阳曾达 −12 mm/a——主因曾为地下水超采，近年已受控。主要断裂倾滑速率，口镇—关山断裂 6.55 mm/a（闭锁深度 4.6 km）；秦岭北缘断裂 5.34 mm/a（闭锁深度 9.8 km）；渭河断裂 3.21 mm/a（闭锁 3.4 km）——由矩形位错模型反演。西安地面沉降，20 世纪 80 年代中期累计沉降 &gt;500 mm 面积约 40 km²，沉降中心 900—1333 mm；2000 年东南郊超 600 mm，超 1000 mm 面积 42.5 km²，中心超 2000 mm，东八里村累计达 2850 mm——沉降中心随城区扩展而迁移。地裂缝活动趋势，1995 年活动量 55.05 mm → 1999 年 23.30 mm，总体减弱——仍具东郊强于西郊、南郊强于北郊的空间分异。</p>
+<h2>争议与口径</h2>
+<p>不同观测时段与技术手段（水准、GPS、InSAR）给出的速率值略有差异；西安沉降中构造分量与人为分量的比例仍有讨论。本站按各时段原文献列出。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="https://html.rhhz.net/DDCLYDQDLX/html/11986.htm" target="_blank" rel="noopener">跨关中地区现今地壳垂直形变剖面（大地测量与地球动力学）</a>；<a href="https://xadfz.xa.gov.cn/xadq/stxa/63d5d8cdf8fd1c4c213b1eef.html" target="_blank" rel="noopener">渭河断陷（西安市地方志办公室）</a>；<a href="https://ytlx.whrsm.ac.cn/CN/PDF/10402" target="_blank" rel="noopener">西安地裂缝活动现状及地铁隧道建设应对措施（岩土力学）</a>；<a href="https://baike.baidu.com/view/1661404.html" target="_blank" rel="noopener">渭河地堑（构造演化与沉积厚度）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/xintan-landslide">新滩滑坡</a>、<a href="#c/nihewan">泥河湾</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 7 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-nihewan"><p class="kicker">第四纪地层与事件 · 泥河湾盆地</p>
+<h1>泥河湾盆地</h1>
+<p class="lead">东亚最早的人类活动面，与它下面的 176 万年</p>
+<p>泥河湾盆地地处河北省张家口市阳原县大田洼乡，桑干河南岸。马圈沟遗址位于岑家湾村西南约 1 km；遗址群分布范围约 9000 km²。成因上归入第四纪地层与事件一类。它的现状是：全国重点文物保护单位；国家首批重要大遗址。到现场去，泥河湾国家考古遗址公园已建成，马圈沟第三文化层建有保护棚并对外开放展示。</p>
+<p>一套 50 多米厚的河湖相地层里，摞着 17 个文化层，最早的距今约 176 万年。第四纪地层学、古地磁测年与旧石器考古在这里共用同一把尺子。</p>
+<h2>现场能看到什么</h2>
+<p>地层现场，看剖面的厚薄与层数，再问每一层对应多长的时间。看剖面本身：50 余米厚的河湖相地层，颜色与粒度的变化就是气候与沉积环境的变化。在保护棚里看第 III 文化层原状：骨骼与石器的空间关系（谁压着谁、谁挨着谁）才是行为证据，不是器物本身。注意&quot;古地面&quot;：足迹、活动面这类遗存只能在极快速埋藏条件下保存，找到一个就是找到一个瞬间。看地层与断层的关系：遗址位于油房断层上盘、距断层面很近 —— 构造控制了盆地的沉积与保存。</p>
+<h2>背后的原理</h2>
+<p>为什么是盆地：构造断陷提供了持续沉降的空间，河流与湖泊在此堆积，形成连续、巨厚的河湖相序列，为古人类活动面提供了良好的埋藏条件。测年链条：古地磁（磁性地层）给出地层的极性序列与年代框架，生物地层（哺乳动物群）给出相对年代交叉验证，两者吻合才敢用来定年。文化层的含义：每一个文化层代表一次或若干次人类在该地表的活动，被后续沉积快速覆盖。17 个层 = 反复有人来过。为什么&quot;层位最低&quot;最重要：最低的文化层给出人类在该区域出现的时间上限，是讨论&quot;人类何时到达东亚&quot;的硬约束。出土背景比器物更关键：刮削器与大象肋骨保持接触状态、骨骼上的砍砸与切割痕迹，这些空间与痕迹信息才能支撑&quot;猎杀—肢解—餐食&quot;的行为重建。争议的科学意义：年代接近甚至超过 200 万年的说法，涉及&quot;早期人类何时走出非洲&quot;这一重大命题，因此要求尽可能高的年代精度。</p>
+<h2>这些数字在说什么</h2>
+<p>176 万—125 万年，这不是一个&quot;遗址年代&quot;，而是一段连续的人类活动史，说明早期人类在华北反复出现。17 个文化层，序列的价值大于单点：它证明的不是&quot;有人来过一次&quot;，而是&quot;这里长期适合人住&quot;。地层学的落点，第四纪地层学不是为分地层而分，最终要回答的是人的问题——人什么时候来、怎么活。方法学示范，磁性地层 + 生物地层 + 考古学三条证据链交叉，是第四纪研究的标准动作。</p>
+<h2>实测数据</h2>
+<p>遗址群规模，约 9000 km²，400 多处遗址，时间跨越 200 万年至 1 万年——被称为&quot;东方人类故乡&quot;。马圈沟遗址，阳原县大田洼乡岑家湾村西南约 1 km，位于大田洼台地北坡、油房断层上盘——文化遗物埋藏在泥河湾层厚约 50 余米的河湖相地层内。文化层数量，同一剖面确认 17 个文化层——由早及晚自第 VII 文化层至鱼咀沟 2 号地点第 I 文化层。年代范围，古地磁年代 176 万—125 万年——基本建立早更新世中晚期古人类文化序列。关键层位年代，第 I 文化层 155 万年、第 II 164 万年、第 III 166 万年；第 III 至第 VII 分别为 166、169、174、175、176 万年——另有半山遗址 1.32 Ma。&quot;东方人类第一餐&quot;，第 III 文化层：以草原猛犸象骨骼为主体，密集散布石核、石片、刮削器、石锤，多数骨骼保留砍砸、刮削痕迹，一件刮削器出土时仍与大象肋骨接触——约 166 万年前。大象足迹，第 II 文化层揭露 66 个（一说 46—66 个）保存完好的草原猛犸象足迹化石——全球罕见。出土物，历年出土石制品与动物化石超万件；以草原猛犸象为主，另有犀、鹿、马、啮齿类——小石器工业传统。</p>
+<h2>争议与口径</h2>
+<p>年代数据存在两代表述：早期报告给出 I/II/III 层 155/164/166 万年，第七文化层&quot;生物地层年龄接近甚至超过 200 万年&quot;；后续系统发掘给出第三至第七层 166—176 万年。是否达到 200 万年涉及重大命题，学界保持高精度要求。本站并列。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="https://baike.baidu.com/item/%E9%A9%AC%E5%9C%88%E6%B2%9F%E9%81%97%E5%9D%80/7125186" target="_blank" rel="noopener">马圈沟遗址（年代、文化层、出土物、保护级别）</a>；<a href="http://www.hbswwkg.com/2022-02/18/content_8728396.html" target="_blank" rel="noopener">马圈沟遗址 2019 年考古发掘汇报（河北省文物考古研究院）</a>；<a href="http://ir.ivpp.ac.cn/bitstream/311034/470/1/" target="_blank" rel="noopener">泥河湾盆地马圈沟遗址化石哺乳动物及年代讨论（中科院古脊椎所）</a>；<a href="https://news.qq.com/rain/a/20250315A05A9J00" target="_blank" rel="noopener">文化中国行：泥河湾遗址群实证我国百万年人类史（腾讯新闻，2025）</a>；<a href="https://www.hbynet.net/html/heqing/daohang/heqingzhuanti/nhwzt/jmnhw/1579740605142241281.html" target="_blank" rel="noopener">马圈沟遗址：泥河湾盆地年代最早的文化遗址</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/fenwei-graben">汾渭地堑</a>、<a href="#c/wudalianchi-volcano">五大连池</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-wudalianchi-volcano"><p class="kicker">第四纪地层与事件 · 五大连池火山群</p>
+<h1>五大连池火山群</h1>
+<p class="lead">300 年前的一次喷发，把地貌过程按下了快进键</p>
+<p>五大连池火山群地处黑龙江省黑河市五大连池市。坐标约 48.6—48.8°N，126.0—126.5°E；海拔 355.8—602.6 m。成因上归入第四纪地层与事件一类。它的现状是：休眠火山；熔岩地貌保存完好。到现场去，五大连池世界地质公园，老黑山、火烧山、龙门石寨等均有栈道与观景设施。</p>
+<p>中国最新的一次火山喷发就在这里，距今仅约 300 年。正因为年轻，熔岩流动、冷却、风化、植被定殖的全过程都还&quot;停在现场&quot;，是最完整的天然实验场。</p>
+<h2>现场能看到什么</h2>
+<p>地层现场，看剖面的厚薄与层数，再问每一层对应多长的时间。在老黑山顶看漏斗状火山口：直径 350 m、深 136 m，留意北侧两个熔岩溢出口。在龙门石寨看翻花熔岩：表层硬壳被内部流动熔岩挤碎翻转，形成一片&quot;石涛&quot;。分辨结壳熔岩与绳状熔岩：前者表面破碎、后者表面呈绳状皱纹 —— 流动状态不同，产物就不同。找喷气锥与喷气碟：熔岩流经含水地表时气体上冲形成，是判断熔岩与水体相互作用的标志。看石缝里的地衣→苔藓→草本：这是原生演替的起点，也是&quot;最年轻地貌&quot;的证明。</p>
+<h2>背后的原理</h2>
+<p>为什么这里会喷：火山受北东、北西两组断裂控制，断裂交会处易成火口；构造薄弱带是岩浆上升的通道。喷发—堆积：玄武质岩浆黏度低、流动性好，以溢流为主形成熔岩盾与熔岩流，同时抛出浮岩与火山渣堆积成锥。老黑山、火烧山均由高钾玄武质熔岩盾和锥体构成，熔岩盾是主体。翻花熔岩的形成：熔岩表层接触空气快速冷凝成硬壳，内部仍在流动，对硬壳推挤使之破碎翻转，最终形成参差不齐的翻花状表面。堰塞湖的形成：熔岩流填入河谷，阻断水流，上游积水成湖 —— 火山作用通过改变水系而重塑地貌，是&quot;内力过程改写外力系统&quot;的典型。为什么老期火山看不出火山形：200 万年—14.5 万年的风化剥蚀与植被覆盖已将其改造；地貌的保存时限，取决于岩性、气候与构造稳定性。为什么这里珍贵：喷发年代有确切史料（《黑龙江外记》《宁古塔记略》），过程有目击记录，产物未被后期剥蚀 —— 年代明确 + 过程完整，是验证火山地貌理论的稀有样本。</p>
+<h2>这些数字在说什么</h2>
+<p>300 年，在地质时间尺度上等于&quot;刚刚发生&quot;，所以喷气锥、熔岩流纹理这些易逝的细节都还在。800 余 km² 熔岩，说明单次火山活动改变的地表面积，远大于火山锥本身。5 个堰塞湖，展示了&quot;火山 → 堵河 → 成湖 → 沉积&quot;的完整因果链。200 万年到 300 年前的时序，同一区域可以读到不同时代的火山地貌，构成天然的&quot;地貌年代序列&quot;。</p>
+<h2>实测数据</h2>
+<p>喷发时间，1719—1721 年（清康熙五十八年至六十年）——形成老黑山与火烧山两座新期火山。火山数量，14 座（若含西部莲花山则为 15 座）——老期 12 座 + 新期 2 座。老黑山，海拔 515.5 m（一说 515.9 m），相对高度 164 m（一说 166 m）；火山口呈漏斗状，直径 350 m，深 136 m（一说 140 m）——14 座火山中最高的一座。火烧山，海拔 392.6 m，比高 73 m；锥体直径 800 m，火口直径 450 m，深 63 m——东北坡有高约 3 m 的喷气孔塔群。熔岩台地，火山岩分布面积达 800 余 km²（一说新期两火山 64 km² / 68.3 km²）——&quot;石龙&quot;沿白河南延，长约 10—17 km。老期火山，年龄跨度约 200 万年至 14.5 万年——多数已被植物覆盖，保存完整火山口与喷气锥、喷气碟。熔岩类型，结壳熔岩、翻花熔岩、绳状熔岩；保存喷气锥、喷气碟、火山弹——全球罕见的熔岩构造组合。堰塞湖，熔岩阻塞白河河道形成 5 个串珠状湖泊——五大连池因此得名。生态演替，经 300 余年演替，形成含 20 余种特有植物的火山生态系统——地衣先行，继以苔藓、草本。</p>
+<h2>争议与口径</h2>
+<p>火山数量（14 或 15）、老黑山相对高度（164 m 或 166 m）、火口深度（136 m 或 140 m）、石龙长度（10 km 或 17 km）、熔岩台地面积（800 余 km² / 64 km² / 68.3 km²）在不同来源口径不一 —— 后两者差异源于&quot;全部火山岩分布&quot;与&quot;新期两火山&quot;两个不同统计对象。本站并列不合并。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 4 条公开来源：<a href="https://baike.baidu.com/item/%E4%BA%94%E5%A4%A7%E8%BF%9E%E6%B1%A0%E7%81%AB%E5%B1%B1%E6%99%AF%E8%A7%82/6978397" target="_blank" rel="noopener">五大连池火山景观（喷发时间、14 座火山、熔岩台地）</a>；<a href="https://baike.baidu.com/item/%E7%9F%B3%E6%B5%B7/5734572" target="_blank" rel="noopener">石海/翻花熔岩（形成机理、龙门石寨约 5 km²）</a>；<a href="https://q.baike.haosou.com/doc/5718482-5931209.html" target="_blank" rel="noopener">老黑山（海拔、火口尺寸、石龙延伸 17 km）</a>；<a href="https://m.baike.haosou.com/doc/6417836-6631508.html" target="_blank" rel="noopener">五大连池火山群（14 座火山、新期喷发、68.3 km²）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/nihewan">泥河湾</a>、<a href="#c/luochuan-loess">洛川</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 9 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-xuancheng-red-earth"><p class="kicker">风化与残积 · 宣城网纹红土</p>
+<h1>宣城网纹红土</h1>
+<p class="lead">南方的红土，到底是不是风吹来的</p>
+<p>宣城网纹红土地处安徽省宣城市向阳镇夏村（向阳剖面）。坐标30°52′24″N，118°51′55″E。成因上归入风化与残积一类。它的现状是：研究热点：成因与气候旋回解读存在分歧。到现场去，剖面位于砖瓦厂取土场露头，需引路；同类红土在皖、苏、浙、赣、粤广泛出露，路边常见。</p>
+<p>一堵红白相间的土墙。白色网纹是铁被还原淋走的痕迹，红色基质是铁被氧化的产物。它记录的是南方持续湿热风化的强度，也是李四光&quot;白条红泥&quot;命名的起点。</p>
+<h2>现场能看到什么</h2>
+<p>风化剖面现场，先看颜色与结构的变化，再用手感分辨风化强度的分带。看&quot;网纹&quot;的形态：白色/黄白色的指状、管状、虫状条纹，交织在红色基质中 —— 这是铁质沿裂隙被还原淋失的通道。看颜色剖面：典型网纹红土（中下部）风化最强，均质红土、弱发育网纹层次之，顶部黄棕色土最弱。捻土感：黏重、细腻、无砂感；与北方黄土的粉质感完全不同。注意上覆下伏关系：长江中下游常见网纹红土覆盖于红色泥砾层之上，这一接触关系是讨论年代与成因的关键。</p>
+<h2>背后的原理</h2>
+<p>红化的化学：湿热条件下，硅酸盐矿物强烈水解，碱金属与碱土金属淋失，硅部分淋失，铁铝相对富集（脱硅富铝化） → 形成以高岭石、赤铁矿、三水铝石为主的红色风化壳。网纹的成因：干湿气候交替下氧化还原环境反复切换。还原条件下铁被还原为可溶的 Fe²⁺ 沿裂隙淋失，留下灰白色条带（纯水铝石为主）；氧化条件下铁以 Fe³⁺ 固定为赤铁矿，呈现红色。为什么磁化率低：强风化使强磁性磁赤铁矿溶解流失或向弱磁性赤铁矿转化，因此典型网纹红土的磁化率比上覆均质红土低一个数量级 —— 磁化率在这里不能当&quot;风化强度计&quot;用。风成说 vs 水成说：粒度证据（粒径细、分布均匀、10—50 μm 富集、双峰曲线、与黄土众数粒径 15—30 μm 吻合）支持风成特性；但作者同时强调，不能因风成特性就简单称其为风积成因 —— 它是&quot;原始风成沉积 + 后期强烈风化&quot;的双重产物。与黄土的对仗：北方黄土—古土壤序列记录干冷—暖湿旋回；南方红土—网纹记录的是长期湿热下的风化强度变化。两者用的不是同一套&quot;气候语法&quot;。为什么不产出多旋回信息：高分辨率粒度分析显示，粒度分布无法提供多个&quot;沉积—成土&quot;旋回的证据，中值粒径曲线与前人结果亦有差异 —— 说明红土记录的分辨率远低于黄土。</p>
+<h2>这些数字在说什么</h2>
+<p>粒径 10—50 μm 富集，这是判别风成 vs 水成的关键指纹：风尘的&quot;基本粒组&quot;。磁化率失效，同一指标在黄土里是温度计，在红土里却失效 —— 指标永远要问&quot;它的物理机制是什么&quot;。20 m 对应近百万年，沉积—风化速率极慢，红土是&quot;时间被压缩得最狠&quot;的第四纪记录。为什么重要，它是长江流域第四纪地层的重要标志层，也是&quot;南北对照&quot;这条研究路线的南方支点。</p>
+<h2>实测数据</h2>
+<p>剖面厚度，网纹红土一般厚约 20 m 左右（一说 20—30 m）；向阳剖面采样深至 952 cm——远薄于北方黄土，但形成年代古老。粒度上限，全剖面未见 &gt;2 mm 砾石；最大粒径未超过 200 μm；&gt;100 μm 颗粒含量微不足道——砂粒（&gt;63 μm）平均仅 0.35%。&quot;风尘基本粒组&quot;，10—50 μm 粒级平均含量 35.06%，变化范围 29.15%—44.88%——与北方黄土可比，是风成说的核心证据。粘粒含量，&lt;2 μm 平均 29.56%（21.77%—34.67%）——次众粒级，反映强风化。中值粒径，平均 5.53 μm——颗粒极细。风化强度指标，强酸性，pH 4.4—5.9；游离铁（Fed）平均 32.14 mg/g，最高 48.57 mg/g——次生氧化铁胶结性强，制样分散困难。成岩与年代，李四光 1937 年《冰期之庐山》中命名&quot;白条红泥&quot;；据磁性地层研究，形成年代约 0.9—0.40 Ma（中更新世早中期）——宣城剖面网纹红土测年在距今 400 ka 以上。分布，长江以南、横断山脉以东广泛分布，北至长江沿岸，西至成都平原与云南，南达海南岛；东部出露海拔仅几十米，西部可达 3000 余米——长江流域第四纪地层的重要标志层。</p>
+<h2>争议与口径</h2>
+<p>①成因之争：早期多认为冲、洪积成因，后有研究主张风积成因（杨达源、Hu 等、Xiong 等），亦有研究指出九江具风成特性而泰和具冲积特性 —— 结论因地点而异；②是否存在多个&quot;沉积—成土&quot;旋回（可与黄土 S8 以上对比）存在分歧，2004 年高分辨率粒度研究不支持多旋回说；③年代口径有 0.9—0.40 Ma 与&quot;400 ka 以上&quot;两种表述。本站并列。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 3 条公开来源：<a href="http://www.dsjyj.com.cn/dzdqs-data/qs/2004/2/PDF/20040204.pdf" target="_blank" rel="noopener">皖南网纹红土的粒度分布特征及古环境意义（第四纪研究，2004）</a>；<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BA%B9%E7%BA%A2%E5%9C%9F/6827575" target="_blank" rel="noopener">网纹红土（命名沿革、年代、分布与磁学特征）</a>；<a href="http://geophy.cn/dzdqs-data/qs/2020/6/PDF/dsjyj-40-6-1441.pdf" target="_blank" rel="noopener">中国南方红土记录的中更新世气候转型及其环境效应（第四纪研究，2020）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/lushan-glacier-debate">庐山之争</a>、<a href="#c/luochuan-loess">洛川</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 8 组实测数据，全部标注来源。</p></div><div class="casebody wrap" id="case-zoige-peatland"><p class="kicker">湖泊与沼泽 · 若尔盖泥炭沼泽</p>
+<h1>若尔盖泥炭沼泽</h1>
+<p class="lead">每十年长一厘米的高原&quot;固体水库&quot;</p>
+<p>若尔盖泥炭沼泽地处四川省阿坝州若尔盖县、红原县一带，青藏高原东北缘。坐标约 33°10′—34°06′N，101°36′—103°25′E；海拔 3400—3900 m。成因上归入湖泊与沼泽一类。它的现状是：国际重要湿地；曾严重退化，现系统性修复中。到现场去，国道 248 可达；花湖、九曲黄河第一湾等为成熟观景点，保护区核心区需许可。</p>
+<p>一片被水泡着的草原，底下是平均两三米厚的泥炭。它每十年才长一厘米，一旦被排干就再也长不回来 —— 这是&quot;沉积速率&quot;这个概念最直观的注脚。</p>
+<h2>现场能看到什么</h2>
+<p>沼泽现场，看「水与地面」的关系：积水多深、排水多慢、底下攒的是什么。看地表：起伏平缓的草丘与积水洼地交错，踩下去是海绵感 —— 那是泥炭的持水性（1 t 干物质泥炭可蓄约 8 t 水）。看水系：河道比降只有千分之零点几，曲流与牛轭湖密布 —— 水流几乎不动，这就是沼泽化的前提。在沟壁看泥炭剖面：上部疏松的植物残体、下部逐渐分解的黑色泥炭，颜色与分解度随深度变化。注意人为沟渠：20 世纪 60—70 年代&quot;开沟排水&quot;留下的痕迹仍在，是理解退化机制的现场样本。</p>
+<h2>背后的原理</h2>
+<p>沼泽化的两个前提：地表积水或过湿（排水不畅）+ 低温/厌氧（分解受抑）。若尔盖两者兼备：构造下沉的宽谷盆地提供积水条件，高原低温使微生物分解缓慢。泥炭的形成：植物残体的生产量大于分解量，未分解的有机质逐年累积。关键在于&quot;分解被卡住&quot;——积水造成的厌氧环境使分解速率骤降。为什么每 10 年才 1 cm：泥炭是有机质，压实与分解后残留的比例很低，堆积速率天然远小于矿质沉积 —— 这提醒我们：做年代换算时必须用实测速率，不能套用其他沉积环境的经验值。湖泊→沼泽的演化：湖泊淤浅 → 水生植物由湖心向岸推进 → 泥炭累积使水面进一步下降 → 最终完全沼泽化。若尔盖约 1 万年前黄河贯通古湖后形成草地沼泽环境。为什么退化不可逆：泥炭积累以千年计，而排水疏干可在数十年内破坏其水文基础。一旦水位下降，好氧分解启动，碳库开始净释放。碳汇意义：泥炭地是全球单位面积碳密度最高的陆地生态系统之一，若尔盖泥炭碳储量占全国总量约 41%，其稳定性直接影响区域碳收支。</p>
+<h2>这些数字在说什么</h2>
+<p>0.6 mm/a，把&quot;沉积速率&quot;这个抽象量换算成肉眼尺度：一百年不到 7 cm，一层砖厚。1 t 泥炭蓄 8 t 水，泥炭不是土，是海绵；它的&quot;地貌作用&quot;体现在调节水文而不是塑造地形。1977—2001 减少 164.86 km² 湖泊，人类活动（排水、放牧）在这一时段的影响量级，远超自然变化。为什么归入&quot;湖泊与沼泽&quot;章，它代表了流水能量的另一端：水不动的时候，堆积的是有机质而不是砂砾。</p>
+<h2>实测数据</h2>
+<p>保护区面积，总面积 166570.6 公顷——国家级自然保护区，1998 年批准。海拔，平均 3400—3900 m（沼泽区一说 3400—3600 m）——青藏高原高寒泥炭沼泽典型代表。沼泽与湖沼面积，沼泽草地 2916 km²，人畜不能进入的湖沼 508 km²——中国最大的一片泥炭沼泽。泥炭厚度，平均 2—3 m；最厚报道有 20 余米与 9—10 m 两种口径——局部由湖泊沼泽化形成的区域平均约 1 m。泥炭储量，71 亿 m³（体积口径）；另称储存量达 19 亿 t（重量口径）——两套口径不可直接换算，本站并列。堆积速率，平均每 10 年约 1 cm（约 0.6 mm/a）；自然条件下每年 0.22—1.31 mm——极缓慢。发育年代，约 1.5 万年前开始发育，峰值在 1.2 万—1 万年前与 7000—5000 年前——全新世以来盆地仍持续下陷但趋缓。水文条件，黄河及支流白河、黑河下游比降仅 0.2—0.3‰，曲流、古河道、牛轭湖发育，阶地宽广（白河下游阶地宽达 20—30 km）——排水不畅是沼泽化的直接原因。气候条件，年均温 0—3 ℃，年降水量 600—800 mm，相对湿度约 70%——低温是有机质不分解的关键。生态功能，每年对黄河流域补水量占黄河全流域水量的 8%；水源涵养贡献黄河上游水量 29%—45%——泥炭碳储量占全国总量约 41%。退化与修复，1977—2001 年湖泊面积减少 164.86 km²，沼泽减少 86.00 km²；2024 年完成湿地修复 12.71 万亩，建生态拦水坝 45 座——近年萎缩退化趋势初步遏制。</p>
+<h2>争议与口径</h2>
+<p>泥炭储量有 71 亿 m³（体积）与 19 亿 t（重量）两种口径，不可直接比较；最大厚度有&quot;20 余米&quot;与&quot;9—10 m&quot;两种报道；堆积速率有&quot;每 10 年 1 cm&quot;与&quot;每年 0.22—1.31 mm&quot;两种表述。本站按来源分列。</p>
+<h2>来源</h2>
+<p class="ref">本页数据出自 5 条公开来源：<a href="https://grassland.china.com.cn/2023-08/03/content_42471633.html" target="_blank" rel="noopener">若尔盖湿地国家级自然保护区（中国网·草原频道，2023）</a>；<a href="http://www.greentimepaper/html/2023-08/03/content_3369314.htm" target="_blank" rel="noopener">全力打造世界最美高原湿地国家名片（中国林业新闻网，2023）</a>；<a href="https://article.xuexi.cn/articles/index.html?art_id=4229135913367306146" target="_blank" rel="noopener">若尔盖泥炭湿地：高原上的碳库（学习强国）</a>；<a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B9%BF%E5%9C%B0" target="_blank" rel="noopener">若尔盖湿地（总面积、泥炭储量、水源涵养贡献）</a>；<a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B2%BC%E6%B3%BD/550039" target="_blank" rel="noopener">若尔盖沼泽（面积、比降、气候、泥炭厚度）</a>。</p>
+<p class="ref">相邻的实例还有<a href="#c/badain-jaran">巴丹吉林</a>、<a href="#c/yellow-river-delta">黄河口</a>，点顶排短名卡片即可切过去看。</p>
+<p class="plain">以上观察点与数字均取自公开来源，未做现场复核；实地情况会随季节、水位与工程进展变化，出发前请再核对一次。本页共 11 组实测数据，全部标注来源。</p></div></section><section class="view" id="v-field">
+<section class="hero wrap">
+<h1>野外判定：怎么认，怎么防认错</h1>
+<p class="lead">这是一份可以直接带到现场的判定手册：6 组高发的易混淆对照，加一份通用的观察顺序。核心原则只有一句——形态相似的成因未必相同，孤立的证据不足以定案。</p>
+</section>
+
+<div class="wrap">
+<h2>6 组最容易认错的地貌与堆积物</h2>
+<h3>冰碛物 / 泥石流堆积</h3>
+<p>先说冰碛物。大小混杂、无层理、无分选，砾石可具擦痕与压坑，基质支撑，砾石长轴有一定定向。再说泥石流堆积。大小混杂、无层理，但常可见粒序或流水改造夹层，砾石擦痕不典型，缺乏冰蚀伴生地貌组合。伴生地貌是决定性证据：冰斗、U 谷、羊背石、终碛侧碛构成完整组合；孤立的&quot;混杂堆积&quot;不足以定案。参看庐山之争。</p>
+<h3>冲积扇 / 洪积扇</h3>
+<p>先说冲积扇。常年性河流出山形成：规模大、坡度缓（一般 2—5°）、砾石磨圆好、下部砾石层与上部粉土层界线清楚。再说洪积扇。暂时性洪流形成：规模小、坡度陡（扇顶 5—10°）、物质混杂无序、砾石多不磨圆、层理不明显。先问&quot;有没有常年水流&quot;。二者成因机理相同，差别在流体性质与持续性，是程度之别不是本质之别。</p>
+<h3>峰林 / 峰丛</h3>
+<p>先说峰林。彼此离立，相对高度 100—200 m，坡度多 &gt;60°，基部常有脚洞。再说峰丛。基座相连，相对高度 300—600 m，坡度 30—60°，峰间为 U 形垭口。本质是地下水位的差别：水位浅→横向侵蚀→峰林；水位深→垂向溶蚀→峰丛。构造上背斜利于峰丛、向斜利于峰林。</p>
+<h3>风成黄土 / 水成黄土状土</h3>
+<p>先说风成黄土。粒径细而均匀，10—50 μm&quot;风尘基本粒组&quot;富集，无层理，垂直节理发育，含钙结核，分布不受水系限制（可覆于高地）。再说水成黄土状土。粒度分布不均，可见层理与砂砾夹层，受古河道与阶地控制，分布局限于水系范围内。关键看&quot;是否越过高地&quot;。风成堆积可以爬上分水岭；水成的不能。</p>
+<h3>冻融作用 / 重力作用</h3>
+<p>先说冻融作用。石环、石带、冰楔假形、融冻褶皱，形态对坡向与含冰量敏感，活动深度受活动层厚度限制。再说重力作用。崩塌、滑坡、撒落，形态受坡度与结构面控制，与含冰量无必然关系。找&quot;冰&quot;的直接痕迹：冰楔假形与融冻褶皱是冻融作用的诊断性构造。</p>
+<h3>构造沉降 / 人为沉降</h3>
+<p>先说构造沉降。速率稳定、与断裂展布一致、区域尺度连续，形变场与构造单元吻合。再说人为沉降。速率随开采强度变化、与水源地/采区空间重合、季节性波动明显、可通过控采显著减缓。先剥离人为分量。西安 1971—1996 年达 −12 mm/a、近年降至约 3 mm/a，差异主要来自地下水开采控制。</p>
+
+
+<h2>通用观察顺序</h2>
+<p><b>远看形态</b>，先看整体轮廓、规模，以及它与周边地形的关系，定下等级：这是大地貌还是小地貌。<b>近看物质</b>，看粒度、分选、磨圆、层理与胶结程度。堆积物的「手感」往往比形态更可靠。<b>找接触关系</b>，与下伏、上覆地层是整合还是不整合，是谁切割谁。这是几乎免费的定年信息。<b>量方向</b>，砾石长轴定向、斜层理倾向、擦痕方向、断裂走向，方向里藏着古水流与古应力。<b>记空间组合</b>，孤立的形态多半多解，成组出现才有诊断意义——冰斗、U 谷、终碛凑齐了才谈得上冰川。<b>最后问年代</b>，能测年就测年，不能测年就用相对年代，比如阶地级序、风化程度、覆盖关系。</p>
+<p>这六步的顺序不是随意的：先形态、后物质，是因为形态容易被第一印象带偏；把年代放在最后，是因为前面五步收集到的信息本身就是定年的材料。反过来做，最常见的后果是先入为主——看到泥砾混杂就断定是冰碛，看到地面开裂就断定是构造活动。</p>
+
+<h2>测量与记录的最小工具集</h2>
+<p>罗盘加测距，解决产状、方向与厚度的问题，本站实例里用来量砾石定向、岩层产状与断裂走向；卷尺与标尺，解决粒度、层厚与位移量，用来量洛川剖面的分层厚度、沙丘的高度与滑坡台阶的高差；GPS 或手机定位，解决点位与高程的记录，比如宣城网纹红土剖面这类必须写清坐标的采样点；遥感影像加地形图，解决区域格局与变化速率，黄河三角洲近五十年的岸线变迁、海螺沟冰川末端的后退都靠它；定点重复拍照，解决变化速率，冰川退缩、冻土路基沉降、沙丘移动都属这一类；年代学手段，解决定年与对比，古地磁用在泥河湾与网纹红土，碳十四用在洛川与泥炭剖面。</p>
+
+<h2>这套方法的边界</h2>
+<p>方法页的价值不在于记住这些条目，而在于养成一个习惯：看到形态，先想它还能怎么形成。这才是从「认得」走到「判得准」的分界线。同时也要承认，判定需要相应条件——没有测年手段时，很多结论只能停在相对先后；没有区域资料时，孤立一点的观察很容易被局部现象误导。本站的实例都标出了数据来源，凡有争议的都并列双方口径，正是出于这个理由。</p>
+</div>
+</section><section class="view" id="v-time">
+<section class="hero wrap">
+<h1>时间轴：从 258 万年前到今天</h1>
+<p class="lead">第四纪的核心不是「很久以前」，而是「气候反复摆动」。这条时间轴把本站 15 个锚点串起来：构造运动以百万年计，水系改道以百年计，工程活动以十年计——每一个锚点，都能在实地找到落点。</p>
+</section>
+
+<div class="wrap">
+<h2>15 个时间锚点</h2>
+<p><b>约 258 万年前</b>，第四纪下限（通行口径之一）——第四纪开始，北半球冰期—间冰期旋回主导。第四纪的时钟，从这里开始走字。</p>
+<p><b>约 200 万—176 万年前</b>，泥河湾盆地最早文化层——马圈沟第 VII 文化层（176 万年），第 III 层&quot;东方人类第一餐&quot;166 万年。人类的脚印，在华北反复出现。</p>
+<p><b>约 176 万—125 万年前</b>，泥河湾 17 个文化层序列——早更新世中晚期古人类反复活动。时间尺度跨了三个数量级，摆在同一条线上。</p>
+<p><b>约 90 万—40 万年前</b>，南方网纹红土主要形成期——宣城剖面，中更新世早中期湿热气候产物。南方的湿热风化，就此留下最厚的一笔。</p>
+<p><b>约 30 万年前</b>，贡嘎山冰川主要形成期——中更新世，海螺沟冰川形成。冰川的进退，把山地重新雕了一遍。</p>
+<p><b>约 1.5 万年前起</b>，若尔盖泥炭开始发育——峰值 1.2 万—1 万年前与 7000—5000 年前。水慢下来之后，泥炭开始一年一年地攒。</p>
+<p><b>约 1 万年前</b>，黄河贯通若尔盖古湖——草地沼泽环境形成，全新世开始。古湖贯通，草原沼泽就此铺开。</p>
+<p><b>1855 年</b>，黄河改道入渤海——现代黄河三角洲开始发育，至今约 5400 km²。入海口再挪一次位置，岸线跟着改口。</p>
+<p><b>1719—1721 年</b>，五大连池老黑山、火烧山喷发——中国最年轻的火山喷发，熔岩台地与堰塞湖形成。时间尺度跨了三个数量级，摆在同一条线上。</p>
+<p><b>1931—1937 年</b>，李四光提出庐山第四纪冰川说——《扬子江流域之第四纪冰期》《冰期之庐山》。同一处山地，两派学者读出了两个故事。</p>
+<p><b>1964 / 1976 / 1996 年</b>，黄河三次改道与出汊——刁口河 → 清水沟 → 清 8 汊，造陆速率随之改写。又一次改道，把造陆的账本翻开新的一页。</p>
+<p><b>1985 年</b>，新滩滑坡——约 3000 万 m³ 入江，900 年古镇被推入长江。一场滑坡，把地貌过程的量级写进了新闻。</p>
+<p><b>1981—2020 年</b>，施雅风持续质疑庐山冰川说——《庐山真的有第四纪冰川吗》至《论李四光教授的庐山第四纪冰川是对泥石流的误读》。冰川的争论，至今没有落幕。</p>
+<p><b>2006 年至今</b>，青藏铁路运营——550 km 连续多年冻土路段，主动冷却路基经受长期检验。冻土从认识对象变成了工程对象。</p>
+<p><b>2024 年</b>，桂林喀斯特入选全球百大地质遗产地——国际地质科学联合会第二批 100 个地质遗产地。这片山水，拿到了国际地质学界的入场券。</p>
+
+
+<h2>年代口径的处理</h2>
+<p>年代的口径常有差异，读起来要留意它究竟指什么。第四纪下限就有 258 万年与 180 万年等不同方案，本站采用通行口径之一；泥河湾最早文化层是否逼近 200 万年，涉及「早期人类何时走出非洲」的重大命题，学界对年代精度保持高度要求。凡遇此类情形，本站一律并列呈现而不取单值，也不代为换算。</p>
+<p>另需说明，时间轴上的次序只表示先后关系，不表示等间隔。构造运动以百万年计，冰期旋回以十万年计，历史文献记载以百年计，把它们放在同一条线上，尺度差距是被压缩过的。</p>
+</div>
+</section><section class="view" id="v-srcs">
+<section class="hero wrap">
+<h1>来源清单</h1>
+<p class="lead">本站所有实测数字都出自下列公开来源，共 60 条，按实例排列。采集方式是按营力类别逐类联网检索，优先采用期刊论文、政府部门、景区官方与主流媒体的实测数据；同一指标出现多个数值时并列呈现，不做加权也不做换算。</p>
+</section>
+
+<div class="wrap">
+<h2>按实例分列</h2>
+<h3><a href="#c/luochuan-loess">洛川黄土剖面</a>　陕西省延安市洛川县，黄土高原中部</h3>
+<p class="ref">4 条：<a href="https://ima.qq.com/wiki/?shareId=f5766487dd65915100bab3a200a9d93201f2c09e340f79db83fd4bcc04eee074" target="_blank" rel="noopener">洛川剖面：厚 130 m，午城/离石/马兰三分，刘东生 1985 与深海 V28-239 对比</a>；<a href="https://ima.qq.com/wiki/?shareId=c897e0b23c14979d5ab01c91bfbe4327104031557f0211b0852bd91ffe8150ba" target="_blank" rel="noopener">洛川剖面各层厚度与岩性描述（刘东生等，2000）</a>；<a href="http://www.progeophys.cn/article/doi/10.11928/j.issn.1001-7410.2025.06.09" target="_blank" rel="noopener">洛川黄土高分辨率 ¹⁴C 测年与千年尺度沉积缺失（地球物理学进展，2025）</a>；<a href="http://ytgcjs.xml-journal.net/cn/article/pdf/preview/10.3969/j.issn.1007-2993.2023.01.017.pdf" target="_blank" rel="noopener">黄土地基水分入渗试验：洛川黄土标准剖面分层底界深度（岩土工程技术，2023）</a>。</p>
+<h3><a href="#c/badain-jaran">巴丹吉林沙漠沙山</a>　内蒙古自治区阿拉善右旗，雅布赖山以西、北大山以北</h3>
+<p class="ref">4 条：<a href="https://photo.cctv.com/mlzg/china/140/index.shtml" target="_blank" rel="noopener">巴丹吉林沙漠概况（央视网·美丽中国）</a>；<a href="https://www.alsyq.gov.cn/art/2026/1/4/art_1207_210423.html" target="_blank" rel="noopener">阿拉善右旗人民政府：景区景点（面积、必鲁图峰海拔 1611.09 m、144 湖）</a>；<a href="https://www.badanjilin.cn/about" target="_blank" rel="noopener">内蒙古巴丹吉林景区概况（海拔 1609 m）</a>；<a href="https://news.cgtn.com/news/2024-07-23/Badain-Jaran-Desert-Towering-sand-dunes-and-hidden-lakes-1vth11eRu6Y/share_amp.html" target="_blank" rel="noopener">CGTN：2024 年世界遗产委员会审议巴丹吉林申遗</a>。</p>
+<h3><a href="#c/hailuogou-glacier">海螺沟冰川</a>　四川省甘孜州泸定县，贡嘎山东坡</h3>
+<p class="ref">5 条：<a href="https://www.hailuogou.com/zh/bckp/1021203373412237312" target="_blank" rel="noopener">海螺沟景区：冰川基本参数与退缩过程（1990—2020、2019—2021 数据）</a>；<a href="https://www.hailuogou.com/zh/overview-geology/939681364502904832" target="_blank" rel="noopener">海螺沟冰川：长 12 km、落差 3900 m、大冰瀑布 1080 m</a>；<a href="https://news.cctv.com/2016/10/30/ARTIMnxjNGgywyvsrTGmjWj5161030.shtml" target="_blank" rel="noopener">贡嘎山冰川 74 条、面积 255.10 km²、1966—2009 退缩（中新网/央视网，2016）</a>；<a href="https://lib-bingchuan.museum.chaoxing.com/info/19001.jspx" target="_blank" rel="noopener">海螺沟冰川消融区表面消融特征研究（长度 13.1 km、面积 25.71 km²、零平衡线 4880 m）</a>；<a href="https://www.cstp.org.cn/kp/kxcb/art/2024/art_a7ab7b8bf08449589d4b16501b53b78d.html" target="_blank" rel="noopener">两类冰川退缩对比与海螺沟植被演替序列（中国科技馆）</a>。</p>
+<h3><a href="#c/lushan-glacier-debate">庐山&quot;冰川&quot;之争</a>　江西省九江市庐山（牯岭海拔 1165 m）</h3>
+<p class="ref">3 条：<a href="https://baike.baidu.com/item/%E5%BA%90%E5%B1%B1%E7%AC%AC%E5%9B%9B%E7%BA%AA%E5%86%B0%E5%B7%9D/8172452" target="_blank" rel="noopener">庐山第四纪冰川（含争议史、遗迹点、保护身份）</a>；<a href="https://www.chinanews.com/cul/2010/11-03/2631025.shtml" target="_blank" rel="noopener">学者驳李四光：庐山第四纪冰川应是泥石流（中新网，2010）</a>；<a href="https://baike.sogou.com/v76599090.htm" target="_blank" rel="noopener">施雅风四条论据整理（搜狗百科）</a>。</p>
+<h3><a href="#c/qinghai-tibet-permafrost">青藏铁路冻土段</a>　青海格尔木至西藏拉萨，穿越可可西里、风火山、唐古拉山</h3>
+<p class="ref">5 条：<a href="https://cloud.kepuchina.cn/newSearch/imgText?id=6654070544307318784" target="_blank" rel="noopener">青藏铁路：穿越冻土里程、热棒与块石路基等措施（科普中国）</a>；<a href="https://www.chinanews.com/gn/2011/07-14/3183084.shtml" target="_blank" rel="noopener">青藏铁路通车运营 5 年：冻土线路整体稳定，平均厚度 38.79 m（中新网，2011）</a>；<a href="https://xz.people.com.cn/BIG5/n2/2026/0623/c138901-41618627.html" target="_blank" rel="noopener">550 公里冻土禁区，安全驰骋 20 年（人民网西藏，2026）</a>；<a href="http://www.bcdt.ac.cn/article/2022/1000-0240/1000-0240-2022-44-6-1784.shtml" target="_blank" rel="noopener">青藏铁路高温多年冻土区典型路基长期热稳定性研究（冰川冻土，2022）</a>；<a href="http://www.gcdz.org/cn/article/pdf/preview/10117.pdf" target="_blank" rel="noopener">青藏高原多年冻土退化及铁路路基工程热稳定性（工程地质学报，2007）</a>。</p>
+<h3><a href="#c/guilin-fenglin">桂林峰林与峰丛</a>　广西壮族自治区桂林市，漓江流域</h3>
+<p class="ref">5 条：<a href="https://baike.baidu.com/item/%E5%96%80%E6%96%AF%E7%89%B9%E5%B3%B0%E6%9E%97/1946797" target="_blank" rel="noopener">喀斯特峰林（峰林/峰丛定义、桂林 2665 km²、11400 座石峰）</a>；<a href="https://article.xuexi.cn/articles/index.html?art_id=12420800958318976763" target="_blank" rel="noopener">桂林喀斯特：峰丛 1285 km²、峰林 1167 km²、石峰 11400 座、洞穴近 2000 个（中国地质调查局岩溶地质研究所）</a>；<a href="https://baike.baidu.com/item/%E5%8D%97%E6%96%B9%E5%96%80%E6%96%AF%E7%89%B9/15796561" target="_blank" rel="noopener">中国南方喀斯特（世界遗产构成与面积）</a>；<a href="https://dnr.yn.gov.cn/html/2022/ziranziyuanxinxi_1102/33942.html" target="_blank" rel="noopener">云南石林：350 km²、海拔 1600—2203 m、2.7 亿年演化史（云南省自然资源厅）</a>；<a href="http://www.kyb.cgs.gov.cn/dxqy/202004/t20200401_583278.html" target="_blank" rel="noopener">石林剑状石柱与溶蚀机理（中国矿业报）</a>。</p>
+<h3><a href="#c/yellow-river-delta">黄河三角洲</a>　山东省东营市，黄河入渤海处</h3>
+<p class="ref">5 条：<a href="http://jhyqy.com.cn/article/doi/10.16028/j.1009-2722.2025.155" target="_blank" rel="noopener">1976—2024 年黄河三角洲海岸线变化分析（海洋地质前沿）</a>；<a href="https://www.geog.com.cn/CN/PDF/10.11821/xb200911007" target="_blank" rel="noopener">黄河三角洲岸线演变与利津站水沙量（地理学报，2009）</a>；<a href="https://a.xueshu.baidu.com/usercenter/paper/show?paperid=1s1q0er0tc280m709a7y0py0bc770683" target="_blank" rel="noopener">基于遥感的黄河三角洲海岸带淤蚀变化及其水沙阈值研究</a>；<a href="https://irrigate.whu.edu.cn/CN/10.12396/znsd.240233" target="_blank" rel="noopener">黄河三角洲海岸线提取及其近期时空变化格局（中国农村水利水电，2024）</a>；<a href="https://www.toutiao.com/article/7177564556745998882" target="_blank" rel="noopener">黄河故道——刁口河（东营网）</a>。</p>
+<h3><a href="#c/yongdinghe-fan">永定河冲洪积扇</a>　北京市西部至东南部，扇顶在石景山</h3>
+<p class="ref">4 条：<a href="http://geochina.cgs.gov.cn/cn/article/pdf/preview/10.12029/gc20090507.pdf" target="_blank" rel="noopener">北京平原第四系的三维结构：永定河冲洪积扇结构与新 5 孔（中国地质）</a>；<a href="http://geochina.cgs.gov.cn/fileZGDZ/journal/article/zgdz/2016/3/htm/20160327.htm" target="_blank" rel="noopener">北京平原地区第四纪地质研究新进展（中国地质）</a>；<a href="https://baike.baidu.com/item/%E5%86%B2%E7%A7%AF%E6%89%87%E5%B9%B3%E5%8E%9F" target="_blank" rel="noopener">冲积扇平原（永定河扇 1000 km²、坡度 2—5°）</a>；<a href="https://www.doc88.com/p-0008547885586.html" target="_blank" rel="noopener">冲积扇与洪积扇的区别（扇顶坡度 5—10°、扇缘 1—2°）</a>。</p>
+<h3><a href="#c/xintan-landslide">新滩滑坡与链子崖</a>　湖北省秭归县（今屈原镇）长江北岸新滩、南岸链子崖</h3>
+<p class="ref">4 条：<a href="https://m.mnr.gov.cn/dt/ywbb/201812/t20181228_2383470.html" target="_blank" rel="noopener">百里峡江写沧桑：链子崖危岩体与新滩滑坡（自然资源部）</a>；<a href="https://m.mnr.gov.cn/dt/ywbb/202410/t20241001_2869822.html" target="_blank" rel="noopener">荆山楚水韵三江：新滩滑坡与链子崖治理（自然资源部）</a>；<a href="https://cigem.cn/auto/db/detail?db=800001&amp;rid=160217B8D3BE3DCC757A4F26270F92C1" target="_blank" rel="noopener">今日链子崖：治理与监测（中国地质环境信息网）</a>；<a href="https://caghp.org.cn/detail/905.html" target="_blank" rel="noopener">今 日 新 三 峡：三峡库区地质灾害防治回眸（中国地质灾害防治与生态修复协会）</a>。</p>
+<h3><a href="#c/fenwei-graben">汾渭地堑与西安地裂缝</a>　陕西关中平原（渭河盆地）及周边汾河谷地</h3>
+<p class="ref">4 条：<a href="https://html.rhhz.net/DDCLYDQDLX/html/11986.htm" target="_blank" rel="noopener">跨关中地区现今地壳垂直形变剖面（大地测量与地球动力学）</a>；<a href="https://xadfz.xa.gov.cn/xadq/stxa/63d5d8cdf8fd1c4c213b1eef.html" target="_blank" rel="noopener">渭河断陷（西安市地方志办公室）</a>；<a href="https://ytlx.whrsm.ac.cn/CN/PDF/10402" target="_blank" rel="noopener">西安地裂缝活动现状及地铁隧道建设应对措施（岩土力学）</a>；<a href="https://baike.baidu.com/view/1661404.html" target="_blank" rel="noopener">渭河地堑（构造演化与沉积厚度）</a>。</p>
+<h3><a href="#c/nihewan">泥河湾盆地</a>　河北省张家口市阳原县大田洼乡，桑干河南岸</h3>
+<p class="ref">5 条：<a href="https://baike.baidu.com/item/%E9%A9%AC%E5%9C%88%E6%B2%9F%E9%81%97%E5%9D%80/7125186" target="_blank" rel="noopener">马圈沟遗址（年代、文化层、出土物、保护级别）</a>；<a href="http://www.hbswwkg.com/2022-02/18/content_8728396.html" target="_blank" rel="noopener">马圈沟遗址 2019 年考古发掘汇报（河北省文物考古研究院）</a>；<a href="http://ir.ivpp.ac.cn/bitstream/311034/470/1/" target="_blank" rel="noopener">泥河湾盆地马圈沟遗址化石哺乳动物及年代讨论（中科院古脊椎所）</a>；<a href="https://news.qq.com/rain/a/20250315A05A9J00" target="_blank" rel="noopener">文化中国行：泥河湾遗址群实证我国百万年人类史（腾讯新闻，2025）</a>；<a href="https://www.hbynet.net/html/heqing/daohang/heqingzhuanti/nhwzt/jmnhw/1579740605142241281.html" target="_blank" rel="noopener">马圈沟遗址：泥河湾盆地年代最早的文化遗址</a>。</p>
+<h3><a href="#c/wudalianchi-volcano">五大连池火山群</a>　黑龙江省黑河市五大连池市</h3>
+<p class="ref">4 条：<a href="https://baike.baidu.com/item/%E4%BA%94%E5%A4%A7%E8%BF%9E%E6%B1%A0%E7%81%AB%E5%B1%B1%E6%99%AF%E8%A7%82/6978397" target="_blank" rel="noopener">五大连池火山景观（喷发时间、14 座火山、熔岩台地）</a>；<a href="https://baike.baidu.com/item/%E7%9F%B3%E6%B5%B7/5734572" target="_blank" rel="noopener">石海/翻花熔岩（形成机理、龙门石寨约 5 km²）</a>；<a href="https://q.baike.haosou.com/doc/5718482-5931209.html" target="_blank" rel="noopener">老黑山（海拔、火口尺寸、石龙延伸 17 km）</a>；<a href="https://m.baike.haosou.com/doc/6417836-6631508.html" target="_blank" rel="noopener">五大连池火山群（14 座火山、新期喷发、68.3 km²）</a>。</p>
+<h3><a href="#c/xuancheng-red-earth">宣城网纹红土</a>　安徽省宣城市向阳镇夏村（向阳剖面）</h3>
+<p class="ref">3 条：<a href="http://www.dsjyj.com.cn/dzdqs-data/qs/2004/2/PDF/20040204.pdf" target="_blank" rel="noopener">皖南网纹红土的粒度分布特征及古环境意义（第四纪研究，2004）</a>；<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BA%B9%E7%BA%A2%E5%9C%9F/6827575" target="_blank" rel="noopener">网纹红土（命名沿革、年代、分布与磁学特征）</a>；<a href="http://geophy.cn/dzdqs-data/qs/2020/6/PDF/dsjyj-40-6-1441.pdf" target="_blank" rel="noopener">中国南方红土记录的中更新世气候转型及其环境效应（第四纪研究，2020）</a>。</p>
+<h3><a href="#c/zoige-peatland">若尔盖泥炭沼泽</a>　四川省阿坝州若尔盖县、红原县一带，青藏高原东北缘</h3>
+<p class="ref">5 条：<a href="https://grassland.china.com.cn/2023-08/03/content_42471633.html" target="_blank" rel="noopener">若尔盖湿地国家级自然保护区（中国网·草原频道，2023）</a>；<a href="http://www.greentimepaper/html/2023-08/03/content_3369314.htm" target="_blank" rel="noopener">全力打造世界最美高原湿地国家名片（中国林业新闻网，2023）</a>；<a href="https://article.xuexi.cn/articles/index.html?art_id=4229135913367306146" target="_blank" rel="noopener">若尔盖泥炭湿地：高原上的碳库（学习强国）</a>；<a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B9%BF%E5%9C%B0" target="_blank" rel="noopener">若尔盖湿地（总面积、泥炭储量、水源涵养贡献）</a>；<a href="https://baike.baidu.com/item/%E8%8B%A5%E5%B0%94%E7%9B%96%E6%B2%BC%E6%B3%BD/550039" target="_blank" rel="noopener">若尔盖沼泽（面积、比降、气候、泥炭厚度）</a>。</p>
+
+
+<h2>使用边界</h2>
+<p>本站的营力框架是通用地貌学的归纳，实例与数据全部来自上列公开来源；同一指标的多个口径并列呈现，不作换算，也不代人取舍。学术争议只列双方论据与出处，本站不作裁决。</p>
+<p>最后一点提醒：这些来源多为机构发布或媒体报道，其中的数字经二次转述，与原始论文口径可能有出入；本站只保证「在此处如此陈述」，不代人判断其权威程度。需要引用于正式场合时，请回到原始文献核对。</p>
+</div>
+</section></main>
+<footer><div class="wrap">
+<p>本站数据来自公开来源并逐条标注出处；同一指标的多个口径一律并列呈现、不作换算；凡查不到来源的数字一概不写。这是读书笔记性质的二次整理，实地情况请以现场为准。</p>
+</div></footer>
 <script>
 (function(){var t=localStorage.getItem('gmtheme');if(t)document.documentElement.setAttribute('data-theme',t);
 else if(matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.setAttribute('data-theme','dark');})();
 function toggleTheme(){var c=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
 document.documentElement.setAttribute('data-theme',c);localStorage.setItem('gmtheme',c);}
-</script>
-<nav><div class="wrap">
-<a class="brand" href="index.html">地貌现场手册</a>
-<div class="links"><a href="index.html" class="on">总览</a><a href="principles.html" class="">原理</a><a href="cases/index.html" class="">实例</a><a href="field.html" class="">野外判定</a><a href="timeline.html" class="">时间轴</a><a href="sources.html" class="">来源</a></div><div class="spacer"></div>
-<button class="tg" onclick="toggleTheme()">明 / 暗</button>
-</div></nav>
-<main class="wrap">
-<section class="hero">
-<h1>把一本书，拆成 14 个能去的地方</h1>
-<p class="lead">《地貌学及第四纪地质学》按学科体系写成：先基本问题，后分论各营力，再讲中国第四纪与研究方法。
-这套结构适合上课，不适合"我要去看"。本站把它<b>重构</b>为三层：营力原理（为什么会这样）→ 现存实例（去哪里看、看什么数字）→ 野外判定（怎么认、怎么防认错）。
-每个实例都给出可核对的实测数据与出处，冲突数据并列不合并。</p>
-<div class="stats"><div class="stat"><b>17</b><span>原书章数</span></div><div class="stat"><b>11</b><span>营力系统</span></div><div class="stat"><b>14</b><span>现存实例</span></div><div class="stat"><b>6</b><span>易混淆对照</span></div><div class="stat"><b>15</b><span>时间锚点</span></div></div>
-</section>
-
-<h2 id="how">重构逻辑：从章节顺序到问题顺序</h2>
-<div class="grid g3">
-<div class="card"><h3>① 原理层</h3><p class="muted">把 17 章压缩为 11 类营力系统，每类回答四个问题：控制变量是什么、作用过程如何推进、留下什么产物、野外怎么认。</p></div>
-<div class="card"><h3>② 实例层</h3><p class="muted">14 个中国境内现存的、可到达的地点。每处给出坐标、实测数字、现场观察清单、成因机制链与争议点。</p></div>
-<div class="card"><h3>③ 判定层</h3><p class="muted">把最容易被认错的 6 组地貌/堆积物做成对照表 —— 冰碛还是泥石流、风成还是水成、构造沉降还是人为沉降。</p></div>
-</div>
-
-<h2>原书章节 → 本站模块</h2>
-<table><thead><tr><th>原书位置</th><th>本站对应</th><th></th></tr></thead><tbody><tr><td>第一、二、三章 概论与基本问题</td><td>原理页「底层框架」</td><td><a href="principles.html">打开 →</a></td></tr><tr><td>第四章 残积物及风化壳</td><td>风化与残积 → 宣城网纹红土</td><td><a href="cases/xuancheng-red-earth.html">打开 →</a></td></tr><tr><td>第五章 斜坡地貌</td><td>斜坡与重力 → 新滩滑坡</td><td><a href="cases/xintan-landslide.html">打开 →</a></td></tr><tr><td>第六章 流水地貌</td><td>流水 → 永定河冲洪积扇</td><td><a href="cases/yongdinghe-fan.html">打开 →</a></td></tr><tr><td>第七章 岩溶地貌</td><td>岩溶 → 桂林峰林</td><td><a href="cases/guilin-fenglin.html">打开 →</a></td></tr><tr><td>第八章 冰川地貌</td><td>冰川 → 海螺沟 + 庐山之争</td><td><a href="cases/hailuogou-glacier.html">打开 →</a></td></tr><tr><td>第九章 冻土地貌</td><td>冻土 → 青藏铁路</td><td><a href="cases/qinghai-tibet-permafrost.html">打开 →</a></td></tr><tr><td>第十章 风成地貌和黄土</td><td>风沙与黄土 → 巴丹吉林 + 洛川</td><td><a href="cases/luochuan-loess.html">打开 →</a></td></tr><tr><td>第十一章 海岸地貌</td><td>海岸 → 黄河三角洲</td><td><a href="cases/yellow-river-delta.html">打开 →</a></td></tr><tr><td>第十二章 湖泊、沼泽</td><td>湖泊与沼泽 → 若尔盖</td><td><a href="cases/zoige-peatland.html">打开 →</a></td></tr><tr><td>第十三、十四章 构造与新构造</td><td>构造 → 汾渭地堑</td><td><a href="cases/fenwei-graben.html">打开 →</a></td></tr><tr><td>第十五、十六章 中国第四纪</td><td>第四纪 → 泥河湾 / 五大连池 / 网纹红土</td><td><a href="cases/nihewan.html">打开 →</a></td></tr><tr><td>第十七章 研究方法</td><td>野外判定页（识别清单 + 易混对照表）</td><td><a href="field.html">打开 →</a></td></tr></tbody></table>
-
-<h2>营力 × 实例</h2>
-<table><thead><tr><th>营力系统</th><th>原书章节</th><th>控制变量</th><th>实例</th></tr></thead><tbody>
-<tr><td><span class="dot" style="background:#9c7a3c"></span>风化与残积</td><td class="small">第四章　残积物及风化壳</td><td class="small">岩石在原地被改造。控制变量是：气候（温度+降水）、岩性、地形排水、时间。</td><td class="small"><a href="cases/xuancheng-red-earth.html">宣城网纹红土</a></td></tr><tr><td><span class="dot" style="background:#a8623c"></span>斜坡与重力</td><td class="small">第五章　斜坡地貌与斜坡堆积物</td><td class="small">一切&quot;往下掉&quot;的过程：崩塌、撒落、滑坡、土层流动。控制变量是坡度、岩土强度、水。</td><td class="small"><a href="cases/xintan-landslide.html">新滩滑坡与链子崖</a></td></tr><tr><td><span class="dot" style="background:#3d7fa6"></span>流水</td><td class="small">第六章　流水地貌及其堆积物</td><td class="small">暂时性流水（洪流）与常年性河流。控制变量是流量、比降、含沙量、基面。</td><td class="small"><a href="cases/yongdinghe-fan.html">永定河冲洪积扇</a></td></tr><tr><td><span class="dot" style="background:#4a8f6e"></span>岩溶</td><td class="small">第七章　岩溶地貌及岩溶堆积物</td><td class="small">水对可溶岩的化学溶蚀。控制变量是岩性纯度与厚度、水的溶蚀力、透水性、流动性。</td><td class="small"><a href="cases/guilin-fenglin.html">桂林峰林与峰丛</a></td></tr><tr><td><span class="dot" style="background:#5b7fb5"></span>冰川</td><td class="small">第八章　冰川地貌与冰川堆积物</td><td class="small">冰的积累、流动与消融。控制变量是积累区面积、气温（平衡线高度）、地形。</td><td class="small"><a href="cases/hailuogou-glacier.html">海螺沟冰川</a>、<a href="cases/lushan-glacier-debate.html">庐山&quot;冰川&quot;之争</a></td></tr><tr><td><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘</td><td class="small">第九章　冻土地貌</td><td class="small">冻融交替。控制变量是年均地温、含冰量、岩性、活动层厚度。</td><td class="small"><a href="cases/qinghai-tibet-permafrost.html">青藏铁路冻土段</a></td></tr><tr><td><span class="dot" style="background:#b08a3e"></span>风沙与黄土</td><td class="small">第十章　风成地貌和黄土</td><td class="small">风的吹扬、搬运与堆积。控制变量是风速、起沙条件、物源、植被覆盖。</td><td class="small"><a href="cases/luochuan-loess.html">洛川黄土剖面</a>、<a href="cases/badain-jaran.html">巴丹吉林沙漠沙山</a></td></tr><tr><td><span class="dot" style="background:#3f8f9c"></span>海岸与河口</td><td class="small">第十一章　海岸地貌及其堆积物</td><td class="small">波浪、潮流与河流共同作用。控制变量是波浪能、潮差、来沙量。</td><td class="small"><a href="cases/yellow-river-delta.html">黄河三角洲</a></td></tr><tr><td><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽</td><td class="small">第十二章　湖泊、沼泽及其堆积物</td><td class="small">静水环境沉积与有机质积累。控制变量是水位、物源、温度（分解速率）。</td><td class="small"><a href="cases/zoige-peatland.html">若尔盖泥炭沼泽</a></td></tr><tr><td><span class="dot" style="background:#8f5f7a"></span>构造与新构造</td><td class="small">第十三、十四章</td><td class="small">内力给出舞台。控制变量是构造运动的方向与速率、岩性构造格局。</td><td class="small"><a href="cases/fenwei-graben.html">汾渭地堑与西安地裂缝</a></td></tr><tr><td><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件</td><td class="small">第十五、十六章</td><td class="small">时间与气候。控制变量是轨道尺度气候旋回、区域构造、沉积保存条件。</td><td class="small"><a href="cases/nihewan.html">泥河湾盆地</a>、<a href="cases/wudalianchi-volcano.html">五大连池火山群</a></td></tr>
-</tbody></table>
-
-<h2 id="cases">全部实例</h2>
-<input class="f" id="q" placeholder="输入关键词或地点筛选…">
-<select class="f" id="fa"><option value="">全部营力</option><option value="weathering">风化与残积</option><option value="slope">斜坡与重力</option><option value="fluvial">流水</option><option value="karst">岩溶</option><option value="glacial">冰川</option><option value="periglacial">冻土与冰缘</option><option value="aeolian">风沙与黄土</option><option value="coastal">海岸与河口</option><option value="lacustrine">湖泊与沼泽</option><option value="tectonic">构造与新构造</option><option value="quaternary">第四纪地层与事件</option></select>
-<div class="grid g3" id="cl"><a class="case" href="cases/luochuan-loess.html" data-agent="aeolian" data-name="洛川黄土剖面">
-<h3>洛川黄土剖面</h3>
-<div class="meta"><span class="dot" style="background:#b08a3e"></span>风沙与黄土<span>·</span><span>陕西省延安市洛川县，黄土高原中部</span></div>
-<p>黄土高原中部的&quot;气候磁带机&quot;</p></a><a class="case" href="cases/badain-jaran.html" data-agent="aeolian" data-name="巴丹吉林沙漠沙山">
-<h3>巴丹吉林沙漠沙山</h3>
-<div class="meta"><span class="dot" style="background:#b08a3e"></span>风沙与黄土<span>·</span><span>内蒙古自治区阿拉善右旗，雅布赖山以西、北大山</span></div>
-<p>世界最高的固定沙丘与它的 144 个湖</p></a><a class="case" href="cases/hailuogou-glacier.html" data-agent="glacial" data-name="海螺沟冰川">
-<h3>海螺沟冰川</h3>
-<div class="meta"><span class="dot" style="background:#5b7fb5"></span>冰川<span>·</span><span>四川省甘孜州泸定县，贡嘎山东坡</span></div>
-<p>一条正在快速后退的海洋型冰川</p></a><a class="case" href="cases/lushan-glacier-debate.html" data-agent="glacial" data-name="庐山&quot;冰川&quot;之争">
-<h3>庐山&quot;冰川&quot;之争</h3>
-<div class="meta"><span class="dot" style="background:#5b7fb5"></span>冰川<span>·</span><span>江西省九江市庐山（牯岭海拔 1165 m）</span></div>
-<p>中国地学史上最长的一次误判还是正解？</p></a><a class="case" href="cases/qinghai-tibet-permafrost.html" data-agent="periglacial" data-name="青藏铁路冻土段">
-<h3>青藏铁路冻土段</h3>
-<div class="meta"><span class="dot" style="background:#6f8fa8"></span>冻土与冰缘<span>·</span><span>青海格尔木至西藏拉萨，穿越可可西里、风火山、</span></div>
-<p>把&quot;会呼吸的地基&quot;钉住的 550 公里</p></a><a class="case" href="cases/guilin-fenglin.html" data-agent="karst" data-name="桂林峰林与峰丛">
-<h3>桂林峰林与峰丛</h3>
-<div class="meta"><span class="dot" style="background:#4a8f6e"></span>岩溶<span>·</span><span>广西壮族自治区桂林市，漓江流域</span></div>
-<p>峰林与峰丛的分界，其实是地下水位的分界</p></a><a class="case" href="cases/yellow-river-delta.html" data-agent="coastal" data-name="黄河三角洲">
-<h3>黄河三角洲</h3>
-<div class="meta"><span class="dot" style="background:#3f8f9c"></span>海岸与河口<span>·</span><span>山东省东营市，黄河入渤海处</span></div>
-<p>来沙一断，海岸线立刻改口</p></a><a class="case" href="cases/yongdinghe-fan.html" data-agent="fluvial" data-name="永定河冲洪积扇">
-<h3>永定河冲洪积扇</h3>
-<div class="meta"><span class="dot" style="background:#3d7fa6"></span>流水<span>·</span><span>北京市西部至东南部，扇顶在石景山</span></div>
-<p>北京城就建在一个扇面上</p></a><a class="case" href="cases/xintan-landslide.html" data-agent="slope" data-name="新滩滑坡与链子崖">
-<h3>新滩滑坡与链子崖</h3>
-<div class="meta"><span class="dot" style="background:#a8623c"></span>斜坡与重力<span>·</span><span>湖北省秭归县（今屈原镇）长江北岸新滩、南岸链</span></div>
-<p>3000 万方，一夜之间把一座 900 年的镇推进长江</p></a><a class="case" href="cases/fenwei-graben.html" data-agent="tectonic" data-name="汾渭地堑与西安地裂缝">
-<h3>汾渭地堑与西安地裂缝</h3>
-<div class="meta"><span class="dot" style="background:#8f5f7a"></span>构造与新构造<span>·</span><span>陕西关中平原（渭河盆地）及周边汾河谷地</span></div>
-<p>内力给出的舞台，正在以毫米每年改写</p></a><a class="case" href="cases/nihewan.html" data-agent="quaternary" data-name="泥河湾盆地">
-<h3>泥河湾盆地</h3>
-<div class="meta"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件<span>·</span><span>河北省张家口市阳原县大田洼乡，桑干河南岸</span></div>
-<p>东亚最早的人类活动面，与它下面的 176 万年</p></a><a class="case" href="cases/wudalianchi-volcano.html" data-agent="quaternary" data-name="五大连池火山群">
-<h3>五大连池火山群</h3>
-<div class="meta"><span class="dot" style="background:#7a6fa8"></span>第四纪地层与事件<span>·</span><span>黑龙江省黑河市五大连池市</span></div>
-<p>300 年前的一次喷发，把地貌过程按下了快进键</p></a><a class="case" href="cases/xuancheng-red-earth.html" data-agent="weathering" data-name="宣城网纹红土">
-<h3>宣城网纹红土</h3>
-<div class="meta"><span class="dot" style="background:#9c7a3c"></span>风化与残积<span>·</span><span>安徽省宣城市向阳镇夏村（向阳剖面）</span></div>
-<p>南方的红土，到底是不是风吹来的</p></a><a class="case" href="cases/zoige-peatland.html" data-agent="lacustrine" data-name="若尔盖泥炭沼泽">
-<h3>若尔盖泥炭沼泽</h3>
-<div class="meta"><span class="dot" style="background:#5f7f6a"></span>湖泊与沼泽<span>·</span><span>四川省阿坝州若尔盖县、红原县一带，青藏高原东</span></div>
-<p>每十年长一厘米的高原&quot;固体水库&quot;</p></a></div>
-<p class="small" id="none" style="display:none">没有匹配的实例。</p>
-</main>
-<footer><div class="wrap">
-<p>内容依据：杜恒俭 等《地貌学及第四纪地质学》（389 页，17 章，111 条目录条目，OCR：RapidOCR 3.9.2 + PP-OCRv6 small，200 dpi，389 页全覆盖），
-实例数据来自公开来源，逐条标注出处。</p>
-<p>本站为读书笔记性质的二次整理，非教材替代品。所有冲突数据并列呈现、不作换算；无来源的数字不写入。</p>
-</div></footer>
-<script>
-var q=document.getElementById('q'),fa=document.getElementById('fa'),
-cs=[].slice.call(document.querySelectorAll('#cl a.case')),none=document.getElementById('none');
-function run(){var k=q.value.trim().toLowerCase(),a=fa.value,n=0;
-cs.forEach(function(el){var ok=(!k||el.textContent.toLowerCase().includes(k))&&(!a||el.dataset.agent===a);
-el.style.display=ok?'':'none';if(ok)n++;});none.style.display=n?'none':'';}
-q.addEventListener('input',run);fa.addEventListener('change',run);
+var CASES=["luochuan-loess","badain-jaran","hailuogou-glacier","lushan-glacier-debate","qinghai-tibet-permafrost","guilin-fenglin","yellow-river-delta","yongdinghe-fan","xintan-landslide","fenwei-graben","nihewan","wudalianchi-volcano","xuancheng-red-earth","zoige-peatland"];
+function route(){
+  var h=decodeURIComponent(location.hash.replace(/^#\/?/,''));
+  var view='home',caso=null;
+  if(h.slice(0,2)==='c/'){view='cases';caso=h.slice(2);}
+  else if(h) view=h;
+  if(!document.getElementById('v-'+view)) view='home';
+  if(view==='cases'&&(caso===null||CASES.indexOf(caso)<0)) caso=CASES[0];
+  var vs=document.querySelectorAll('.view');
+  for(var i=0;i<vs.length;i++) vs[i].classList.remove('on');
+  document.getElementById('v-'+view).classList.add('on');
+  var bs=document.querySelectorAll('.cards[data-k=mod] button');
+  for(var j=0;j<bs.length;j++) bs[j].classList.toggle('on',bs[j].getAttribute('data-v')===view);
+  var cs=document.querySelectorAll('.cards[data-k=case] button');
+  for(var k=0;k<cs.length;k++) cs[k].classList.toggle('on',cs[k].getAttribute('data-c')===caso);
+  document.getElementById('casebar').style.display=(view==='cases')?'flex':'none';
+  var cts=document.querySelectorAll('.casebody');
+  for(var m=0;m<cts.length;m++) cts[m].classList.remove('on');
+  if(view==='cases'){
+    var el=document.getElementById('case-'+caso);
+    if(el) el.classList.add('on');
+  }
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+route();
 </script>
 </body></html>
